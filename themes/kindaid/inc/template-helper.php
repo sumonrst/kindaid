@@ -20,6 +20,7 @@ function Kindaid_Header(){
     
 }
 
+
 // Kindaid Logo
 
 function kindaid_logo() {
@@ -31,6 +32,21 @@ function kindaid_logo() {
             src="<?php echo esc_url( $header_logo ); ?>"
             alt="<?php echo esc_attr( get_bloginfo('name') ); ?>"
             data-width="108">
+    </a>
+
+    <?php
+}
+
+
+// Kindaid Header Transparent Logo
+
+function kindaid_Transparent_Logo() {
+    $header_logo = get_theme_mod('logo', get_template_directory_uri() . '/assets/img/logo/logo.png');
+    $header_transparent_logo = get_theme_mod('header_transparent_logo', get_template_directory_uri() . '/assets/img/logo/logo-yellow.png');
+    ?>
+    <a href="<?php echo esc_url( home_url('/') ); ?>">
+        <img class="logo-1" data-width="108" src="<?php echo esc_url( $header_transparent_logo ); ?>" alt="<?php echo esc_attr( get_bloginfo('name') ); ?>">
+        <img class="logo-2 d-none" data-width="108" src="<?php echo esc_url( $header_logo ); ?>" alt="<?php echo esc_attr( get_bloginfo('name') ); ?>">
     </a>
 
     <?php

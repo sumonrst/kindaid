@@ -130,6 +130,14 @@ function kindaid_header_logo(){
 			'default'     => get_template_directory_uri() . '/assets/img/logo/logo.png',
 		]
 	);
+	new \Kirki\Field\Image(
+		[
+			'settings'    => 'header_transparent_logo',
+			'label'       => esc_html__( 'Transparent Logo', 'kindaid' ),
+			'section'     => 'header_logo',
+			'default'     => get_template_directory_uri() . '/assets/img/logo/logo-yellow.png',
+		]
+	);
 }
 kindaid_header_logo();
 
