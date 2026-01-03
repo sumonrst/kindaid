@@ -67,7 +67,7 @@
    </div>
    <!-- search-form-end -->   
 
-<?php get_template_part( 'templates/header/header-1' ); ?>
+   <?php Kindaid_Header(); ?>
 
 
 

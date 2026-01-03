@@ -29,7 +29,7 @@ function kindaid_header_info(){
 			'settings' => 'button_text',
 			'label'    => esc_html__( 'Button Text', 'kindaid' ),
 			'section'  => 'header_info',
-			'default'  => esc_html__( 'Button Text', 'kirki' ),
+			'default'  => esc_html__( 'Button Text', 'kindaid' ),
 			'priority' => 10,
 		]
 	);
@@ -38,13 +38,73 @@ function kindaid_header_info(){
 			'settings' => 'button_url',
 			'label'    => esc_html__( 'Button Url', 'kindaid' ),
 			'section'  => 'header_info',
-			'default'  => esc_html__( '#', 'kirki' ),
+			'default'  => esc_html__( '#', 'kindaid' ),
 			'priority' => 10,
+		]
+	);
+
+	new \Kirki\Field\Checkbox_Switch(
+		[
+			'settings'    => 'header_right_switch',
+			'label'       => esc_html__( 'Header Right Switch', 'kindaid' ),
+			'description' => esc_html__( 'Enable or disable the right-side header section info', 'kindaid' ),
+			'section'     => 'header_info',
+			'default'     => false,
+			'choices'     => [
+				'on'  => esc_html__( 'Enable', 'kindaid' ),
+				'off' => esc_html__( 'Disable', 'kindaid' ),
+			],
 		]
 	);
 }
 kindaid_header_info();
 
+
+
+//  Kindaid Social Info Section
+
+function kindaid_social_info_section(){
+	new \Kirki\Section(
+		'kindaid_social_info',
+		[
+			'title'       => esc_html__( 'Kindaid Social Info', 'kindaid' ),
+			'description' => esc_html__( 'Kindaid Social Info Settings', 'kindaid' ),
+			'panel'       => 'kindaid_panel',
+			'priority'    => 160,
+		]
+	);
+
+	new \Kirki\Field\Text(
+		[
+			'settings' => 'kindaid_offcanvas_fb_url',
+			'label'    => esc_html__( 'Facebook URL', 'kindaid' ),
+			'section'  => 'kindaid_social_info',
+			'default'  => esc_html__( 'https://www.facebook.com', 'kirki' ),
+			'priority' => 10,
+		]
+	);
+	new \Kirki\Field\Text(
+		[
+			'settings' => 'kindaid_offcanvas_twitter_url',
+			'label'    => esc_html__( 'Twitter URL', 'kindaid' ),
+			'section'  => 'kindaid_social_info',
+			'default'  => esc_html__( 'https://www.twitter.com', 'kirki' ),
+			'priority' => 10,
+		]
+	);
+	new \Kirki\Field\Text(
+		[
+			'settings' => 'kindaid_offcanvas_instagram_url',
+			'label'    => esc_html__( 'Instagram URL', 'kindaid' ),
+			'section'  => 'kindaid_social_info',
+			'default'  => esc_html__( 'https://www.instagram.com', 'kirki' ),
+			'priority' => 10,
+		]
+	);
+
+}
+
+kindaid_social_info_section();
 
 
 
