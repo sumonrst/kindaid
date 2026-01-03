@@ -8,6 +8,7 @@
       
    ?>
    
+   <?php get_template_part( 'templates/header/header-search' ); ?>
    <?php get_template_part( 'templates/header/offcanvas' ); ?>
    <?php get_template_part( 'templates/header/mini-cart' ); ?>
 
@@ -19,59 +20,11 @@
                <div class="col-lg-10 col-5">
                   <div class="tp-header-content d-flex align-items-center">
                      <div class="tp-header-logo">
-                        <a href="index.html"><img data-width="108" src="assets/img/logo/logo.png" alt="logo"></a>
+                        <?php Kindaid_logo(); ?>
                      </div>
                      <div class="tp-main-menu ml-80 d-none d-xl-block">
                         <nav class="tp-mobile-menu-active">
-                           <ul>
-                              <li class="has-dropdown">
-                                 <a href="index.html">Home</a>
-                                 <ul class="sub-menu">
-                                    <li><a href="index.html">Home 01</a></li>
-                                    <li><a href="index-2.html">Home 02</a></li>
-                                    <li><a href="index-3.html">Home 03</a></li>
-                                 </ul>
-                              </li>
-                              <li><a href="about.html">About</a>
-                              </li>
-                              <li class="has-dropdown">
-                                 <a href="causes.html">Causes</a>
-                                 <ul class="sub-menu">
-                                    <li><a href="causes.html">Causes</a></li>
-                                    <li><a href="causes-details.html">Causes Details</a></li>
-                                 </ul>
-                              </li>
-                              <li class="has-dropdown">
-                                 <a href="#">Pages</a>
-                                 <ul class="sub-menu">
-                                    <li><a href="service.html">What We Do</a></li>
-                                    <li><a href="events.html">Events</a></li>
-                                    <li><a href="events-details.html">Events Details</a></li>
-                                    <li><a href="team.html">Team</a></li>
-                                    <li><a href="team-details.html">Team Details</a></li>
-                                    <li class="menu-item-has-children">
-                                       <a href="shop.html">Shop</a>
-                                       <ul class="sub-menu">
-                                          <li><a href="shop.html">Shop</a></li>
-                                          <li><a href="shop-details.html">Shop Details</a></li>
-                                          <li><a href="cart.html">Cart</a></li>
-                                          <li><a href="checkout.html">Checkout</a></li>
-                                       </ul>
-                                    </li>
-                                    <li><a href="faq.html">Faq</a></li>
-                                    <li><a href="contact.html">Contact</a></li>
-                                 </ul> 
-                              </li>
-                              <li class="has-dropdown">
-                                 <a href="blog.html">Blog</a>
-                                 <ul class="sub-menu">
-                                    <li><a href="blog.html">Blog Grid</a></li>
-                                    <li><a href="blog-standard.html">Blog Standard</a></li>
-                                    <li><a href="blog-details.html">Blog Details</a></li>
-                                 </ul>
-                              </li>
-                              <li><a href="donate.html">Donation</a></li>
-                           </ul>
+                            <?php  Kindaid_header_main_menu(); ?>
                         </nav>
                      </div>
                   </div>

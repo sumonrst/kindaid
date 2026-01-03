@@ -114,6 +114,20 @@ if( file_exists( dirname(__FILE__) . '/inc/template-helper.php' ) ){
 }
 
 
+
+// kindaid Metabox File
+
+if( file_exists( dirname(__FILE__) . '/inc/kindaid-metabox.php' ) ){
+    require_once( dirname(__FILE__) . '/inc/kindaid-metabox.php' );
+}
+
+// $kindaid_metabox_file = get_template_directory() . '/inc/template-helper.php';
+
+// if ( function_exists( 'tpmeta_field' ) && file_exists( $kindaid_metabox_file ) ) {
+// 	require_once $kindaid_metabox_file;
+// }
+
+
 // kindaid Nav Walker Integration
 
 if( file_exists( dirname(__FILE__) . '/inc/nav-walker.php' ) ){

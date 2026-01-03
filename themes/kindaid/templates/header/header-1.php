@@ -8,6 +8,7 @@
       
    ?>
    
+   <?php get_template_part( 'templates/header/header-search' ); ?>
    <?php get_template_part( 'templates/header/offcanvas' ); ?>
    <?php get_template_part( 'templates/header/mini-cart' ); ?>
 
