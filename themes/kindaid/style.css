@@ -13,3 +13,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: kindaid
 Tags: charity, donation, fundraising, non-profit, responsive, custom-logo, custom-menu, featured-images, full-site-editing, block-patterns, rtl-language-support, sticky-post, translation-ready, custom-background, accessibility-ready
 */
+
+.admin-bar .tp-transparent{
+    margin-top: 32px !important;
+}

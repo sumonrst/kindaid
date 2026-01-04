@@ -4,8 +4,9 @@
 //  Kindaid Header
 
 function Kindaid_Header(){
-     // Kindaid Metabox file here
-    $kindaid_header_from_page = function_exists('tpmeta_field') ? tpmeta_field('kindaid_page_header_style') : 'header_style_page_1';
+     // Kindaid Page header from Metabox
+    $kindaid_header_from_page = function_exists('tpmeta_field') ? tpmeta_field('kindaid_page_header_style') : '';
+    $header_global = get_theme_mod('header_global', 'header_global_1');
 
     if($kindaid_header_from_page == 'header_style_page_1'){
         get_template_part( 'templates/header/header-1'); 
@@ -15,8 +16,17 @@ function Kindaid_Header(){
     }
     elseif($kindaid_header_from_page == 'header_style_page_3'){
         get_template_part( 'templates/header/header-3'); 
-    }
-      
+    }else{
+        if($header_global == 'header_global_2'){
+            get_template_part( 'templates/header/header-2'); 
+        }
+        elseif($header_global == 'header_global_3'){
+            get_template_part( 'templates/header/header-3'); 
+        }
+        else {
+            get_template_part( 'templates/header/header-1' );
+        }
+    }     
     
 }
 

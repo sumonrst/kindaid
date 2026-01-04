@@ -4,7 +4,7 @@
       $header_button_url = get_theme_mod( 'button_url', __('#', 'kindaid'));
       $header_right_switch = get_theme_mod( 'header_right_switch', false);
       $header_menu_column = ($header_right_switch == false) ? 'col-xxl-9 col-xl-10' : 'col-xxl-6 col-xl-6';
-      $header_menu_column_position = ($header_right_switch == false) ? 'text-end' : 'text-center';
+      $header_menu_column_margin = ($header_right_switch == false) ? 'mr-0' : '';
       
    ?>
    
@@ -25,11 +25,13 @@
                </div>
                <div class="col-lg-10 col-7">
                   <div class="d-flex justify-content-end">
-                     <div class="tp-main-menu text-center mr-60 d-none d-xl-block">
+                     <div class="tp-main-menu text-center <?php echo esc_attr($header_menu_column_margin); ?> d-none d-xl-block">
                         <nav class="tp-mobile-menu-active">
                            <?php  Kindaid_header_main_menu(); ?>
                         </nav>
                      </div>
+                  <?php
+                  if($header_right_switch ) : ?>
                      <div class="tp-header-action d-flex align-items-center justify-content-end">
                         <div class="tp-header-action-item">
                            <button class="tp-header-action-btn cartmini-open-btn">
@@ -54,6 +56,16 @@
                            <button class="tp-header-toogle"><i class="far fa-bars"></i></button>
                         </div>
                      </div>
+
+                  <?php 
+                  else : ?>
+                  <div class="tp-header-toogle-wrapper d-xl-none">
+                     <button class="tp-header-toogle"><i class="far fa-bars"></i></button>
+                  </div>
+
+                  <?php 
+                  endif; ?>
+
                   </div>
                </div>
             </div>

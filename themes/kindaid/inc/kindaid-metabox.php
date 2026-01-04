@@ -14,13 +14,14 @@ function Kindaid_Metabox( $meta_boxes ) {
                 'id'              => "kindaid_page_header_style",
                 'type'            => 'select',
                 'options'         => array(
+                    '' => esc_html__( 'Default (Use Global Header)', 'textdomain' ),
                     'header_style_page_1' => esc_html__('Header Style 1', 'textdomain'),
                     'header_style_page_2' => esc_html__('Header Style 2', 'textdomain'),
                     'header_style_page_3' => esc_html__('Header Style 3', 'textdomain'),
                 ),
+                'default' => '',
                 'placeholder'     => esc_html__('Select Header Style', 'textdomain'),
                 'conditional' => array(),
-                'default' => '',
                 'multiple' => false,
 
             )

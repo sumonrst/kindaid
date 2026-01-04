@@ -43,6 +43,21 @@ function kindaid_header_info(){
 		]
 	);
 
+	new \Kirki\Field\Select(
+		[
+			'settings'    => 'header_global',
+			'label'       => esc_html__( 'Select global header', 'kirki' ),
+			'section'     => 'header_info',
+			'default'     => 'header_global_1',
+			'placeholder' => esc_html__( 'Choose an option', 'kirki' ),
+			'choices'     => [
+				'header_global_1' => esc_html__( 'Header Global Style 1', 'kirki' ),
+				'header_global_2' => esc_html__( 'Header Global Style 2', 'kirki' ),
+				'header_global_3' => esc_html__( 'Header Global Style 3', 'kirki' ),
+			],
+		]
+	);
+
 	new \Kirki\Field\Checkbox_Switch(
 		[
 			'settings'    => 'header_right_switch',
@@ -61,7 +76,7 @@ kindaid_header_info();
 
 
 
-//  Kindaid Social Info Section
+//  Kindaid Social Info Section Start
 
 function kindaid_social_info_section(){
 	new \Kirki\Section(
