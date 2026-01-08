@@ -1,3 +1,7 @@
+(function ($) {
+	"use strict";
+
+
 $(function() {
     ParallaxScroll.init();
 });
@@ -183,3 +187,6 @@ var ParallaxScroll = {
         }
     }
 };
+
+
+})(jQuery);

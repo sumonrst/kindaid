@@ -63,11 +63,61 @@ function kindaid_setup() {
 	) );
 
 
+	// Remove wordpress block editor
+	remove_theme_support('widgets-block-editor');
+
+
 
 
 }
 endif; // kindaid_setup
 add_action( 'after_setup_theme', 'kindaid_setup' );
+
+
+
+
+/**
+ * Add a sidebar.
+ */
+function Kindaid_widgets_init() {
+	register_sidebar( array(
+		'name'          => __( 'Footer 1 : Widget 1', 'textdomain' ),
+		'id'            => 'footer-1-widget-1',
+		'description'   => __( 'Widgets in this area will be shown on Footer 1 : Widget 1', 'textdomain' ),
+		'before_widget' => '<div id="%1$s" class="tp-footer-widget mb-40 wow fadeInUp %2$s" data-wow-duration=".9s" data-wow-delay=".3s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3 class="tp-footer-title mb-15">',
+		'after_title'   => '</h3>',
+	) );
+	register_sidebar( array(
+		'name'          => __( 'Footer 1 : Widget 2', 'textdomain' ),
+		'id'            => 'footer-1-widget-2',
+		'description'   => __( 'Widgets in this area will be shown on Footer 2 : Widget 1', 'textdomain' ),
+		'before_widget' => '<div id="%1$s" class="tp-footer-widget ml-75 mb-50 wow fadeInUp %2$s" data-wow-duration=".9s" data-wow-delay=".4s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3 class="tp-footer-title mb-15">',
+		'after_title'   => '</h3>',
+	) );
+	register_sidebar( array(
+		'name'          => __( 'Footer 1 : Widget 3', 'textdomain' ),
+		'id'            => 'footer-1-widget-3',
+		'description'   => __( 'Widgets in this area will be shown on Footer 1 : Widget 3', 'textdomain' ),
+		'before_widget' => '<div id="%1$s" class="tp-footer-widget tp-footer-col-2 mb-50 wow fadeInUp %2$s" data-wow-duration=".9s" data-wow-delay=".5s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3 class="tp-footer-title mb-15">',
+		'after_title'   => '</h3>',
+	) );
+	register_sidebar( array(
+		'name'          => __( 'Footer 1 : Widget 4', 'textdomain' ),
+		'id'            => 'footer-1-widget-4',
+		'description'   => __( 'Widgets in this area will be shown on Footer 1 : Widget 4', 'textdomain' ),
+		'before_widget' => '<div id="%1$s" class="tp-footer-widget tp-footer-cta mb-50 bg-position wow fadeInUp %2$s" data-wow-duration=".9s" data-wow-delay=".6s>',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3 class="tp-footer-cta-title mb-30">',
+		'after_title'   => '</h3>',
+	) );
+}
+add_action( 'widgets_init', 'Kindaid_widgets_init' );
 
 
 
@@ -97,6 +147,12 @@ function kindaid_script() {
 	wp_enqueue_script( 'wow', get_template_directory_uri() . '/assets/js/wow.min.js', array('jquery'), '1.0', true );
 	wp_enqueue_script( 'kindaid-slider-init', get_template_directory_uri() . '/assets/js/slider-init.js', array('jquery'), '1.0', true );
 	wp_enqueue_script( 'kindaid-main', get_template_directory_uri() . '/assets/js/main.js', array('jquery'), '1.0', true );
+
+	function tp_widget_media_upload() {
+		wp_enqueue_media();
+	}
+	add_action('admin_enqueue_scripts', 'tp_widget_media_upload');
+
 
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -132,6 +188,15 @@ if( file_exists( dirname(__FILE__) . '/inc/kindaid-metabox.php' ) ){
 
 if( file_exists( dirname(__FILE__) . '/inc/nav-walker.php' ) ){
     require_once( dirname(__FILE__) . '/inc/nav-walker.php' );
+}
+
+
+// kindaid Footer Widgets File Here
+if( file_exists( dirname(__FILE__) . '/inc/widgets/footer-info.php' ) ){
+    require_once( dirname(__FILE__) . '/inc/widgets/footer-info.php' );
+}
+if( file_exists( dirname(__FILE__) . '/inc/widgets/footer-contact-info.php' ) ){
+    require_once( dirname(__FILE__) . '/inc/widgets/footer-contact-info.php' );
 }
 
 
