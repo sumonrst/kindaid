@@ -42,7 +42,7 @@ function kindaid_setup() {
 	// This theme uses wp_nav_menu() in two locations.
 	register_nav_menus( array(
 		'main-menu' => __( 'Primary Menu',      'kindaid' ),
-		'social'  => __( 'Social Links Menu', 'kindaid' ),
+		'footer-menu'  => __( 'Footer Menu', 'kindaid' ),
 	) );
 
 	/*
@@ -77,9 +77,21 @@ add_action( 'after_setup_theme', 'kindaid_setup' );
 
 
 /**
- * Add a sidebar.
+ * Kindaid widget code here
  */
 function Kindaid_widgets_init() {
+
+	//  Footer Style 1
+
+	register_sidebar( array(
+		'name'          => __( 'Blog Sidebar', 'textdomain' ),
+		'id'            => 'blog-sidebar',
+		'description'   => __( 'Widgets in this area will be shown on Blog Sidebar', 'textdomain' ),
+		'before_widget' => '<div id="%1$s" class="tp-widget-sidebar mb-20 %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3 class="tp-widget-main-title mb-25">',
+		'after_title'   => '</h3>',
+	) );
 	register_sidebar( array(
 		'name'          => __( 'Footer 1 : Widget 1', 'textdomain' ),
 		'id'            => 'footer-1-widget-1',
@@ -111,11 +123,51 @@ function Kindaid_widgets_init() {
 		'name'          => __( 'Footer 1 : Widget 4', 'textdomain' ),
 		'id'            => 'footer-1-widget-4',
 		'description'   => __( 'Widgets in this area will be shown on Footer 1 : Widget 4', 'textdomain' ),
-		'before_widget' => '<div id="%1$s" class="tp-footer-widget tp-footer-cta mb-50 bg-position wow fadeInUp %2$s" data-wow-duration=".9s" data-wow-delay=".6s>',
+		'before_widget' => '<div id="%1$s" class="tp-footer-widget mb-50 wow fadeInUp %2$s" data-wow-duration=".9s" data-wow-delay=".6s>',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h3 class="tp-footer-cta-title mb-30">',
 		'after_title'   => '</h3>',
 	) );
+
+
+	//  Footer Style 2
+	register_sidebar( array(
+		'name'          => __( 'Footer 2 : Widget 1', 'textdomain' ),
+		'id'            => 'footer-2-widget-1',
+		'description'   => __( 'Widgets in this area will be shown on Footer 2 : Widget 1', 'textdomain' ),
+		'before_widget' => '<div id="%1$s" class="tp-footer-widget mb-40 mr-70 wow fadeInUp %2$s" data-wow-duration=".9s" data-wow-delay=".3s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3 class="tp-footer-title mb-15">',
+		'after_title'   => '</h3>',
+	) );
+	register_sidebar( array(
+		'name'          => __( 'Footer 2 : Widget 2', 'textdomain' ),
+		'id'            => 'footer-2-widget-2',
+		'description'   => __( 'Widgets in this area will be shown on Footer 2 : Widget 2', 'textdomain' ),
+		'before_widget' => '<div id="%1$s" class="tp-footer-widget ml-30 mb-50 wow fadeInUp %2$s" data-wow-duration=".9s" data-wow-delay=".4s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3 class="tp-footer-title mb-15">',
+		'after_title'   => '</h3>',
+	) );
+	register_sidebar( array(
+		'name'          => __( 'Footer 2 : Widget 3', 'textdomain' ),
+		'id'            => 'footer-2-widget-3',
+		'description'   => __( 'Widgets in this area will be shown on Footer 2 : Widget 3', 'textdomain' ),
+		'before_widget' => '<div id="%1$s" class="tp-footer-widget ml-75 tp-footer-col-2 mb-50 wow fadeInUp %2$s" data-wow-duration=".9s" data-wow-delay=".5s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3 class="tp-footer-title mb-15">',
+		'after_title'   => '</h3>',
+	) );
+	register_sidebar( array(
+		'name'          => __( 'Footer 2 : Widget 4', 'textdomain' ),
+		'id'            => 'footer-2-widget-4',
+		'description'   => __( 'Widgets in this area will be shown on Footer 2 : Widget 4', 'textdomain' ),
+		'before_widget' => '<div id="%1$s" class="tp-footer-widget ml-30 tp-footer-3-cta mb-50 wow fadeInUp %2$s" data-wow-duration=".9s" data-wow-delay=".6s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3 class="tp-footer-title mb-15">',
+		'after_title'   => '</h3>',
+	) );
+
 }
 add_action( 'widgets_init', 'Kindaid_widgets_init' );
 
@@ -198,6 +250,22 @@ if( file_exists( dirname(__FILE__) . '/inc/widgets/footer-info.php' ) ){
 if( file_exists( dirname(__FILE__) . '/inc/widgets/footer-contact-info.php' ) ){
     require_once( dirname(__FILE__) . '/inc/widgets/footer-contact-info.php' );
 }
+
+// widget sytle 2 file here
+if( file_exists( dirname(__FILE__) . '/inc/widgets/footer-newsletter.php' ) ){
+    require_once( dirname(__FILE__) . '/inc/widgets/footer-newsletter.php' );
+}
+
+// widget sytle 2 file here
+if( file_exists( dirname(__FILE__) . '/inc/widgets/footer-contact-info-2.php' ) ){
+    require_once( dirname(__FILE__) . '/inc/widgets/footer-contact-info-2.php' );
+}
+
+// Kindaid KSES File Here
+if( file_exists( dirname(__FILE__) . '/inc/kindaid-kses.php' ) ){
+	require_once( dirname(__FILE__) . '/inc/kindaid-kses.php' );
+}
+
 
 
 

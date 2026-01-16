@@ -31,6 +31,32 @@ function Kindaid_Header(){
 }
 
 
+//  Kindaid Footer
+function Kindaid_Footer(){
+
+     // Kindaid Page footer from Metabox
+
+    $kindaid_page_footer_style = function_exists('tpmeta_field') ? tpmeta_field('kindaid_page_footer_style') : '';
+    $footer_global = get_theme_mod('footer_global', 'footer_global_1');
+
+    if($kindaid_page_footer_style == 'footer_style_page_1'){
+        get_template_part( 'templates/footer/footer-1'); 
+    }
+    elseif($kindaid_page_footer_style == 'footer_style_page_2'){
+        get_template_part( 'templates/footer/footer-2'); 
+    }
+    else{
+        if($footer_global == 'footer_global_2'){
+            get_template_part( 'templates/footer/footer-2'); 
+        }
+        else {
+            get_template_part( 'templates/footer/footer-1' );
+        }
+    } 
+    
+}
+
+
 // Kindaid Logo
 
 function kindaid_logo() {
@@ -80,10 +106,21 @@ function kindaid_offcanvas_logo() {
 
 
 // Kindaid Header Menu
-
 function kindaid_header_main_menu() {
     wp_nav_menu(array(
         'theme_location' => 'main-menu',
+        'container' => '',
+        'container_class' => '',
+        'menu_class' => '',
+        'fallback_cb' => 'KindAid_Walker_Nav_Menu::fallback',
+        'walk' => new KindAid_Walker_Nav_Menu,
+    ));
+}
+
+// Kindaid Footer Menu
+function Kindaid_Footer_Menu() {
+    wp_nav_menu(array(
+        'theme_location' => 'footer-menu',
         'container' => '',
         'container_class' => '',
         'menu_class' => '',
@@ -119,6 +156,16 @@ function kindaid_social_info() {
     </a>
 
 <?php
+}
+
+
+// Kindaid Footer Copy Right
+function kindaid_Footer_Copy_Right_Helper() {
+    $footer_text = get_theme_mod( 'footer_text', esc_html__( '© 2026 Charity. is Proudly Powered by Aqlova', 'your-text-domain' ) );
+    ?>
+    <p class="mb-0"><?php echo kindaid_kses($footer_text); ?></p>
+
+    <?php
 }
 
 
