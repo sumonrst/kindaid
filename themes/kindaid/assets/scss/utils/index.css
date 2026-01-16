@@ -1,0 +1,37 @@
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.fadeInUp {
+  animation-name: fadeInUp;
+}
+
+/* transform */
+:root {
+  /**
+  @font family declaration
+  */
+  --tp-ff-body: 'Montserrat', sans-serif;
+  --tp-ff-heading: 'Libre Baskerville', serif;
+  --tp-ff-p: 'Montserrat', sans-serif;
+  --tp-ff-fontawesome: "Font Awesome 6 Pro";
+  /**
+  @color declaration
+  */
+  --tp-common-white: #fcf8ec;
+  --tp-common-white-2: #fff;
+  --tp-common-black: #620035;
+  --tp-common-mulberry: #620035;
+  --tp-common-emerald: #f0e8d1;
+  --tp-grey-1: #68665E;
+  --tp-theme-primary: #FF4121;
+  --tp-theme-secondary: #ffca24;
+  --tp-border-1: #F1F1F9;
+  --tp-border-2: #EDEEEE;
+}/*# sourceMappingURL=index.css.map */

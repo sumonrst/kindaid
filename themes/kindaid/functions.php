@@ -261,6 +261,11 @@ if( file_exists( dirname(__FILE__) . '/inc/widgets/footer-contact-info-2.php' ) 
     require_once( dirname(__FILE__) . '/inc/widgets/footer-contact-info-2.php' );
 }
 
+// Blog Author Sidebar Widget File Here
+if( file_exists( dirname(__FILE__) . '/inc/widgets/blog-author-sidebar-widget.php' ) ){
+    require_once( dirname(__FILE__) . '/inc/widgets/blog-author-sidebar-widget.php' );
+}
+
 // Kindaid KSES File Here
 if( file_exists( dirname(__FILE__) . '/inc/kindaid-kses.php' ) ){
 	require_once( dirname(__FILE__) . '/inc/kindaid-kses.php' );

@@ -21,3 +21,26 @@ Tags: charity, donation, fundraising, non-profit, responsive, custom-logo, custo
 .mc4wp-form-fields {
     position: relative;
 }
+
+.tp-widget-sidebar.widget_search {
+    padding: 0;
+    background: none;
+    box-shadow: none;
+}
+
+
+.tp-widget-cat.widget_categories ul li a {
+    font-size: 16px;
+    color: var(--tp-common-mulberry);
+    display: flex;
+    justify-content: space-between;
+    font-weight: 500;
+}
+
+.tp-widget-sidebar ul li {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    color: var(--tp-common-mulberry);
+    font-weight: 500;
+}

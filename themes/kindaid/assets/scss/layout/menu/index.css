@@ -1,0 +1,156 @@
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.fadeInUp {
+  animation-name: fadeInUp;
+}
+
+/* transform */
+:root {
+  /**
+  @font family declaration
+  */
+  --tp-ff-body: 'Montserrat', sans-serif;
+  --tp-ff-heading: 'Libre Baskerville', serif;
+  --tp-ff-p: 'Montserrat', sans-serif;
+  --tp-ff-fontawesome: "Font Awesome 6 Pro";
+  /**
+  @color declaration
+  */
+  --tp-common-white: #fcf8ec;
+  --tp-common-white-2: #fff;
+  --tp-common-black: #620035;
+  --tp-common-mulberry: #620035;
+  --tp-common-emerald: #f0e8d1;
+  --tp-grey-1: #68665E;
+  --tp-theme-primary: #FF4121;
+  --tp-theme-secondary: #ffca24;
+  --tp-border-1: #F1F1F9;
+  --tp-border-2: #EDEEEE;
+}
+
+/*----------------------------------------*/
+/*  4.1 Main menu css
+/*----------------------------------------*/
+.tp-main-menu nav ul li {
+  list-style: none;
+  display: inline-block;
+  position: relative;
+}
+.tp-main-menu nav ul li:not(:last-child) {
+  margin-right: 35px;
+}
+.tp-main-menu nav ul li a {
+  font-weight: 500;
+  font-size: 17px;
+  color: var(--tp-common-mulberry);
+  padding: 39px 0px;
+  display: inline-block;
+}
+.tp-main-menu nav ul li a:hover {
+  color: var(--tp-theme-primary);
+}
+.tp-main-menu nav ul li:hover > a {
+  color: var(--tp-theme-primary);
+}
+.tp-main-menu nav ul li:hover > .sub-menu {
+  opacity: 1;
+  visibility: visible;
+  top: 100%;
+}
+.tp-main-menu nav ul li .sub-menu {
+  position: absolute;
+  top: 105%;
+  left: 0;
+  background: var(--tp-common-emerald);
+  width: 220px;
+  padding: 18px 0;
+  transition: all 0.3s 0s ease-out;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 9;
+}
+.tp-main-menu nav ul li .sub-menu li {
+  margin-right: 0px;
+  display: block;
+}
+.tp-main-menu nav ul li .sub-menu li a {
+  padding: 6px 28px;
+  display: block;
+}
+.tp-main-menu nav ul li .sub-menu li .sub-menu {
+  left: 102%;
+  top: 0;
+}
+.tp-main-menu nav ul li .sub-menu li.menu-item-has-children:hover a:after {
+  transform: rotate(0deg);
+  color: var(--tp-theme-primary);
+}
+.tp-main-menu nav ul li .sub-menu li.menu-item-has-children > a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.tp-main-menu nav ul li .sub-menu li.menu-item-has-children > a:after {
+  content: "\f107";
+  font-size: 16px;
+  font-weight: 400;
+  margin-left: 2px;
+  color: var(--tp-common-mulberry);
+  display: inline-block;
+  transform: rotate(-90deg);
+  transition: all 0.3s 0s ease-out;
+  font-family: var(--tp-ff-fontawesome);
+}
+.tp-main-menu nav ul li .sub-menu li:hover > .sub-menu {
+  left: 100%;
+}
+
+/*----------------------------------------*/
+/*  4.2 Sidemenu
+/*----------------------------------------*/
+.tp-offcanvas-menu ul li {
+  list-style: none;
+  position: relative;
+}
+.tp-offcanvas-menu ul li:last-child a {
+  border: 0;
+}
+.tp-offcanvas-menu ul li a {
+  font-size: 15px;
+  font-weight: 500;
+  display: block;
+  padding: 6px 0;
+  color: var(--tp-common-mulberry);
+  border-bottom: 1px solid #ddd;
+}
+.tp-offcanvas-menu ul li.active > a {
+  color: var(--tp-theme-primary);
+}
+.tp-offcanvas-menu ul li.active > button.tp-sidemenu-close i {
+  transform: rotate(90deg);
+}
+.tp-offcanvas-menu ul li .sub-menu {
+  margin-left: 20px;
+  display: none;
+}
+
+.tp-sidemenu-close {
+  position: absolute;
+  right: 0;
+  top: 5px;
+  border: 1px solid #ddd;
+  font-size: 12px;
+  width: 30px;
+  height: 30px;
+}
+.tp-sidemenu-close i {
+  transition: 0.3s;
+}/*# sourceMappingURL=index.css.map */
