@@ -191,6 +191,22 @@ add_filter( 'get_search_form', 'Kindaid_Sidebar_Search_Form' );
 
 
 
+// Kindaid Pagination
+
+function kindaid_pagination() {
+    $pages = paginate_links( array(
+        'type'      => 'array',
+        'prev_text' => __('<i class="far fa-arrow-left"></i>', 'kindaid'),
+        'next_text' => __('<i class="far fa-arrow-right"></i>', 'kindaid'),
+    ) );
+    if ( $pages ) {
+        echo '<ul>';
+        foreach ( $pages as $page ) {
+            echo '<li>' . $page . '</li>';
+        }
+        echo '</ul>';
+    }
+}
 
 
 

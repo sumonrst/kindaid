@@ -1604,7 +1604,7 @@ input[type=color] {
 .tp-pagination li {
   display: inline-block;
 }
-.tp-pagination li a {
+.tp-pagination li a, .tp-pagination li span {
   height: 50px;
   width: 50px;
   font-size: 14px;
@@ -1620,7 +1620,7 @@ input[type=color] {
   -o-transition: all 0.3s 0s ease-out;
   transition: all 0.3s 0s ease-out;
 }
-.tp-pagination li.current a {
+.tp-pagination li span {
   background-color: var(--tp-theme-primary);
   color: var(--tp-common-white);
 }

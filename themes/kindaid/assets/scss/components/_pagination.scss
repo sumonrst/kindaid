@@ -7,7 +7,7 @@
 .#{$theme-prifix}-pagination {
     & li{
         display: inline-block;
-        & a{
+        & a,& span{
             height: 50px;
             width: 50px;
             font-size: 14px;
@@ -19,11 +19,9 @@
             text-align: center;
             @include transition();
         }
-        &.current{
-            & a{
-                background-color: var(--tp-theme-primary);
-                color: var(--tp-common-white);
-            }
+        & span{
+            background-color: var(--tp-theme-primary);
+            color: var(--tp-common-white);
         }
         &:hover{
             & a{

@@ -29,7 +29,7 @@ Tags: charity, donation, fundraising, non-profit, responsive, custom-logo, custo
 }
 
 
-.tp-widget-cat.widget_categories ul li a {
+.widget_categories ul li a {
     font-size: 16px;
     color: var(--tp-common-mulberry);
     display: flex;
@@ -43,4 +43,15 @@ Tags: charity, donation, fundraising, non-profit, responsive, custom-logo, custo
     font-size: 16px;
     color: var(--tp-common-mulberry);
     font-weight: 500;
+    position: relative;
+}
+.tp-widget-sidebar ul li:before {
+    position: absolute;
+    content: "";
+    width: 6px;
+    height: 6px;
+    background-color: var(--tp-common-mulberry);
+    border-radius: 50%;
+    top: 10px;
+    left: -14px;
 }

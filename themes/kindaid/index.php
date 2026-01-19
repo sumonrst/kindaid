@@ -29,14 +29,16 @@
                     endif; ?>
 
                      <div class="tp-pagination mt-40">
-                        <ul>
+
+                     <?php kindaid_pagination(); ?>
+                        <!-- <ul>
                            <li><a href="#"><i class="far fa-arrow-left"></i></a></li>
                            <li><a href="#"><span>01</span></a></li>
                            <li class="current"><a href="#"><span >02</span></a></li>
                            <li><a href="#"><span>03</span></a></li>
                            <li><a href="#"><span>04</span></a></li>
                            <li><a href="#"><i class="far fa-arrow-right"></i></a></li>
-                        </ul>
+                        </ul> -->
                      </div>
 
                   </div>
