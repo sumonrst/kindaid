@@ -266,10 +266,18 @@ if( file_exists( dirname(__FILE__) . '/inc/widgets/blog-author-sidebar-widget.ph
     require_once( dirname(__FILE__) . '/inc/widgets/blog-author-sidebar-widget.php' );
 }
 
+
+// Recent Post Blog Sidebar Widget File Here
+if( file_exists( dirname(__FILE__) . '/inc/widgets/recent-post-blog-sidebar.php' ) ){
+    require_once( dirname(__FILE__) . '/inc/widgets/recent-post-blog-sidebar.php' );
+}
+
 // Kindaid KSES File Here
 if( file_exists( dirname(__FILE__) . '/inc/kindaid-kses.php' ) ){
 	require_once( dirname(__FILE__) . '/inc/kindaid-kses.php' );
 }
+
+
 
 
 

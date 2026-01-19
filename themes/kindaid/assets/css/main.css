@@ -1603,6 +1603,7 @@ input[type=color] {
 /*----------------------------------------*/
 .tp-pagination li {
   display: inline-block;
+  margin: 0 4px;
 }
 .tp-pagination li a, .tp-pagination li span {
   height: 50px;
