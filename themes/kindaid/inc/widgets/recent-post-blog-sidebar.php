@@ -8,8 +8,8 @@ class Recent_Post_Blog_Sidebar_Widget extends WP_Widget {
     public function __construct() {
         parent::__construct(
             'recent_post_blog_sidebar_widget',
-            __('Recent Post Blog Sidebar Widget', 'kindaid'),
-            ['description' => __('Show recent blog posts in sidebar.', 'kindaid')]
+            __('Kindaid Recent Post Blog Sidebar Widget', 'kindaid'),
+            ['description' => __('Kindaid Show recent blog posts in sidebar.', 'kindaid')]
         );
     }
 

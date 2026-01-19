@@ -8,8 +8,8 @@ class Footer_Info_Widget extends WP_Widget {
     public function __construct() {
         parent::__construct(
             'footer_info_widget',
-            __('Footer Info Widget', 'textdomain'),
-            array( 'description' => __( 'Footer logo with description & social links', 'textdomain' ) )
+            __('Kindaid Footer Info Widget', 'textdomain'),
+            array( 'description' => __( 'Kindaid Footer logo with description & social links', 'textdomain' ) )
         );
 
         add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_admin_scripts' ) );

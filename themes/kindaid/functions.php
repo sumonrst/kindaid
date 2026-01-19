@@ -272,6 +272,11 @@ if( file_exists( dirname(__FILE__) . '/inc/widgets/recent-post-blog-sidebar.php'
     require_once( dirname(__FILE__) . '/inc/widgets/recent-post-blog-sidebar.php' );
 }
 
+// Blog Sidebar Banner Widget File Here
+if( file_exists( dirname(__FILE__) . '/inc/widgets/blog-sidebar-banner-widget.php' ) ){
+    require_once( dirname(__FILE__) . '/inc/widgets/blog-sidebar-banner-widget.php' );
+}
+
 // Kindaid KSES File Here
 if( file_exists( dirname(__FILE__) . '/inc/kindaid-kses.php' ) ){
 	require_once( dirname(__FILE__) . '/inc/kindaid-kses.php' );

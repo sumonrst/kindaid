@@ -8,8 +8,8 @@ class Blog_Author_Sidebar_Widget extends WP_Widget {
     public function __construct() {
         parent::__construct(
             'blog_author_sidebar_widget',
-            __('Blog Author Sidebar Widget', 'textdomain'),
-            array( 'description' => __( 'Blog Author Sidebar Widget', 'textdomain' ) )
+            __('Kindaid Blog Author Sidebar Widget', 'textdomain'),
+            array( 'description' => __( 'Kindaid Blog Author Sidebar Widget', 'textdomain' ) )
         );
 
         add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_admin_scripts' ) );

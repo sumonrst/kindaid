@@ -8,8 +8,8 @@ class Footer_Contact_Cta_Widget extends WP_Widget {
     public function __construct() {
         parent::__construct(
             'Footer_Contact_Cta_Widget',
-            __('Footer Concact CTA Widget', 'textdomain'),
-            array( 'description' => __( 'Footer Contact Info CTA Widget', 'textdomain' ) )
+            __('Kindaid Footer Concact CTA Widget', 'textdomain'),
+            array( 'description' => __( 'Kindaid Footer Contact Info CTA Widget', 'textdomain' ) )
         );
 
         add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_admin_scripts' ) );

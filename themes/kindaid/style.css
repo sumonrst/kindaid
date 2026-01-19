@@ -55,3 +55,7 @@ Tags: charity, donation, fundraising, non-profit, responsive, custom-logo, custo
     top: 10px;
     left: -14px;
 }
+
+.widget_blog_sidebar_banner_widget {
+    padding: 0;
+}

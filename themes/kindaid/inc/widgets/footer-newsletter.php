@@ -8,8 +8,8 @@ class Footer_newsletter_shortcode_Widget extends WP_Widget {
     public function __construct() {
         parent::__construct(
             'Footer_newsletter_shortcode_Widget',
-            __('Footer Newsletter Shortcode Widget', 'textdomain'),
-            array( 'description' => __( 'Footer logo with description & social links', 'textdomain' ) )
+            __('Kindaid Footer Newsletter Shortcode Widget', 'textdomain'),
+            array( 'description' => __( 'Kindaid Footer logo with description & social links', 'textdomain' ) )
         );
 
         add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_admin_scripts' ) );

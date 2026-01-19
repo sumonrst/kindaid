@@ -1,12 +1,13 @@
 <?php 
     get_header(); 
+    $post_center = is_active_sidebar( 'blog-sidebar' ) ? '' : 'justify-content-center';
 ?>
 
 
 
       <div class="tp-blog-post-area pt-120 pb-80">
          <div class="container container-1424">
-            <div class="row">
+            <div class="row <?php echo $post_center; ?>">
                <div class="col-xl-9 col-lg-8">
                   <div class="tp-postbox-wrapper mr-85 mb-40">
 
@@ -29,26 +30,21 @@
                     endif; ?>
 
                      <div class="tp-pagination mt-40">
-
-                     <?php kindaid_pagination(); ?>
-                        <!-- <ul>
-                           <li><a href="#"><i class="far fa-arrow-left"></i></a></li>
-                           <li><a href="#"><span>01</span></a></li>
-                           <li class="current"><a href="#"><span >02</span></a></li>
-                           <li><a href="#"><span>03</span></a></li>
-                           <li><a href="#"><span>04</span></a></li>
-                           <li><a href="#"><i class="far fa-arrow-right"></i></a></li>
-                        </ul> -->
+                        <?php kindaid_pagination(); ?>
                      </div>
 
                   </div>
                </div>
 
-               <div class="col-xl-3 col-lg-4">
-                  <div class="tp-blog-sidebar mb-40">
-                     <?php get_sidebar(); ?>
+               <?php 
+               if ( is_active_sidebar( 'blog-sidebar' ) ) : ?>
+                  <div class="col-xl-3 col-lg-4">
+                     <div class="tp-blog-sidebar mb-40">
+                        <?php get_sidebar(); ?>
+                     </div>
                   </div>
-               </div>
+               <?php 
+               endif; ?>
 
             </div>
          </div>
