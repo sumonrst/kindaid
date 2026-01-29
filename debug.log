@@ -1,2 +1,42 @@
-[19-Jan-2026 05:44:21 UTC] Automatic updates starting...
-[19-Jan-2026 05:44:25 UTC] Automatic updates complete.
+[29-Jan-2026 05:25:26 UTC] Automatic updates starting...
+[29-Jan-2026 05:25:26 UTC]   Automatic plugin updates starting...
+[29-Jan-2026 05:25:26 UTC]   Automatic plugin updates complete.
+[29-Jan-2026 05:25:27 UTC] Automatic updates complete.
+[29-Jan-2026 07:48:35 UTC] PHP Warning:  Undefined array key "btn_url_1" in C:\xampp\htdocs\kindaid-projectwp\wp-content\plugins\kindaid-elementor\widgets\fact.php on line 479
+[29-Jan-2026 07:48:35 UTC] PHP Fatal error:  Uncaught TypeError: Elementor\Element_Base::add_link_attributes(): Argument #2 ($url_control) must be of type array, null given, called in C:\xampp\htdocs\kindaid-projectwp\wp-content\plugins\kindaid-elementor\widgets\fact.php on line 479 and defined in C:\xampp\htdocs\kindaid-projectwp\wp-content\plugins\elementor\includes\base\element-base.php:416
+Stack trace:
+#0 C:\xampp\htdocs\kindaid-projectwp\wp-content\plugins\kindaid-elementor\widgets\fact.php(479): Elementor\Element_Base->add_link_attributes('button_arg', NULL)
+#1 C:\xampp\htdocs\kindaid-projectwp\wp-content\plugins\elementor\includes\base\controls-stack.php(2374): Kindaid\Widgets\Fact_Widget->render()
+#2 C:\xampp\htdocs\kindaid-projectwp\wp-content\plugins\elementor\includes\base\widget-base.php(636): Elementor\Controls_Stack->render_by_mode()
+#3 C:\xampp\htdocs\kindaid-projectwp\wp-content\plugins\elementor\includes\base\widget-base.php(757): Elementor\Widget_Base->render_content()
+#4 C:\xampp\htdocs\kindaid-projectwp\wp-content\plugins\elementor\includes\base\element-base.php(629): Elementor\Widget_Base->get_raw_data(true)
+#5 C:\xampp\htdocs\kindaid-projectwp\wp-content\plugins\elementor\core\base\document.php(1087): Elementor\Element_Base->get_raw_data(true)
+#6 C:\xampp\htdocs\kindaid-projectwp\wp-content\plugins\elementor\core\base\document.php(735): Elementor\Core\Base\Document->get_elements_raw_data(Array, true)
+#7 C:\xampp\htdocs\kindaid-projectwp\wp-content\plugins\elementor\includes\base\controls-stack.php(1071): Elementor\Core\Base\Document->get_initial_config()
+#8 C:\xampp\htdocs\kindaid-projectwp\wp-content\plugins\elementor\core\editor\loader\common\editor-common-scripts-settings.php(40): Elementor\Controls_Stack->get_config()
+#9 C:\xampp\htdocs\kindaid-projectwp\wp-content\plugins\elementor\core\editor\loader\v2\editor-v2-loader.php(171): Elementor\Core\Editor\Loader\Common\Editor_Common_Scripts_Settings::get()
+#10 C:\xampp\htdocs\kindaid-projectwp\wp-content\plugins\elementor\core\editor\editor.php(355): Elementor\Core\Editor\Loader\V2\Editor_V2_Loader->enqueue_scripts()
+#11 C:\xampp\htdocs\kindaid-projectwp\wp-includes\class-wp-hook.php(341): Elementor\Core\Editor\Editor->enqueue_scripts('')
+#12 C:\xampp\htdocs\kindaid-projectwp\wp-includes\class-wp-hook.php(365): WP_Hook->apply_filters('', Array)
+#13 C:\xampp\htdocs\kindaid-projectwp\wp-includes\plugin.php(522): WP_Hook->do_action(Array)
+#14 C:\xampp\htdocs\kindaid-projectwp\wp-includes\script-loader.php(2311): do_action('wp_enqueue_scri...')
+#15 C:\xampp\htdocs\kindaid-projectwp\wp-includes\class-wp-hook.php(341): wp_enqueue_scripts('')
+#16 C:\xampp\htdocs\kindaid-projectwp\wp-includes\class-wp-hook.php(365): WP_Hook->apply_filters('', Array)
+#17 C:\xampp\htdocs\kindaid-projectwp\wp-includes\plugin.php(522): WP_Hook->do_action(Array)
+#18 C:\xampp\htdocs\kindaid-projectwp\wp-includes\general-template.php(3197): do_action('wp_head')
+#19 C:\xampp\htdocs\kindaid-projectwp\wp-content\plugins\elementor\includes\editor-templates\editor-wrapper.php(35): wp_head()
+#20 C:\xampp\htdocs\kindaid-projectwp\wp-content\plugins\elementor\core\editor\loader\v2\editor-v2-loader.php(221): include('C:\\xampp\\htdocs...')
+#21 C:\xampp\htdocs\kindaid-projectwp\wp-content\plugins\elementor\core\editor\editor.php(160): Elementor\Core\Editor\Loader\V2\Editor_V2_Loader->print_root_template()
+#22 C:\xampp\htdocs\kindaid-projectwp\wp-includes\class-wp-hook.php(341): Elementor\Core\Editor\Editor->init('')
+#23 C:\xampp\htdocs\kindaid-projectwp\wp-includes\class-wp-hook.php(365): WP_Hook->apply_filters('', Array)
+#24 C:\xampp\htdocs\kindaid-projectwp\wp-includes\plugin.php(522): WP_Hook->do_action(Array)
+#25 C:\xampp\htdocs\kindaid-projectwp\wp-admin\admin.php(424): do_action('admin_action_el...')
+#26 C:\xampp\htdocs\kindaid-projectwp\wp-admin\post.php(12): require_once('C:\\xampp\\htdocs...')
+#27 {main}
+  thrown in C:\xampp\htdocs\kindaid-projectwp\wp-content\plugins\elementor\includes\base\element-base.php on line 416
+[29-Jan-2026 08:24:52 UTC] PHP Notice:  Function Elementor\Controls_Manager::add_control_to_stack was called <strong>incorrectly</strong>. Cannot redeclare control with same name "control_section_1". Please see <a href="https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 1.0.0.) in C:\xampp\htdocs\kindaid-projectwp\wp-includes\functions.php on line 6131
+[29-Jan-2026 08:25:02 UTC] PHP Notice:  Function Elementor\Controls_Manager::add_control_to_stack was called <strong>incorrectly</strong>. Cannot redeclare control with same name "control_section_1". Please see <a href="https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 1.0.0.) in C:\xampp\htdocs\kindaid-projectwp\wp-includes\functions.php on line 6131
+[29-Jan-2026 09:49:05 UTC] PHP Notice:  Function Elementor\Controls_Manager::add_control_to_stack was called <strong>incorrectly</strong>. Cannot redeclare control with same name "separator_heading_2". Please see <a href="https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 1.0.0.) in C:\xampp\htdocs\kindaid-projectwp\wp-includes\functions.php on line 6131
+[29-Jan-2026 10:15:29 UTC] PHP Parse error:  syntax error, unexpected token "}", expecting "elseif" or "else" or "endif" in C:\xampp\htdocs\kindaid-projectwp\wp-content\plugins\kindaid-elementor\widgets\kd-service.php on line 687
+[29-Jan-2026 10:25:23 UTC] PHP Notice:  Function Elementor\Controls_Manager::add_control_to_stack was called <strong>incorrectly</strong>. Cannot redeclare control with same name "control_section_1". Please see <a href="https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 1.0.0.) in C:\xampp\htdocs\kindaid-projectwp\wp-includes\functions.php on line 6131
+[29-Jan-2026 10:25:32 UTC] PHP Notice:  Function Elementor\Controls_Manager::add_control_to_stack was called <strong>incorrectly</strong>. Cannot redeclare control with same name "control_section_1". Please see <a href="https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 1.0.0.) in C:\xampp\htdocs\kindaid-projectwp\wp-includes\functions.php on line 6131

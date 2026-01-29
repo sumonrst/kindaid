@@ -7,7 +7,7 @@
 
       <div class="tp-blog-post-area pt-120 pb-80">
          <div class="container container-1424">
-            <div class="row <?php echo $post_center; ?>">
+            <div class="row <?php echo esc_attr( $post_center ); ?>">
                <div class="col-xl-9 col-lg-8">
                   <div class="tp-postbox-wrapper mr-85 mb-40">
 

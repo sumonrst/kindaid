@@ -1,0 +1,522 @@
+/* envato Theme check css */
+
+/* WordPress Gallery Caption */
+.gallery-caption {
+    font-family: 'Montserrat', sans-serif; /* theme font */
+    font-size: 0.875rem; /* slightly smaller than body text */
+    line-height: 1.4;
+    color: #666666; /* muted text color */
+    text-align: center;
+    margin-top: 0.5em;
+}
+
+/* WordPress image caption wrapper */
+.wp-caption {
+    max-width: 100%;
+    padding: 0.5em;
+    margin: 0 0 1em;
+    border: 1px solid #ddd;
+    background: #f9f9f9;
+    text-align: center;
+}
+
+/* Image inside caption */
+.wp-caption img {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Caption text */
+.wp-caption-text {
+    font-family: 'Montserrat', sans-serif; /* match theme font */
+    font-size: 0.875rem;                  /* slightly smaller than body text */
+    line-height: 1.4;
+    color: #666666;                       /* muted text color */
+    margin-top: 0.5em;
+}
+
+/* Comments by the post author */
+.bypostauthor {
+    background-color: #f9f9f9;  /* subtle background for author */
+    border-left: 3px solid #0073aa; /* highlight with theme color */
+    padding: 10px 15px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+}
+
+.bypostauthor .comment-author {
+    font-weight: bold; /* make author name stand out */
+    color: #0073aa;    /* theme primary color */
+}
+
+/* Align images or blocks to the right */
+.alignright {
+    float: right;
+    margin-left: 1.5em; /* spacing from surrounding content */
+    margin-bottom: 1em;
+    max-width: 100%; /* responsive */
+}
+
+/* Align images or blocks to the left */
+.alignleft {
+    float: left;
+    margin-right: 1.5em; /* spacing from surrounding content */
+    margin-bottom: 1em;
+    max-width: 100%; /* responsive */
+}
+
+/* Center align images or blocks */
+.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.screen-reader-text {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+
+.screen-reader-text:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+}
+
+
+/* Theme Unit Test CSS Start */
+
+
+/* Sticky Post CSS Start */
+
+.tp-postbox-item.sticky {
+	border-color: #ff4121;
+}
+.tp-postbox-details-wrap ul li {
+	margin-bottom: 10px;
+}
+.tp-postbox-details-wrap ul {
+	margin-left: 14px;
+}
+.tp-postbox-details-wrap ul li a, ol li a {
+    color: var(--tp-common-mulberry);
+	text-decoration: underline;
+}
+.tp-postbox-details-wrap ul li a:hover, ol li a:hover {
+    color: #ff4121;
+}
+
+/* Sticky Post CSS End */
+
+
+/* Preset Post CSS Start */
+
+.wp-block-group {
+	margin-bottom: 20px;
+}
+.wp-block-group__inner-container p {
+	margin-bottom: 0px;
+    padding: 5px 10px;
+}
+
+/* Preset Post CSS End */
+
+.wp-block-navigation__container.is-responsive.wp-block-navigation {
+	margin-left: 0px;
+}
+.wp-block-navigation .wp-block-page-list {
+	margin-left: 0px;
+}
+.wp-block-post-template.is-layout-flow.wp-block-post-template-is-layout-flow {
+	margin-left: 0px;
+}
+.wp-block-post-title {
+	font-size: 36px;
+}
+.wp-block-site-title{
+    font-size: 36px;
+}
+.wp-block-post-template.is-layout-flow.wp-block-post-template-is-layout-flow li {
+	margin-bottom: 25px;
+}
+
+
+/* Pagination Post CSS Start */
+
+.wp-block-query-pagination-numbers .page-numbers {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px; 
+    height:35px; 
+    border: 1px solid #ddd;
+    margin: 0 4px;
+    font-size: 14px;
+    line-height: 1;
+    box-sizing: border-box;
+}
+
+.wp-block-query-pagination-numbers .page-numbers.current {
+  background-color: #FF4121;
+}
+.wp-block-query-pagination-numbers .page-numbers:hover {
+  background-color: #EEDCA8;
+}
+
+.wp-block-query-pagination .wp-block-query-pagination-previous:hover,
+.wp-block-query-pagination .wp-block-query-pagination-next:hover {
+	color: #FF4121;
+}
+.wp-block-query-pagination.is-layout-flex.wp-block-query-pagination-is-layout-flex {
+	margin-bottom: 6px;
+}
+
+/* Pagination Post CSS End */
+
+
+/* Comments form CSS Start */
+
+.wp-block-post-comments-form textarea {
+	height: 150px;
+}
+.comment-form .form-submit #submit {
+	padding:13px 28px;
+    font-weight: 600;
+	font-size: 15px;
+    text-transform: uppercase;
+	color: var(--tp-common-white);
+	background: var(--tp-theme-primary);
+    border: 1px solid var(--tp-theme-primary);
+}
+
+.comment-form .form-submit #submit:hover {
+	background: var(--tp-common-mulberry);
+	color: var(--tp-common-white);
+    border: 1px solid var(--tp-common-mulberry);
+}
+/* Comments form CSS End */
+
+/* Calendar CSS Start */
+
+.wp-block-calendar .today,
+.tp-widget-sidebar .today {
+	background: tomato;
+}
+
+/* Calendar CSS End */
+
+.tp-postbox-details-content ol {
+	padding-left: 0px;
+}
+
+.wp-block-latest-posts__list.wp-block-latest-posts {
+	margin: 0px;
+}
+.wp-block-page-list li ul li {
+	margin-bottom: 6px;
+}
+
+.tp-postbox-details-content .wp-block-rss{
+    margin-left: 0px;
+}
+
+.wp-block-search__input {
+	padding: 0 15px;
+}
+.tp-postbox-details-content form {
+	padding-bottom: 20px;
+}
+.tp-postbox-details-content .wp-block-social-links {
+    margin-left: 0px;
+	margin-left: 0px;
+	margin-bottom: 20px;
+}
+.wp-block-columns {
+	margin-bottom: 30px;
+}
+.wp-block-group p {
+	padding: 0;
+}
+.wp-block-buttons {
+	padding-bottom: 10px;
+}
+.wp-block-group p {
+	padding-bottom: 20px;
+}
+
+.wp-block-cover, .wp-block-cover-image {
+	margin-bottom: 20px;
+}
+.wp-block-cover__inner-container p {
+	color: #fff;
+}
+.wp-block-file__button {
+	padding: 0 15px;
+}
+.wp-block-file {
+	margin-bottom: 20px;
+}
+.wp-block-media-text.alignwide.is-stacked-on-mobile {
+	margin-bottom: 20px;
+}
+.wp-block-preformatted {
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	padding: .8em 1em;
+}
+
+.wp-block-table.is-style-regular table tr {
+	text-align: center;
+}
+
+.wp-block-table.is-style-regular table tfoot tr td {
+	text-align: left;
+}
+.wp-element-caption {
+	margin-top: 25px;
+}
+.wp-block-verse {
+	border: 1px solid #ccc;
+	padding: 12px;
+}
+
+.wp-block-table :where(figcaption) {
+	margin-top: 25px;
+}
+.wp-block-image figcaption a {
+	color: #FF4121;
+}
+
+.tp-blog-navigation-wrap {
+	clear: both;
+	padding-top: 34px;
+	overflow: hidden;
+}
+
+.tp-postbox-details-content .wp-block-button {
+	margin-bottom: 14px;
+}
+.wp-block-gallery figcaption {
+	margin-bottom: 23px;
+}
+.wp-block-gallery.columns-2 {
+	margin-right: 20px;
+}
+.wp-block-quote.is-style-large {
+	border-left: 4px solid;
+}
+
+.wp-block-archives-dropdown select {
+	width: 100%;
+	padding: 10px 10px;
+	margin-bottom: 20px;
+}
+.wp-block-categories-dropdown.wp-block-categories select {
+	width: 100%;
+	padding: 10px;
+}
+.wp-block-group__inner-container {
+	padding: 20px;
+}
+.wp-block-media-text.alignwide {
+	margin-bottom: 20px;
+}
+.wp-block-media-text.alignfull.has-media-on-the-right {
+	margin-bottom: 20px;
+}
+.tp-postbox-details-content table td {
+	text-align: center;
+}
+.tp-postbox-details-content table th, td {
+	border: 1px solid #ccc;
+	padding: 12px 12px;
+	font-size: 15px;
+	border-color: #ddd;
+	text-align: center;
+	font-weight: 400;
+}
+.tp-postbox-details-wrap table{
+    margin-bottom:20px;
+}
+.tp-postbox-details-content table th a {
+	color: #FF4121;
+}
+.tp-postbox-details-content .gallery-columns-2 .gallery-item {
+	width: 50%;
+}
+
+.tp-postbox-details-wrap pre {
+	border: 1px solid #ccc;
+	padding: 20px;
+}
+
+.tp-postbox-details-content blockquote {
+	background-color: #fff;
+	padding: 20px;
+	border-left: 4px solid #535252;
+}
+.tp-postbox-details-content table {
+	width: 100%;
+}
+.post-password-form input[type="submit"] {
+	background-color: #FF4121;
+	padding: 15px;
+	border: 0;
+}
+.post-password-form input{
+    border: 0;
+}
+
+.postbox__comment blockquote::after {
+	position: absolute;
+	content: "";
+	top: 0;
+	height: 100%;
+	width: 2px;
+	left: 0;
+	background: #FF4121;
+}
+.postbox__comment blockquote {
+	padding-left: 30px;
+	position: relative;
+}
+.tp-postbox-details-wrap .postbox__comment {
+	list-style: none;
+    margin-left: 0px;
+}
+.tp-postbox-details-wrap .postbox__comment .children {
+	list-style: none;
+}
+.tp-postbox-title {
+	word-break: break-word;
+	overflow-wrap: break-word;
+}
+.tp-blog-navigation-title{
+    word-break: break-word;
+	overflow-wrap: break-word;
+}
+
+
+
+/* Kindaid Theme Widget Unit Test */
+
+.tp-blog-sidebar select {
+	padding: 13px 9px;
+	width: 100%;
+	background-color: #fff;
+	border: 1px solid #ddd;
+	border-radius: 6px;
+}
+
+.widget_recent_comments ul li::before{
+	display: none;
+}
+.widget_recent_comments ul{
+	list-style: none;
+}
+.widget_recent_entries ul{
+	list-style: none;
+}
+
+.widget_recent_entries ul {
+	padding-left:0px;
+}
+.widget_recent_entries ul li::before {
+	display: none;
+}
+.widget_recent_comments ul li a {
+	display: contents;
+}
+.widget_recent_comments ul {
+	padding-left:0px;
+}
+.widget_recent_comments ul li .comment-author-link a{
+	color: #FF4121;
+}
+.widget_rss ul{
+	padding-left:0px;
+}
+.widget_rss ul li::before {
+	display: none;
+}
+
+.widget_rss ul li{
+	list-style: none;
+}
+.widget_rss .rss-date {
+	color: #FF4121;
+}
+
+.widget_text p strong {
+	display: block;
+}
+.widget_text p img {
+	margin-bottom: 20px;
+}
+
+
+
+.widget_text select {
+  width: 100%;
+  max-width: 300px; /* Apnar proyojon moto */
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.widget_text select option {
+	white-space: break-spaces !important;
+}
+
+
+
+
+/* Kindaid Theme Footer Widget Unit Test CSS Start */
+
+.tp-footer-widget .wp-calendar-table caption {
+	color: #fff;
+}
+.tp-footer-widget ul li a {
+	color: #fff !important;
+}
+.tp-footer-widget .wp-calendar-nav-prev a {
+	color: #fff;
+}
+
+.tp-footer-widget ul li ul {
+	margin-left: 15px;
+}
+.tp-footer-widget .recentcomments {
+	color: #fff;
+}
+.tp-footer-widget .rssSummary {
+	color: #fff;
+}
+.tp-footer-widget ul li cite {
+	color: #fff;
+}
+.tp-footer-widget strong{
+	color: #fff;
+}
+.tp-footer-widget .textwidget p {
+	color: #fff;
+}
+.tp-footer-widget .tagcloud a {
+	color: #fff;
+}

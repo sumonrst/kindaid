@@ -14,6 +14,7 @@
 </head>
 
 <body <?php body_class(); ?>>
+   <?php wp_body_open(); ?>
 
    <!-- Preloader Start -->
    <!-- <div class="preloader">
@@ -34,30 +35,7 @@
 
 
 
-   <?php Kindaid_Header(); ?>
-
-
-
-
-      <!-- tp-breadcrumb-area-start -->
-      <div class="tp-breadcrumb-area tp-breadcrumb-bg bg-position" data-img-bg="<?php echo get_template_directory_uri(); ?>/assets/img/breadcrumb/bg-3.jpg">
-         <div class="container">
-            <div class="tp-breadcrumb text-center position-relative z-index-2">
-               <h2 class="tp-breadcrumb-title lh-1 mb-10 wow fadeInUp" data-wow-duration=".9s" data-wow-delay=".3s">Blog Standard</h2>
-               <div class="tp-breadcrumb-list wow fadeInUp" data-wow-duration=".9s" data-wow-delay=".4s">
-                  <span><a href="index.html">Home</a></span>
-                  <span class="dvir">/</span>
-                  <span class="active">Blog Standard</span>
-               </div>
-               <div class="tp-breadcrumb-scroll pt-85">
-                  <a href="#">
-                     <svg width="20" height="29" viewBox="0 0 20 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1 9.9541C1.00024 5.00348 5.03497 1 10 1C14.965 1 18.9998 5.00348 19 9.9541V19.0459C18.9998 23.9965 14.965 28 10 28C5.03497 28 1.00024 23.9965 1 19.0459L1 9.9541Z" stroke="white" stroke-opacity="0.1" stroke-width="2" />
-                        <path class="upslide-1" d="M13 19.0455C13 17.398 11.6569 16.0625 10 16.0625C8.34315 16.0625 7 17.398 7 19.0455C7 20.6929 8.34315 22.0284 10 22.0284C11.6569 22.0284 13 20.6929 13 19.0455Z" fill="white" />
-                     </svg>
-                  </a>
-               </div>
-            </div>
-         </div>
-      </div>   
-      <!-- tp-breadcrumb-area-end -->
+   <?php 
+      Kindaid_Header(); 
+      kindaid_breadcrumb()
+   ?>

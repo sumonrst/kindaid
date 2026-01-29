@@ -33,13 +33,13 @@
         <div class="tp-offcanvas-content mb-40">
             <?php 
             if ( !empty($offcanvas_title) ) : ?>
-                <h3 class="tp-offcanvas-title"><?php echo $offcanvas_title; ?></h3>
+                <h3 class="tp-offcanvas-title"><?php echo esc_html( $offcanvas_title ); ?></h3>
             <?php 
             endif; ?>
 
             <?php 
             if ( !empty($offcanvas_sub_des) ) : ?>
-                <p><?php echo $offcanvas_sub_des; ?></p>
+                <p><?php echo esc_html( $offcanvas_sub_des ); ?></p>
             <?php 
             endif; ?>
         </div>
@@ -67,25 +67,25 @@
         <div class="tp-offcanvas-info mb-50">
             <?php 
             if ( $offcanvas_info_title ) : ?>
-                <h3 class="tp-offcanvas-title"><?php echo $offcanvas_info_title; ?></h3>
+                <h3 class="tp-offcanvas-title"><?php echo esc_html( $offcanvas_info_title ); ?></h3>
             <?php 
             endif; ?>
 
             <?php 
             if ( $offcanvas_info_phone ) : ?>
-                <span><a href="<?php echo $offcanvas_info_phone_url; ?>"><?php echo $offcanvas_info_phone; ?></a></span>
+                <span><a href="<?php echo esc_attr( $offcanvas_info_phone_url ); ?>"><?php echo esc_html( $offcanvas_info_phone ); ?></a></span>
             <?php 
             endif; ?>
 
             <?php 
             if ( $offcanvas_info_email ) : ?>
-                <span><a href="<?php echo $offcanvas_info_email_url; ?>"><?php echo $offcanvas_info_email; ?></a></span>
+                <span><a href="<?php echo esc_url( $offcanvas_info_email_url ); ?>"><?php echo esc_html( $offcanvas_info_email ); ?></a></span>
             <?php 
             endif; ?>
 
             <?php 
             if ( $offcanvas_info_address ) : ?>
-                <span><a href="#"><?php echo $offcanvas_info_address; ?></a></span>
+                <span><a href="#"><?php echo esc_html( $offcanvas_info_address ); ?></a></span>
             <?php 
             endif; ?>
         </div>

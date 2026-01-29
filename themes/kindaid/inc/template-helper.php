@@ -161,7 +161,7 @@ function kindaid_social_info() {
 
 // Kindaid Footer Copy Right
 function kindaid_Footer_Copy_Right_Helper() {
-    $footer_text = get_theme_mod( 'footer_text', esc_html__( '© 2026 Charity. is Proudly Powered by Aqlova', 'your-text-domain' ) );
+    $footer_text = get_theme_mod( 'footer_text', esc_html__( '© 2026 Charity. is Proudly Powered by Aqlova', 'kindaid' ) );
     ?>
     <p class="mb-0"><?php echo kindaid_kses($footer_text); ?></p>
 
@@ -175,7 +175,7 @@ function Kindaid_Sidebar_Search_Form( $form ) {
     $form = '
     <div class="tp-widget-search mb-20">
         <form method="get" action="' . esc_url( home_url( '/' ) ) . '">
-            <input type="text" name="s" value="' . get_search_query() . '" placeholder="' . esc_attr__( 'Search...', 'textdomain' ) . '">
+            <input type="text" name="s" value="' . get_search_query() . '" placeholder="' . esc_attr__( 'Search...', 'kindaid' ) . '">
             <button type="submit">
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M9 17C13.4183 17 17 13.4183 17 9C17 4.58172 13.4183 1 9 1C4.58172 1 1 4.58172 1 9C1 13.4183 4.58172 17 9 17Z" stroke="#121018" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -209,4 +209,72 @@ function kindaid_pagination() {
 }
 
 
+// Kindaid Single Page Tags Code Here
 
+function Kindaid_post_tags() {
+    $tags = get_the_tags();
+    ?>
+        <div class="tp-blog-tag mb-20">
+            <h4 class="tp-blog-tag-title mb-0 mr-10">
+                <?php echo esc_html__( 'Popular Tags:', 'kindaid' ); ?>
+            </h4>
+
+            <?php if ( $tags ) : ?>
+                <?php foreach ( $tags as $tag ) : ?>
+                    <a href="<?php echo esc_url( get_tag_link( $tag->term_id ) ); ?>">
+                        <?php echo esc_html( $tag->name ); ?>
+                    </a>
+                <?php endforeach; ?>
+            <?php else : ?>
+                <span><?php echo esc_html__( 'Tag not found', 'kindaid' ); ?></span>
+            <?php endif; ?>
+        </div>
+    <?php
+}
+
+
+
+// Kindaid Single Post Social Share Code Here
+
+function Kindaid_post_share_links() {
+    $post_url   = urlencode( get_permalink() );
+    $post_title = urlencode( get_the_title() );
+    ?>
+        <div class="tp-blog-social text-xl-end mn-20">
+
+            <!-- Facebook -->
+            <a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo esc_attr( $post_url ); ?>" target="_blank" rel="noopener noreferrer">
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="18" viewBox="0 0 12 18" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M1.62839 7.77713C0.911363 7.77713 0.761719 7.91782 0.761719 8.59194V9.81416C0.761719 10.4883 0.911363 10.629 1.62839 10.629H3.36172V15.5179C3.36172 16.192 3.51136 16.3327 4.22839 16.3327H5.96172C6.67874 16.3327 6.82839 16.192 6.82839 15.5179V10.629H8.77466C9.31846 10.629 9.45859 10.5296 9.60798 10.038L9.97941 8.81579C10.2353 7.97368 10.0776 7.77713 9.14609 7.77713H6.82839V5.74009C6.82839 5.29008 7.21641 4.92527 7.69505 4.92527H10.1617C10.8787 4.92527 11.0284 4.78458 11.0284 4.11046V2.48083C11.0284 1.80671 10.8787 1.66602 10.1617 1.66602H7.69505C5.30182 1.66602 3.36172 3.49004 3.36172 5.74009V7.77713H1.62839Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                </svg>
+            </a>
+
+            <!-- Twitter / X -->
+            <a href="https://twitter.com/intent/tweet?url=<?php echo esc_attr( $post_url ); ?>&text=<?php echo esc_attr( $post_title ); ?>" target="_blank" rel="noopener noreferrer">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="14" viewBox="0 0 16 14" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M5.28884 0.714844H0.666992L6.14691 7.9153L1.01754 13.9556H3.38746L7.26697 9.38713L10.7118 13.9136H15.3337L9.69453 6.50391L9.70451 6.51669L14.5599 0.798959H12.19L8.58427 5.04503L5.28884 0.714844ZM3.21817 1.97588H4.65702L12.7825 12.6525H11.3436L3.21817 1.97588Z" fill="currentColor"/>
+                </svg>
+            </a>
+
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/sharing/share-offsite/?url=<?php echo esc_attr( $post_url ); ?>" target="_blank" rel="noopener noreferrer">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="9.99991" cy="9.99991" r="8.38077" stroke="currentColor" stroke-width="1.5"/>
+                    <path d="M18.3799 11.0604C17.6032 10.9148 16.8043 10.8389 15.9891 10.8389C11.5034 10.8389 7.51372 13.1373 4.9707 16.7054" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                    <path d="M15.8665 4.13281C13.2437 7.2064 9.30255 9.16128 4.8957 9.16128C3.76828 9.16128 2.67133 9.03332 1.61914 8.79143" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                    <path d="M12.1938 18.3815C12.4039 17.3641 12.5142 16.3104 12.5142 15.2309C12.5142 9.93756 9.86111 5.26259 5.80957 2.45801" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                </svg>
+            </a>
+
+            <!-- WhatsApp -->
+            <a href="https://wa.me/?text=<?php echo esc_attr( $post_title . '%20' . $post_url ); ?>" target="_blank" rel="noopener noreferrer">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.66602 8.99935C1.66602 5.54238 1.66602 3.8139 2.73996 2.73996C3.8139 1.66602 5.54238 1.66602 8.99935 1.66602C12.4563 1.66602 14.1848 1.66602 15.2587 2.73996C16.3327 3.8139 16.3327 5.54238 16.3327 8.99935C16.3327 12.4563 16.3327 14.1848 15.2587 15.2587C14.1848 16.3327 12.4563 16.3327 8.99935 16.3327C5.54238 16.3327 3.8139 16.3327 2.73996 15.2587C1.66602 14.1848 1.66602 12.4563 1.66602 8.99935Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                    <path d="M12.4747 9.00103C12.4747 10.9195 10.9195 12.4747 9.00103 12.4747C7.08256 12.4747 5.52734 10.9195 5.52734 9.00103C5.52734 7.08256 7.08256 5.52734 9.00103 5.52734C10.9195 5.52734 12.4747 7.08256 12.4747 9.00103Z" stroke="currentColor" stroke-width="1.5"/>
+                    <path d="M13.251 4.75391L13.242 4.75391" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+
+        </div>
+    <?php
+}

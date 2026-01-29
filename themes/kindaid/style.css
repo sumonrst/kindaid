@@ -11,8 +11,10 @@ Version: 1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: kindaid
-Tags: charity, donation, fundraising, non-profit, responsive, custom-logo, custom-menu, featured-images, full-site-editing, block-patterns, rtl-language-support, sticky-post, translation-ready, custom-background, accessibility-ready
+Tags: blog
 */
+
+/* Copyright: (C) 2026 Md.Sumon Reja. Licensed under GPLv2 or later. */
 
 .admin-bar .tp-transparent{
     margin-top: 32px !important;
@@ -35,11 +37,10 @@ Tags: charity, donation, fundraising, non-profit, responsive, custom-logo, custo
     display: flex;
     justify-content: space-between;
     font-weight: 500;
+    margin-bottom: 8px;
 }
 
 .tp-widget-sidebar ul li {
-    display: flex;
-    justify-content: space-between;
     font-size: 16px;
     color: var(--tp-common-mulberry);
     font-weight: 500;
@@ -59,3 +60,10 @@ Tags: charity, donation, fundraising, non-profit, responsive, custom-logo, custo
 .widget_blog_sidebar_banner_widget {
     padding: 0;
 }
+
+
+
+
+
+
+

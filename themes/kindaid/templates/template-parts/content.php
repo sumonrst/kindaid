@@ -1,16 +1,33 @@
 
 <?php 
-    $get_category = get_the_category();
+if(is_single()) :  ?>
 
-    $cat_name = $get_category[0]->name;
-    $cat_link = get_category_link( $get_category[0]->term_id );
-    
+    <article id="post-<?php the_ID(); ?>" <?php post_class('tp-postbox-item mb-30'); ?>>
+        <div class="tp-postbox-thumb mb-30">
+            <?php 
+            if ( has_post_thumbnail() ) : ?>
+                <?php 
+                the_post_thumbnail('large', array('class' => 'w-100')); ?>
+            <?php 
+            endif; ?>
+        </div>
+        <div class="tp-postbox-content">
+            <?php get_template_part( 'templates/template-parts/blog/blog-category/blog-category' ); ?>
 
-    // echo '<pre>';
-    // print_r( $get_category );
-    // echo '</pre>';
-?>
+            <h2 class="tp-postbox-title mb-15"><?php the_title(); ?></h2>
+            
+            <?php get_template_part( 'templates/template-parts/blog/blog-meta/blog-meta' ); ?>
 
+            <div class="tp-postbox-details-content mb-30">
+                <?php 
+                the_content(); ?>
+                
+            </div>
+
+        </div>
+    </article>
+
+<?php else : ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('tp-postbox-item mb-30'); ?>>
     <div class="tp-postbox-thumb mb-30">
@@ -33,3 +50,6 @@
         <?php get_template_part( 'templates/template-parts/blog/blog-button/blog-btn' ); ?>
     </div>
 </article>
+
+<?php 
+endif; ?>

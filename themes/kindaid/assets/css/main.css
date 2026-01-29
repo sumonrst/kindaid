@@ -1,3 +1,61 @@
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+    -ms-transform: translateY(20px);
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+
+.back-to-top-wrapper, a,
+button,
+p,
+input,
+select,
+textarea,
+li,
+.transition-3 {
+  -webkit-transition: all 0.3s 0s ease-out;
+  -moz-transition: all 0.3s 0s ease-out;
+  -ms-transition: all 0.3s 0s ease-out;
+  -o-transition: all 0.3s 0s ease-out;
+  transition: all 0.3s 0s ease-out;
+}
+
+/* transform */
+:root {
+  /**
+  @font family declaration
+  */
+  --tp-ff-body: 'Montserrat', sans-serif;
+  --tp-ff-heading: 'Libre Baskerville', serif;
+  --tp-ff-p: 'Montserrat', sans-serif;
+  --tp-ff-fontawesome: "Font Awesome 6 Pro";
+  /**
+  @color declaration
+  */
+  --tp-common-white: #fcf8ec;
+  --tp-common-white-2: #fff;
+  --tp-common-black: #620035;
+  --tp-common-mulberry: #620035;
+  --tp-common-emerald: #f0e8d1;
+  --tp-grey-1: #68665E;
+  --tp-theme-primary: #FF4121;
+  --tp-theme-secondary: #ffca24;
+  --tp-border-1: #F1F1F9;
+  --tp-border-2: #EDEEEE;
+}
+
 /*-----------------------------------------------------------------------------------
 
     Template Name: KindAid - Charity & Nonprofit HTML Template
@@ -85,65 +143,6 @@
 /*----------------------------------------*/
 /*  1.1 Theme Default
 /*----------------------------------------*/
-@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet');
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(20px);
-    -ms-transform: translateY(20px);
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-    -ms-transform: translateY(0);
-    transform: translateY(0);
-  }
-}
-.fadeInUp {
-  -webkit-animation-name: fadeInUp;
-  animation-name: fadeInUp;
-}
-
-.back-to-top-wrapper, a,
-button,
-p,
-input,
-select,
-textarea,
-li,
-.transition-3 {
-  -webkit-transition: all 0.3s 0s ease-out;
-  -moz-transition: all 0.3s 0s ease-out;
-  -ms-transition: all 0.3s 0s ease-out;
-  -o-transition: all 0.3s 0s ease-out;
-  transition: all 0.3s 0s ease-out;
-}
-
-/* transform */
-:root {
-  /**
-  @font family declaration
-  */
-  --tp-ff-body: 'Montserrat', sans-serif;
-  --tp-ff-heading: 'Libre Baskerville', serif;
-  --tp-ff-p: 'Montserrat', sans-serif;
-  --tp-ff-fontawesome: "Font Awesome 6 Pro";
-  /**
-  @color declaration
-  */
-  --tp-common-white: #fcf8ec;
-  --tp-common-white-2: #fff;
-  --tp-common-black: #620035;
-  --tp-common-mulberry: #620035;
-  --tp-common-emerald: #f0e8d1;
-  --tp-grey-1: #68665E;
-  --tp-theme-primary: #FF4121;
-  --tp-theme-secondary: #ffca24;
-  --tp-border-1: #F1F1F9;
-  --tp-border-2: #EDEEEE;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -181,27 +180,27 @@ h6 {
 }
 
 h1 {
-  font-size: 90px;
+  font-size: 60px;
 }
 
 h2 {
-  font-size: 54px;
+  font-size: 48px;
 }
 
 h3 {
-  font-size: 40px;
+  font-size: 38px;
 }
 
 h4 {
-  font-size: 26px;
+  font-size: 30px;
 }
 
 h5 {
-  font-size: 20px;
+  font-size: 24px;
 }
 
 h6 {
-  font-size: 16px;
+  font-size: 19px;
 }
 
 ul {
@@ -220,6 +219,7 @@ p {
 
 img {
   max-width: 100%;
+  height: auto;
 }
 
 a:not([href]):not([class]),
@@ -1114,7 +1114,6 @@ input[type=color] {
   clear: both;
   cursor: pointer;
   display: block;
-  float: left;
   font-family: inherit;
   font-size: 14px;
   font-weight: normal;
@@ -1144,7 +1143,7 @@ input[type=color] {
   position: absolute;
   content: "\f107";
   top: 50%;
-  right: 0;
+  right: 16px;
   font-family: var(--tp-ff-fontawesome);
   color: var(--tp-common-black);
   font-weight: 500;
@@ -1172,6 +1171,7 @@ input[type=color] {
   -webkit-transform: scale(1) translateY(0);
   -ms-transform: scale(1) translateY(0);
   transform: scale(1) translateY(0);
+  padding: 22px 0;
 }
 .nice-select.disabled {
   border-color: #ededed;
@@ -1234,7 +1234,7 @@ input[type=color] {
 .nice-select .option {
   cursor: pointer;
   font-weight: 400;
-  line-height: 40px;
+  line-height: 25px;
   list-style: none;
   min-height: 40px;
   outline: none;
@@ -1243,6 +1243,8 @@ input[type=color] {
   text-align: left;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
+  margin-bottom: 0px !important;
+  white-space: break-spaces;
 }
 .nice-select .option.selected {
   font-weight: bold;
@@ -1382,7 +1384,7 @@ input[type=color] {
   letter-spacing: -0.02em;
   color: rgba(255, 255, 255, 0.8);
 }
-.tp-breadcrumb-list span.active {
+.tp-breadcrumb-list span.current-item {
   color: var(--tp-theme-secondary);
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px), (max-width: 574.98px) {
@@ -4208,9 +4210,6 @@ body .ui-tooltip {
   color: var(--tp-common-white);
 }
 
-.tp-blog-comments-main ul {
-  list-style: none;
-}
 .tp-blog-comments-title {
   font-size: 36px;
   letter-spacing: inherit;

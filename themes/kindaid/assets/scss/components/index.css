@@ -543,7 +543,7 @@
   letter-spacing: -0.02em;
   color: rgba(255, 255, 255, 0.8);
 }
-.tp-breadcrumb-list span.active {
+.tp-breadcrumb-list span.current-item {
   color: var(--tp-theme-secondary);
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px), (max-width: 574.98px) {
@@ -734,8 +734,9 @@
 /*----------------------------------------*/
 .tp-pagination li {
   display: inline-block;
+  margin: 0 4px;
 }
-.tp-pagination li a {
+.tp-pagination li a, .tp-pagination li span {
   height: 50px;
   width: 50px;
   font-size: 14px;
@@ -747,7 +748,7 @@
   text-align: center;
   transition: all 0.3s 0s ease-out;
 }
-.tp-pagination li.current a {
+.tp-pagination li span {
   background-color: var(--tp-theme-primary);
   color: var(--tp-common-white);
 }

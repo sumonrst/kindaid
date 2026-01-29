@@ -46,14 +46,14 @@ function kindaid_header_info(){
 	new \Kirki\Field\Select(
 		[
 			'settings'    => 'header_global',
-			'label'       => esc_html__( 'Select global header', 'kirki' ),
+			'label'       => esc_html__( 'Select global header', 'kindaid' ),
 			'section'     => 'header_info',
 			'default'     => 'header_global_1',
-			'placeholder' => esc_html__( 'Choose an option', 'kirki' ),
+			'placeholder' => esc_html__( 'Choose an option', 'kindaid' ),
 			'choices'     => [
-				'header_global_1' => esc_html__( 'Header Global Style 1', 'kirki' ),
-				'header_global_2' => esc_html__( 'Header Global Style 2', 'kirki' ),
-				'header_global_3' => esc_html__( 'Header Global Style 3', 'kirki' ),
+				'header_global_1' => esc_html__( 'Header Global Style 1', 'kindaid' ),
+				'header_global_2' => esc_html__( 'Header Global Style 2', 'kindaid' ),
+				'header_global_3' => esc_html__( 'Header Global Style 3', 'kindaid' ),
 			],
 		]
 	);
@@ -94,7 +94,7 @@ function kindaid_social_info_section(){
 			'settings' => 'kindaid_offcanvas_fb_url',
 			'label'    => esc_html__( 'Facebook URL', 'kindaid' ),
 			'section'  => 'kindaid_social_info',
-			'default'  => esc_html__( 'https://www.facebook.com', 'kirki' ),
+			'default'  => esc_html__( 'https://www.facebook.com', 'kindaid' ),
 			'priority' => 10,
 		]
 	);
@@ -103,7 +103,7 @@ function kindaid_social_info_section(){
 			'settings' => 'kindaid_offcanvas_twitter_url',
 			'label'    => esc_html__( 'Twitter URL', 'kindaid' ),
 			'section'  => 'kindaid_social_info',
-			'default'  => esc_html__( 'https://www.twitter.com', 'kirki' ),
+			'default'  => esc_html__( 'https://www.twitter.com', 'kindaid' ),
 			'priority' => 10,
 		]
 	);
@@ -112,7 +112,7 @@ function kindaid_social_info_section(){
 			'settings' => 'kindaid_offcanvas_instagram_url',
 			'label'    => esc_html__( 'Instagram URL', 'kindaid' ),
 			'section'  => 'kindaid_social_info',
-			'default'  => esc_html__( 'https://www.instagram.com', 'kirki' ),
+			'default'  => esc_html__( 'https://www.instagram.com', 'kindaid' ),
 			'priority' => 10,
 		]
 	);
@@ -184,7 +184,7 @@ function kindaid_header_offcanvas(){
 			'settings' => 'offcanvas_title',
 			'label'    => esc_html__( 'Offcanvas Title', 'kindaid' ),
 			'section'  => 'header_offcanvas',
-			'default'  => esc_html__( 'Hello There!', 'kirki' ),
+			'default'  => esc_html__( 'Hello There!', 'kindaid' ),
 			'priority' => 10,
 		]
 	);
@@ -194,7 +194,7 @@ function kindaid_header_offcanvas(){
 			'settings' => 'offcanvas_sub_des',
 			'label'    => esc_html__( 'Offcanvas Sub Description', 'kindaid' ),
 			'section'  => 'header_offcanvas',
-			'default'  => esc_html__( 'Lorem ipsum dolor sit amet, consect etur adipiscing elit.', 'kirki' ),
+			'default'  => esc_html__( 'Lorem ipsum dolor sit amet, consect etur adipiscing elit.', 'kindaid' ),
 			'priority' => 10,
 		]
 	);
@@ -226,7 +226,7 @@ function kindaid_header_offcanvas(){
 			'settings' => 'offcanvas_info_title',
 			'label'    => esc_html__( 'Offcanvas Info Title', 'kindaid' ),
 			'section'  => 'header_offcanvas',
-			'default'  => esc_html__( 'Information', 'kirki' ),
+			'default'  => esc_html__( 'Information', 'kindaid' ),
 			'priority' => 10,
 		]
 	);
@@ -235,7 +235,7 @@ function kindaid_header_offcanvas(){
 			'settings' => 'offcanvas_info_phone',
 			'label'    => esc_html__( 'Offcanvas Info Phone', 'kindaid' ),
 			'section'  => 'header_offcanvas',
-			'default'  => esc_html__( '+ 4 20 7700 1007', 'kirki' ),
+			'default'  => esc_html__( '+ 4 20 7700 1007', 'kindaid' ),
 			'priority' => 10,
 		]
 	);
@@ -244,7 +244,7 @@ function kindaid_header_offcanvas(){
 			'settings' => 'offcanvas_info_phone_url',
 			'label'    => esc_html__( 'Offcanvas Info Phone URL', 'kindaid' ),
 			'section'  => 'header_offcanvas',
-			'default'  => esc_html__( '#', 'kirki' ),
+			'default'  => esc_html__( '#', 'kindaid' ),
 			'priority' => 10,
 		]
 	);
@@ -253,7 +253,7 @@ function kindaid_header_offcanvas(){
 			'settings' => 'offcanvas_info_email',
 			'label'    => esc_html__( 'Offcanvas Info Email', 'kindaid' ),
 			'section'  => 'header_offcanvas',
-			'default'  => esc_html__( 'hello@exdos.com', 'kirki' ),
+			'default'  => esc_html__( 'hello@exdos.com', 'kindaid' ),
 			'priority' => 10,
 		]
 	);
@@ -262,7 +262,7 @@ function kindaid_header_offcanvas(){
 			'settings' => 'offcanvas_info_email_url',
 			'label'    => esc_html__( 'Offcanvas Info Email URL', 'kindaid' ),
 			'section'  => 'header_offcanvas',
-			'default'  => esc_html__( '#', 'kirki' ),
+			'default'  => esc_html__( '#', 'kindaid' ),
 			'priority' => 10,
 		]
 	);
@@ -271,7 +271,7 @@ function kindaid_header_offcanvas(){
 			'settings' => 'offcanvas_info_address',
 			'label'    => esc_html__( 'Offcanvas Info Address', 'kindaid' ),
 			'section'  => 'header_offcanvas',
-			'default'  => esc_html__( 'Avenue de Roma 158b, Lisboa', 'kirki' ),
+			'default'  => esc_html__( 'Avenue de Roma 158b, Lisboa', 'kindaid' ),
 			'priority' => 10,
 		]
 	);
@@ -279,6 +279,182 @@ function kindaid_header_offcanvas(){
 }
 kindaid_header_offcanvas();
 
+
+// Blog Section Start
+function kindaid_Blog_Options(){
+	new \Kirki\Section(
+		'blog_section',
+		[
+			'title'       => esc_html__( 'Blog Settings', 'kindaid' ),
+			'description' => esc_html__( 'Here blog settings will be placed', 'kindaid' ),
+			'panel'       => 'kindaid_panel',
+			'priority'    => 160,
+		]
+	);
+
+		new \Kirki\Field\Checkbox_Switch(
+			[
+				'settings'    => 'blog_btn_show_hide',
+				'label'       => esc_html__( 'Blog Button Show/Hide', 'kindaid' ),
+				'description' => esc_html__( 'Show or hide the "Read More" button on blog archive pages', 'kindaid' ),
+				'section'     => 'blog_section',
+				'default'     => 'off',
+				'choices'     => [
+					'on'  => esc_html__( 'Enable', 'kindaid' ),
+					'off' => esc_html__( 'Disable', 'kindaid' ),
+				],
+			]
+		);
+		new \Kirki\Field\Text(
+			[
+				'settings' => 'blog_read_more_text',
+				'label'    => esc_html__( 'Blog Read More', 'kindaid' ),
+				'section'  => 'blog_section',
+				'default'     => esc_html__( 'Read More', 'kindaid' ),
+				'priority' => 10,
+			]
+		);
+
+		// Blog category show/hide option
+		new \Kirki\Field\Checkbox_Switch(
+			[
+				'settings'    => 'blog_category_show_hide',
+				'label'       => esc_html__( 'Blog Category Show/Hide', 'kindaid' ),
+				'description' => esc_html__( 'Show or hide the blog category on blog archive pages', 'kindaid' ),
+				'section'     => 'blog_section',
+				'default'     => 'off',
+				'choices'     => [
+					'on'  => esc_html__( 'Enable', 'kindaid' ),
+					'off' => esc_html__( 'Disable', 'kindaid' ),
+				],
+			]
+		);
+
+		// Blog Author show/hide option
+		new \Kirki\Field\Checkbox_Switch(
+			[
+				'settings'    => 'blog_meta_author_show_hide',
+				'label'       => esc_html__( 'Blog Author Show/Hide', 'kindaid' ),
+				'description' => esc_html__( 'Show or hide the blog author on blog archive pages', 'kindaid' ),
+				'section'     => 'blog_section',
+				'default'     => 'off',
+				'choices'     => [
+					'on'  => esc_html__( 'Enable', 'kindaid' ),
+					'off' => esc_html__( 'Disable', 'kindaid' ),
+				],
+			]
+		);
+
+		// Blog Date show/hide option
+		new \Kirki\Field\Checkbox_Switch(
+			[
+				'settings'    => 'blog_meta_date_show_hide',
+				'label'       => esc_html__( 'Blog Date Show/Hide', 'kindaid' ),
+				'description' => esc_html__( 'Show or hide the blog date on blog archive pages', 'kindaid' ),
+				'section'     => 'blog_section',
+				'default'     => 'off',
+				'choices'     => [
+					'on'  => esc_html__( 'Enable', 'kindaid' ),
+					'off' => esc_html__( 'Disable', 'kindaid' ),
+				],
+			]
+		);
+
+		// Blog Comment show/hide option
+		new \Kirki\Field\Checkbox_Switch(
+			[
+				'settings'    => 'blog_meta_comment_show_hide',
+				'label'       => esc_html__( 'Blog Comment Show/Hide', 'kindaid' ),
+				'description' => esc_html__( 'Show or hide the blog comment on blog archive pages', 'kindaid' ),
+				'section'     => 'blog_section',
+				'default'     => 'off',
+				'choices'     => [
+					'on'  => esc_html__( 'Enable', 'kindaid' ),
+					'off' => esc_html__( 'Disable', 'kindaid' ),
+				],
+			]
+		);
+
+}
+kindaid_Blog_Options();
+
+
+// 404 Error Section Start
+function kindaid_Error_Options(){
+	new \Kirki\Section(
+		'error_section',
+		[
+			'title'       => esc_html__( '404 Error Settings', 'kindaid' ),
+			'description' => esc_html__( 'Here error 404 settings will be placed', 'kindaid' ),
+			'panel'       => 'kindaid_panel',
+			'priority'    => 160,
+		]
+	);
+
+		// 404 Title Text
+		new \Kirki\Field\Text(
+			[
+				'settings' => 'error_title_text',
+				'label'    => esc_html__( '404 Error Title Text', 'kindaid' ),
+				'section'  => 'error_section',
+				'default'     => esc_html__( '404', 'kindaid' ),
+				'priority' => 10,
+			]
+		);
+
+		// 404 sub Title Text
+		new \Kirki\Field\Text(
+			[
+				'settings' => 'error_sub_title_text',
+				'label'    => esc_html__( '404 Error Sub Title Text', 'kindaid' ),
+				'section'  => 'error_section',
+				'default'     => esc_html__( 'page not found', 'kindaid' ),
+				'priority' => 10,
+			]
+		);
+
+		// 404 sub Title Text
+		new \Kirki\Field\Textarea(
+			[
+				'settings' => 'error_description',
+				'label'    => esc_html__( '404 Error Description', 'kindaid' ),
+				'section'  => 'error_section',
+				'default'     => esc_html__( 'Sorry, but the page you are looking for does not exist, has been removed, name changed or is temporarily unavailable.', 'kindaid' ),
+				'priority' => 10,
+			]
+		);
+
+		// 404 Button show/hide 
+		new \Kirki\Field\Checkbox_Switch(
+			[
+				'settings'    => 'error_btn_show_hide',
+				'label'       => esc_html__( '404 Button Show/Hide', 'kindaid' ),
+				'description' => esc_html__( 'Show or hide the "Go Back Home" button on 404 error pages', 'kindaid' ),
+				'section'     => 'error_section',
+				'default'     => 'on',
+				'choices'     => [
+					'on'  => esc_html__( 'Enable', 'kindaid' ),
+					'off' => esc_html__( 'Disable', 'kindaid' ),
+				],
+			]
+		);
+
+		// 404 Button Text
+		new \Kirki\Field\Textarea(
+			[
+				'settings' => 'error_button_text',
+				'label'    => esc_html__( '404 Button Text', 'kindaid' ),
+				'section'  => 'error_section',
+				'default'     => esc_html__( 'Go Back Home', 'kindaid' ),
+				'priority' => 10,
+			]
+		);
+
+
+
+
+}
+kindaid_Error_Options();
 
 
 // Footer Copyright Section
@@ -296,13 +472,13 @@ function kindaid_Footer_Options(){
 	new \Kirki\Field\Select(
 		[
 			'settings'    => 'footer_global',
-			'label'       => esc_html__( 'Select global Footer', 'kirki' ),
+			'label'       => esc_html__( 'Select global Footer', 'kindaid' ),
 			'section'     => 'footer_option',
 			'default'     => 'footer_global_1',
-			'placeholder' => esc_html__( 'Choose an option', 'kirki' ),
+			'placeholder' => esc_html__( 'Choose an option', 'kindaid' ),
 			'choices'     => [
-				'footer_global_1' => esc_html__( 'Footer Global Style 1', 'kirki' ),
-				'footer_global_2' => esc_html__( 'Footer Global Style 2', 'kirki' ),
+				'footer_global_1' => esc_html__( 'Footer Global Style 1', 'kindaid' ),
+				'footer_global_2' => esc_html__( 'Footer Global Style 2', 'kindaid' ),
 			],
 		]
 	);
@@ -321,7 +497,7 @@ function kindaid_Footer_Options(){
 			'settings' => 'footer_text',
 			'label'    => esc_html__( 'Footer Copyright Text', 'kindaid' ),
 			'section'  => 'footer_option',
-			'default'     => esc_html__( '© 2025 Charity. is Proudly Powered by Aqlova', 'kirki' ),
+			'default'     => esc_html__( '© 2025 Charity. is Proudly Powered by Aqlova', 'kindaid' ),
 			'priority' => 10,
 		]
 	);

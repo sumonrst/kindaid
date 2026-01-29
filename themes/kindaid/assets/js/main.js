@@ -30,7 +30,7 @@
 	});
 
 	// 02. Nice Select Js
-	$('.tp-select').niceSelect();
+	$('.tp-select, .tp-widget-sidebar select, .tp-footer-widget select').niceSelect();
 
 	////////////////////////////////////////////////////
 	// 03. mobile menu Js

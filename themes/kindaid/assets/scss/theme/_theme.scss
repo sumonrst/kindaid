@@ -89,7 +89,7 @@
 /*  1.1 Theme Default
 /*----------------------------------------*/
 
-@import url($font-url);
+
 
 *{
 	margin: 0;
@@ -128,27 +128,27 @@ h6 {
 }
 
 h1 {
-	font-size: 90px;
+	font-size: 60px;
 }
   
 h2 {
-font-size: 54px;
+font-size:48px;
 }
 
 h3 {
-font-size: 40px;
+font-size:38px;
 }
 
 h4 {
-font-size: 26px;
+font-size:30px;
 }
 
 h5 {
-font-size: 20px;
+font-size: 24px;
 }
 
 h6 {
-font-size: 16px;
+font-size: 19px;
 }
 
 ul {
@@ -166,6 +166,7 @@ p {
 }
 img {
 	max-width: 100%;
+	height: auto;
 }
 
 

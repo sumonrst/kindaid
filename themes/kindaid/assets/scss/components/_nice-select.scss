@@ -12,7 +12,7 @@
 	clear: both;
 	cursor: pointer;
 	display: block;
-	float: left;
+	// float: left;
 	font-family: inherit;
 	font-size: 14px;
 	font-weight: normal;
@@ -46,7 +46,7 @@
         position: absolute;
 		content: '\f107';
         top: 50%;
-        right: 0;
+        right: 16px;
 		font-family: var(--tp-ff-fontawesome);
 		color: var(--tp-common-black);
 		font-weight: 500;
@@ -70,6 +70,7 @@
             -webkit-transform: scale(1) translateY(0);
             -ms-transform: scale(1) translateY(0);
             transform: scale(1) translateY(0);
+            padding: 22px 0;
         }
     }
 
@@ -144,7 +145,7 @@
     & .option{
         cursor: pointer;
         font-weight: 400;
-        line-height: 40px;
+        line-height:25px;
         list-style: none;
         min-height: 40px;
         outline: none;
@@ -153,6 +154,8 @@
         text-align: left;
         -webkit-transition: all 0.2s;
         transition: all 0.2s;
+        margin-bottom: 0px !important;
+        white-space: break-spaces;
 
         &.selected{
             font-weight: bold;
