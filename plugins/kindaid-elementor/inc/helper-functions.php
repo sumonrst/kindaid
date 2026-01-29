@@ -5,6 +5,26 @@ if ( ! function_exists( 'kindaid_kses' ) ) {
 
         $allowed_tags = array(
 
+            'svg' => [
+                'width' => true,
+                'height' => true,
+                'viewbox' => true,
+                'fill' => true,
+                'xmlns' => true,
+                'class' => true,
+                'aria-hidden' => true,
+                'role' => true,
+            ],
+
+            'path' => [
+                'd' => true,
+                'fill' => true,
+                'stroke' => true,
+                'stroke-width' => true,
+                'stroke-linecap' => true,
+                'stroke-linejoin' => true,
+            ],
+
             'a' => array(
                 'href'   => true,
                 'title'  => true,
