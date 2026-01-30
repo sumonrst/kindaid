@@ -42,11 +42,13 @@ function kindaid_addon_register_widgets( $widgets_manager ) {
     require_once KINDAID_PATH . 'widgets/hero.php';
     require_once KINDAID_PATH . 'widgets/fact.php';
     require_once KINDAID_PATH . 'widgets/kd-service.php';
+    require_once KINDAID_PATH . 'widgets/kd-join.php';
 
     $widgets_manager->register( new \Kindaid\Widgets\Heading_Widget() );
     $widgets_manager->register( new \Kindaid\Widgets\Hero_Widget() );
     $widgets_manager->register( new \Kindaid\Widgets\Fact_Widget() );
     $widgets_manager->register( new \Kindaid\Widgets\Service_Widget() );
+    $widgets_manager->register( new \Kindaid\Widgets\Kd_Join_Widget() );
 
 }
 add_action( 'elementor/widgets/register', 'kindaid_addon_register_widgets' );

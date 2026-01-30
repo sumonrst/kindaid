@@ -5021,7 +5021,7 @@ body .ui-tooltip {
   left: 0;
   filter: drop-shadow(0px 20px 40px rgba(92, 97, 96, 0.2));
   top: 60px;
-  border-radius: 90px;
+  border-radius: 90px !important;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .tp-join-shape-1 {
@@ -5034,7 +5034,7 @@ body .ui-tooltip {
   filter: drop-shadow(0px 20px 40px rgba(92, 97, 96, 0.2));
   top: auto !important;
   bottom: -42px;
-  border-radius: 90px;
+  border-radius: 90px !important;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .tp-join-shape-2 {
@@ -5047,7 +5047,7 @@ body .ui-tooltip {
   border-radius: 90px;
   filter: drop-shadow(0px 20px 40px rgba(92, 97, 96, 0.2));
   top: 15% !important;
-  border-radius: 90px;
+  border-radius: 90px !important;
   left: auto !important;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
@@ -5060,7 +5060,7 @@ body .ui-tooltip {
   border-radius: 90px;
   filter: drop-shadow(0px 20px 40px rgba(92, 97, 96, 0.2));
   bottom: 0;
-  border-radius: 90px;
+  border-radius: 90px !important;
   top: auto !important;
   left: auto !important;
 }

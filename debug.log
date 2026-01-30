@@ -1,6 +1,0 @@
-[30-Jan-2026 05:24:46 UTC] Automatic updates starting...
-[30-Jan-2026 05:24:48 UTC]   Automatic plugin updates starting...
-[30-Jan-2026 05:24:48 UTC]   Automatic plugin updates complete.
-[30-Jan-2026 05:24:49 UTC] Automatic updates complete.
-[30-Jan-2026 05:41:13 UTC] PHP Notice:  Function Elementor\Controls_Manager::add_control_to_stack was called <strong>incorrectly</strong>. Cannot redeclare control with same name "separator_heading_7". Please see <a href="https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 1.0.0.) in C:\xampp\htdocs\kindaid-projectwp\wp-includes\functions.php on line 6131
-[30-Jan-2026 05:41:21 UTC] PHP Notice:  Function Elementor\Controls_Manager::add_control_to_stack was called <strong>incorrectly</strong>. Cannot redeclare control with same name "separator_heading_7". Please see <a href="https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 1.0.0.) in C:\xampp\htdocs\kindaid-projectwp\wp-includes\functions.php on line 6131

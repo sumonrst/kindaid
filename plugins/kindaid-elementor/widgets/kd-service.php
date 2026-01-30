@@ -120,7 +120,6 @@ class Service_Widget extends Widget_Base {
                 [
                     'label' => esc_html__( 'Select Icon', 'textdomain' ),
                     'type' => \Elementor\Controls_Manager::SELECT,
-                    'default' => esc_html__( 'Healthy Food' , 'textdomain' ),
                     'default'     => 'fontawosome_icon',
                     'options'     => [
                         'fontawosome_icon' => esc_html__( 'Icon', 'kindaid' ),
@@ -856,11 +855,11 @@ class Service_Widget extends Widget_Base {
                                 <div class="col-xxl-3 col-xl-6 col-lg-6 col-md-6">
                                     <div class="tp-service-item icon-anime-wrap mb-25 wow fadeInUp" data-wow-duration=".9s" data-wow-delay=".3s">
                                         <?php
-                                        $has_icon = (
-                                            ( $item['chose_icon_style'] === 'fontawosome_icon' && ! empty( $item['list_icon']['value'] ) ) ||
-                                            ( $item['chose_icon_style'] === 'image_icon' && ! empty( $item['list_image_icon']['url'] ) ) ||
-                                            ( $item['chose_icon_style'] === 'svg_icon' && ! empty( $item['list_svg_icon'] ) )
-                                        );
+                                            $has_icon = (
+                                                ( $item['chose_icon_style'] === 'fontawosome_icon' && ! empty( $item['list_icon']['value'] ) ) ||
+                                                ( $item['chose_icon_style'] === 'image_icon' && ! empty( $item['list_image_icon']['url'] ) ) ||
+                                                ( $item['chose_icon_style'] === 'svg_icon' && ! empty( $item['list_svg_icon'] ) )
+                                            );
                                         ?>
 
                                         <?php 
