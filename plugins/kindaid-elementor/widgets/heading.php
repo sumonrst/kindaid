@@ -219,6 +219,18 @@ class Heading_Widget extends Widget_Base {
             );
 
             $this->add_responsive_control(
+                'margin_5',
+                [
+                    'label' => esc_html__('Margin', 'zylo-elementor'),
+                    'type' => Controls_Manager::DIMENSIONS,
+                    'size_units' => ['px', '%', 'em'],
+                    'selectors' => [
+                        '{{WRAPPER}} .ele-kd-bg' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    ],
+                ]
+            );
+
+            $this->add_responsive_control(
 				'background_3',
 				[
 					'label' => esc_html__( 'Background Color', 'kindaid' ),
