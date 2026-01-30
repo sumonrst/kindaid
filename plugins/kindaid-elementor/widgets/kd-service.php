@@ -102,104 +102,8 @@ class Service_Widget extends Widget_Base {
         $this->end_controls_section();
 
 
-        //  Service List item
 
-        // $this->start_controls_section(
-        //     'control_section_1',
-        //         [
-        //             'label' => __( 'Service Content', 'kindaid' ),
-        //         ]
-        //     );
-
-        //     $this->add_control(
-        //         'tabs',
-        //         [
-        //             'label'   => esc_html__( 'Service Item', 'kindaid' ),
-        //             'type'    => \Elementor\Controls_Manager::REPEATER,
-        //             'default' => [
-        //                 [
-        //                     'tab_icon_style' => 'fontawosome_icon',
-        //                     'tab_title'      => esc_html__( 'Healthy Food', 'kindaid' ),
-        //                     'tab_dec'      => esc_html__( 'Health care are essential for a childs growth.', 'kindaid' ),
-        //                     'tab_btn_text'      => esc_html__( 'Read More', 'kindaid' ),
-        //                 ],
-        //                 [
-        //                     'tab_icon_style' => 'fontawosome_icon',
-        //                     'tab_number'     => esc_html__( '500', 'kindaid' ),
-        //                     'tab_title'      => esc_html__( 'Successful Campaigns', 'kindaid' ),
-        //                 ],
-        //             ],
-        //             'fields'  => [
-
-        //                 [
-        //                     'name'        => 'tab_icon_style',
-        //                     'label'       => esc_html__( 'Select Icon', 'kindaid' ),
-        //                     'type'        => \Elementor\Controls_Manager::SELECT,
-        //                     'default'     => 'fontawosome_icon',
-        //                     'options'     => [
-        //                         'fontawosome_icon' => esc_html__( 'Icon', 'kindaid' ),
-        //                         'image_icon'       => esc_html__( 'Image', 'kindaid' ),
-        //                         'svg_icon'         => esc_html__( 'SVG', 'kindaid' ),
-        //                     ],
-        //                 ],
-        //                 [
-        //                     'name'      => 'tab_icon',
-        //                     'label'     => esc_html__( 'Icon', 'kindaid' ),
-        //                     'type'      => \Elementor\Controls_Manager::ICONS,
-        //                     'condition' => [
-        //                         'tab_icon_style' => 'fontawosome_icon',
-        //                     ],
-        //                 ],
-        //                 [
-        //                     'name'      => 'tab_icon_image',
-        //                     'label'     => esc_html__( 'Image Icon', 'kindaid' ),
-        //                     'type'      => \Elementor\Controls_Manager::MEDIA,
-        //                     'condition' => [
-        //                         'tab_icon_style' => 'image_icon',
-        //                     ],
-        //                 ],
-        //                 [
-        //                     'name'      => 'tab_icon_svg',
-        //                     'label'     => esc_html__( 'SVG Icon', 'kindaid' ),
-        //                     'type'      => \Elementor\Controls_Manager::TEXTAREA,
-        //                     'condition' => [
-        //                         'tab_icon_style' => 'svg_icon',
-        //                     ],
-        //                 ],
-        //                 [
-        //                     'name'        => 'tab_title',
-        //                     'label'       => esc_html__( 'Title', 'kindaid' ),
-        //                     'type'        => \Elementor\Controls_Manager::TEXT,
-        //                     'default'     => esc_html__( 'Healthy Food', 'kindaid' ),
-        //                     'label_block' => true,
-        //                 ],
-        //                 [
-        //                     'name'        => 'tab_dec',
-        //                     'label'       => esc_html__( 'Description', 'kindaid' ),
-        //                     'type'        => \Elementor\Controls_Manager::TEXT,
-        //                     'default'     => esc_html__( 'Health care are essential for a childs growth.', 'kindaid' ),
-        //                     'label_block' => true,
-        //                 ],
-        //                 [
-        //                     'name'         => 'tab_btn_text',
-        //                     'label'        => esc_html__( 'Button Text', 'kindaid' ),
-        //                     'type'         => \Elementor\Controls_Manager::TEXT,
-        //                     'default'      => 'Read More',
-        //                 ],
-        //                 [
-        //                     'name'         => 'tab_btn_url',
-        //                     'label'        => esc_html__( 'Button URL', 'kindaid' ),
-        //                     'type'         => \Elementor\Controls_Manager::TEXT,
-        //                     'default'      => '#',
-        //                 ],
-        //             ],
-        //         ]
-        //     );
-
-        // $this->end_controls_section();
-
-
-
+        //  Service single card start
 
         $this->start_controls_section(
             'control_section_1',
@@ -426,61 +330,6 @@ class Service_Widget extends Widget_Base {
 
 
 
-        /** Fact Number Style Tabs **/
-        $this->start_controls_section(
-            'style_tab_2',
-                [
-                    'label' => esc_html__('Fact Number Style', 'kindaid'),
-                    'tab'   => Controls_Manager::TAB_STYLE,
-                ]
-            );
-
-            $this->add_responsive_control(
-				'color_1',
-				[
-					'label' => esc_html__( 'Color', 'kindaid' ),
-					'type' => Controls_Manager::COLOR,
-					'selectors' => [
-						'{{WRAPPER}} .ele-kd-number' => 'color: {{VALUE}}',
-					],
-				]
-			);
-
-            $this->add_group_control(
-                Group_Control_Typography::get_type(),
-                [
-                    'name' => 'typography_1',
-                    'selector' => '{{WRAPPER}} .ele-kd-number',
-                ]
-            );
-
-            $this->add_responsive_control(
-                'padding_1',
-                [
-                    'label' => __( 'Padding', 'kindaid' ),
-                    'type' => \Elementor\Controls_Manager::DIMENSIONS,
-                    'size_units' => [ 'px', '%', 'em', 'rem' ],
-                    'selectors' => [
-                        '{{WRAPPER}} .ele-kd-number' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-                    ],
-                ]
-            );
-
-            $this->add_responsive_control(
-                'margin_1',
-                [
-                    'label' => esc_html__('Margin', 'zylo-elementor'),
-                    'type' => Controls_Manager::DIMENSIONS,
-                    'size_units' => ['px', '%', 'em'],
-                    'selectors' => [
-                        '{{WRAPPER}} .ele-kd-number' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-                    ],
-                ]
-            );
-
-        $this->end_controls_section();
-
-
         /** Title Style Tabs **/
         $this->start_controls_section(
             'style_tab_3',
@@ -490,8 +339,72 @@ class Service_Widget extends Widget_Base {
                 ]
             );
 
+            $this->add_control(
+				'separator_heading_4',
+				[
+					'type' => \Elementor\Controls_Manager::HEADING,
+					'label' => __( 'Sub Title Layout Style Here...', 'kindaid' ),
+					'separator' => 'before',
+				]
+			);
+
             $this->add_responsive_control(
 				'color_2',
+				[
+					'label' => esc_html__( 'Color', 'kindaid' ),
+					'type' => Controls_Manager::COLOR,
+					'selectors' => [
+						'{{WRAPPER}} .ele-kd-subtitle' => 'color: {{VALUE}}',
+					],
+				]
+			);
+
+            $this->add_group_control(
+                Group_Control_Typography::get_type(),
+                [
+                    'name' => 'typography_2',
+                    'selector' => '{{WRAPPER}} .ele-kd-subtitle',
+                ]
+            );
+
+            $this->add_responsive_control(
+                'padding_2',
+                [
+                    'label' => __( 'Padding', 'kindaid' ),
+                    'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                    'size_units' => [ 'px', '%', 'em', 'rem' ],
+                    'selectors' => [
+                        '{{WRAPPER}} .ele-kd-subtitle' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    ],
+                ]
+            );
+
+            $this->add_responsive_control(
+                'margin_2',
+                [
+                    'label' => esc_html__('Margin', 'zylo-elementor'),
+                    'type' => Controls_Manager::DIMENSIONS,
+                    'size_units' => ['px', '%', 'em'],
+                    'selectors' => [
+                        '{{WRAPPER}} .ele-kd-subtitle' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    ],
+                ]
+            );
+
+
+            // Title style here start
+
+            $this->add_control(
+				'separator_heading_6',
+				[
+					'type' => \Elementor\Controls_Manager::HEADING,
+					'label' => __( 'Title Layout Style Here...', 'kindaid' ),
+					'separator' => 'before',
+				]
+			);
+
+            $this->add_responsive_control(
+				'color_3',
 				[
 					'label' => esc_html__( 'Color', 'kindaid' ),
 					'type' => Controls_Manager::COLOR,
@@ -504,13 +417,13 @@ class Service_Widget extends Widget_Base {
             $this->add_group_control(
                 Group_Control_Typography::get_type(),
                 [
-                    'name' => 'typography_2',
+                    'name' => 'typography_3',
                     'selector' => '{{WRAPPER}} .ele-kd-title',
                 ]
             );
 
             $this->add_responsive_control(
-                'padding_2',
+                'padding_3',
                 [
                     'label' => __( 'Padding', 'kindaid' ),
                     'type' => \Elementor\Controls_Manager::DIMENSIONS,
@@ -522,7 +435,7 @@ class Service_Widget extends Widget_Base {
             );
 
             $this->add_responsive_control(
-                'margin_2',
+                'margin_3',
                 [
                     'label' => esc_html__('Margin', 'zylo-elementor'),
                     'type' => Controls_Manager::DIMENSIONS,
@@ -536,14 +449,25 @@ class Service_Widget extends Widget_Base {
         $this->end_controls_section();
 
 
-        /** Extra Text Style Tabs **/
+        /** Card Info Style Tabs **/
         $this->start_controls_section(
             'style_tab_4',
                 [
-                    'label' => esc_html__('Extra Text Style', 'kindaid'),
+                    'label' => esc_html__('Card Info Style', 'kindaid'),
                     'tab'   => Controls_Manager::TAB_STYLE,
                 ]
             );
+
+            // Card Sub Title Style Here....
+
+            $this->add_control(
+				'separator_heading_5',
+				[
+					'type' => \Elementor\Controls_Manager::HEADING,
+					'label' => __( 'Sub Title Layout Style Here...', 'kindaid' ),
+					'separator' => 'before',
+				]
+			);
 
             $this->add_responsive_control(
 				'color_4',
@@ -551,7 +475,7 @@ class Service_Widget extends Widget_Base {
 					'label' => esc_html__( 'Color', 'kindaid' ),
 					'type' => Controls_Manager::COLOR,
 					'selectors' => [
-						'{{WRAPPER}} .ele-kd-extra' => 'color: {{VALUE}}',
+						'{{WRAPPER}} .ele-kd-cd-title' => 'color: {{VALUE}}',
 					],
 				]
 			);
@@ -560,7 +484,7 @@ class Service_Widget extends Widget_Base {
                 Group_Control_Typography::get_type(),
                 [
                     'name' => 'typography_4',
-                    'selector' => '{{WRAPPER}} .ele-kd-extra',
+                    'selector' => '{{WRAPPER}} .ele-kd-cd-title',
                 ]
             );
 
@@ -571,7 +495,7 @@ class Service_Widget extends Widget_Base {
                     'type' => \Elementor\Controls_Manager::DIMENSIONS,
                     'size_units' => [ 'px', '%', 'em', 'rem' ],
                     'selectors' => [
-                        '{{WRAPPER}} .ele-kd-extra' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                        '{{WRAPPER}} .ele-kd-cd-title' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                     ],
                 ]
             );
@@ -583,7 +507,151 @@ class Service_Widget extends Widget_Base {
                     'type' => Controls_Manager::DIMENSIONS,
                     'size_units' => ['px', '%', 'em'],
                     'selectors' => [
-                        '{{WRAPPER}} .ele-kd-extra' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                        '{{WRAPPER}} .ele-kd-cd-title' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    ],
+                ]
+            );
+
+
+            // Card Description Style Here....
+
+            $this->add_control(
+				'separator_heading_7',
+				[
+					'type' => \Elementor\Controls_Manager::HEADING,
+					'label' => __( 'Card Dec Style Here...', 'kindaid' ),
+					'separator' => 'before',
+				]
+			);
+
+            $this->add_responsive_control(
+				'color_5',
+				[
+					'label' => esc_html__( 'Color', 'kindaid' ),
+					'type' => Controls_Manager::COLOR,
+					'selectors' => [
+						'{{WRAPPER}} .ele-kd-cd-dec' => 'color: {{VALUE}}',
+					],
+				]
+			);
+
+            $this->add_group_control(
+                Group_Control_Typography::get_type(),
+                [
+                    'name' => 'typography_5',
+                    'selector' => '{{WRAPPER}} .ele-kd-cd-dec',
+                ]
+            );
+
+            $this->add_responsive_control(
+                'padding_6',
+                [
+                    'label' => __( 'Padding', 'kindaid' ),
+                    'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                    'size_units' => [ 'px', '%', 'em', 'rem' ],
+                    'selectors' => [
+                        '{{WRAPPER}} .ele-kd-cd-dec' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    ],
+                ]
+            );
+
+            $this->add_responsive_control(
+                'margin_6',
+                [
+                    'label' => esc_html__('Margin', 'zylo-elementor'),
+                    'type' => Controls_Manager::DIMENSIONS,
+                    'size_units' => ['px', '%', 'em'],
+                    'selectors' => [
+                        '{{WRAPPER}} .ele-kd-cd-dec' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    ],
+                ]
+            );
+
+            // Card Button Style Here....
+
+            $this->add_control(
+				'separator_heading_8',
+				[
+					'type' => \Elementor\Controls_Manager::HEADING,
+					'label' => __( 'Card Btn Style Here...', 'kindaid' ),
+					'separator' => 'before',
+				]
+			);
+
+            $this->add_responsive_control(
+				'color_6',
+				[
+					'label' => esc_html__( 'Color', 'kindaid' ),
+					'type' => Controls_Manager::COLOR,
+					'selectors' => [
+						'{{WRAPPER}} .ele-kd-cd-btn' => 'color: {{VALUE}}',
+					],
+				]
+			);
+
+            $this->add_group_control(
+                Group_Control_Typography::get_type(),
+                [
+                    'name' => 'typography_6',
+                    'selector' => '{{WRAPPER}} .ele-kd-cd-btn',
+                ]
+            );
+
+            $this->add_responsive_control(
+                'padding_7',
+                [
+                    'label' => __( 'Padding', 'kindaid' ),
+                    'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                    'size_units' => [ 'px', '%', 'em', 'rem' ],
+                    'selectors' => [
+                        '{{WRAPPER}} .ele-kd-cd-btn' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    ],
+                ]
+            );
+
+            $this->add_responsive_control(
+                'margin_7',
+                [
+                    'label' => esc_html__('Margin', 'zylo-elementor'),
+                    'type' => Controls_Manager::DIMENSIONS,
+                    'size_units' => ['px', '%', 'em'],
+                    'selectors' => [
+                        '{{WRAPPER}} .ele-kd-cd-btn' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    ],
+                ]
+            );
+
+        $this->end_controls_section();
+
+        /** Thumbnail Style Tabs **/
+        $this->start_controls_section(
+            'style_tab_5',
+                [
+                    'label' => esc_html__('Thumbnail Style', 'kindaid'),
+                    'tab'   => Controls_Manager::TAB_STYLE,
+                ]
+            );
+
+            $this->add_responsive_control(
+                'padding_5',
+                [
+                    'label' => __( 'Padding', 'kindaid' ),
+                    'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                    'size_units' => [ 'px', '%', 'em', 'rem' ],
+                    'selectors' => [
+                        '{{WRAPPER}} .ele-kd-thmb-img' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    ],
+                ]
+            );
+
+            $this->add_responsive_control(
+                'margin_5',
+                [
+                    'label' => esc_html__('Margin', 'zylo-elementor'),
+                    'type' => Controls_Manager::DIMENSIONS,
+                    'size_units' => ['px', '%', 'em'],
+                    'selectors' => [
+                        '{{WRAPPER}} .ele-kd-thmb-img' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                     ],
                 ]
             );
@@ -745,7 +813,7 @@ class Service_Widget extends Widget_Base {
 
         if ($chose_style == 'service-style-1'):   ?>
 
-        <div class="tp-service-area tp-bg-mulberry p-relative">
+        <div class="tp-service-area ele-kd-bg tp-bg-mulberry p-relative">
             <?php
             if ( kindaid_img_src($settings['shape_1']) && $settings['show_shape_1'] == 'yes' )  : ?>
                 <?php echo kindaid_img_src( $settings['shape_1'], 'tp-service-shape ele-kd-img' ); ?>
@@ -755,7 +823,7 @@ class Service_Widget extends Widget_Base {
             <div class="container-fluid">
                 <div class="row">
                 <div class="col-xxl-3 col-xl-4 d-none d-xl-block">
-                    <div class="tp-service-thumb">
+                    <div class="tp-service-thumb ele-kd-thmb-img">
                         <?php
                         if ( kindaid_img_src($settings['shape_2']) && $settings['show_thumbnail_1'] == 'yes' )  : ?>
                             <?php echo kindaid_img_src( $settings['shape_2'], 'ele-kd-img' ); ?>
@@ -766,12 +834,19 @@ class Service_Widget extends Widget_Base {
                 <div class="col-xxl-8 col-xl-8">
                     <div class="tp-service-content-wrap pt-95 pb-90 pr-90">
                         <div class="tp-service-title-wrap mb-40">
-
-                                <span class="tp-section-subtitle tp-section-subtitle-yellow d-inline-block mb-10 wow fadeInUp" data-wow-duration=".9s" data-wow-delay=".3s">
-                                    How we help
+                            <?php 
+							if (( '' !== $sub_title ) && ( $show_sub_title )) : ?>
+                                <span class="tp-section-subtitle ele-kd-subtitle tp-section-subtitle-yellow d-inline-block mb-10 wow fadeInUp" data-wow-duration=".9s" data-wow-delay=".3s">
+                                    <?php echo kd_kses($sub_title); ?>
                                 </span>
+                            <?php
+                            endif; ?>
 
-                            <h2 class="tp-section-title tp-section-title-white wow fadeInUp" data-wow-duration=".9s" data-wow-delay=".5s">Delivering Solutions</h2>
+                            <?php 
+							if (( '' !== $title ) && ( $show_title )) : ?>
+                                <h2 class="tp-section-title ele-kd-title tp-section-title-white wow fadeInUp" data-wow-duration=".9s" data-wow-delay=".5s"><?php echo kd_kses($title); ?></h2>
+                            <?php
+                            endif; ?>
                         </div>
                         <div class="row">
                             <?php 
@@ -810,24 +885,25 @@ class Service_Widget extends Widget_Base {
                                         endif; ?>
 
                                         <?php 
-                                        if (!empty($list_title_url)): ?>
-                                            <h3 class="tp-service-title mb-10"><a href="<?php echo esc_url($list_title_url); ?>"><?php echo kd_kses($list_title); ?></a></h3>
+                                        if ( 'yes' === $show_card_title && ! empty( $list_title ) && ! empty( $list_title_url ) ) : ?>
+                                            <h3 class="tp-service-title ele-kd-cd-title mb-10"><a href="<?php echo esc_url($list_title_url); ?>"><?php echo kd_kses($list_title); ?></a></h3>
                                         <?php 
-                                        else : ?>
-                                            <h3 class="tp-service-title mb-10"><?php echo kd_kses($list_title); ?></h3>
+                                        elseif ( 'yes' === $settings['show_card_title'] && ! empty( $list_title ) ) : ?>
+                                            <h3 class="tp-service-title ele-kd-cd-title mb-10"><?php echo kd_kses($list_title); ?></h3>
                                         <?php 
                                         endif; ?>
 
+
                                         <?php 
-                                        if (!empty($list_content)): ?>
-                                            <p class="tp-service-dec"><?php echo kd_kses($list_content); ?></p>
+                                        if ( 'yes' === $show_card_dec && ! empty( $list_content ) ) : ?>
+                                            <p class="tp-service-dec ele-kd-cd-dec"><?php echo kd_kses($list_content); ?></p>
                                         <?php 
                                         endif; ?>
 
                                         <?php 
                                         if (!empty($list_btn_text)): ?>
                                             <a class="tp-service-btn" href="<?php echo esc_url($list_btn_url); ?>">
-                                                <span class="btn-text"><?php echo kd_kses($list_btn_text); ?></span>
+                                                <span class="btn-text ele-kd-cd-btn"><?php echo kd_kses($list_btn_text); ?></span>
                                                 <span class="btn-icon">
                                                     <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path d="M1 7H13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
