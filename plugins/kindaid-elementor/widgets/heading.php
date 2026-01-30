@@ -161,6 +161,15 @@ class Heading_Widget extends Widget_Base {
 				]
 			);
 
+            $this->add_control(
+                'show_sub_title',
+                [
+                    'label'   => esc_html__( 'Show Sub Title', 'cleenpro-elementor' ),
+                    'type'    => Controls_Manager::SWITCHER,
+                    'default' => 'yes',
+                ]
+            );
+
             
             $this->add_control(
                 'show_title',
@@ -170,10 +179,11 @@ class Heading_Widget extends Widget_Base {
                     'default' => 'yes',
                 ]
             );	
+
             $this->add_control(
-                'show_sub_title',
+                'show_short_dec',
                 [
-                    'label'   => esc_html__( 'Show Sub Title', 'cleenpro-elementor' ),
+                    'label'   => esc_html__( 'Show Shor Dec', 'cleenpro-elementor' ),
                     'type'    => Controls_Manager::SWITCHER,
                     'default' => 'yes',
                 ]
@@ -338,6 +348,61 @@ class Heading_Widget extends Widget_Base {
                 ]
             );
 
+
+            // Shor Description style here start
+
+            $this->add_control(
+				'separator_heading_7',
+				[
+					'type' => \Elementor\Controls_Manager::HEADING,
+					'label' => __( 'Title Layout Style Here...', 'kindaid' ),
+					'separator' => 'before',
+				]
+			);
+
+            $this->add_responsive_control(
+				'color_4',
+				[
+					'label' => esc_html__( 'Color', 'kindaid' ),
+					'type' => Controls_Manager::COLOR,
+					'selectors' => [
+						'{{WRAPPER}} .ele-kd-dec' => 'color: {{VALUE}}',
+					],
+				]
+			);
+
+            $this->add_group_control(
+                Group_Control_Typography::get_type(),
+                [
+                    'name' => 'typography_4',
+                    'selector' => '{{WRAPPER}} .ele-kd-dec',
+                ]
+            );
+
+            $this->add_responsive_control(
+                'padding_4',
+                [
+                    'label' => __( 'Padding', 'kindaid' ),
+                    'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                    'size_units' => [ 'px', '%', 'em', 'rem' ],
+                    'selectors' => [
+                        '{{WRAPPER}} .ele-kd-dec' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    ],
+                ]
+            );
+
+            $this->add_responsive_control(
+                'margin_4',
+                [
+                    'label' => esc_html__('Margin', 'zylo-elementor'),
+                    'type' => Controls_Manager::DIMENSIONS,
+                    'size_units' => ['px', '%', 'em'],
+                    'selectors' => [
+                        '{{WRAPPER}} .ele-kd-dec' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    ],
+                ]
+            );
+
         $this->end_controls_section();
 
     }
@@ -352,11 +417,11 @@ class Heading_Widget extends Widget_Base {
 
             <?php 
             if ( ! empty( $sub_title ) || ! empty( $title ) || ! empty( $short_dec ) ) : ?>
-                <div class="tp-section-team-wrap mb-45 p-relative">
+                <div class="tp-section-team-wrap ele-kd-bg mb-45 p-relative">
 
                     <?php 
-                    if ( ! empty( $sub_title ) ) : ?>
-                        <span class="tp-section-subtitle d-inline-block mb-15 wow fadeInUp"
+					if (( '' !== $sub_title ) && ( $show_sub_title )) : ?>
+                        <span class="tp-section-subtitle ele-kd-subtitle d-inline-block mb-15 wow fadeInUp"
                             data-wow-duration=".9s" data-wow-delay=".3s">
                             <?php echo esc_html( $sub_title ); ?>
                         </span>
@@ -364,8 +429,8 @@ class Heading_Widget extends Widget_Base {
                     endif; ?>
 
                     <?php 
-                    if ( ! empty( $title ) ) : ?>
-                        <h2 class="tp-section-title mb-20 wow fadeInUp"
+					if (( '' !== $title ) && ( $show_title )) : ?>
+                        <h2 class="tp-section-title ele-kd-title mb-20 wow fadeInUp"
                             data-wow-duration=".9s" data-wow-delay=".4s">
                             <?php echo wp_kses_post( $title ); ?>
                         </h2>
@@ -373,8 +438,8 @@ class Heading_Widget extends Widget_Base {
                     endif; ?>
 
                     <?php 
-                    if ( ! empty( $short_dec ) ) : ?>
-                        <p><?php echo wp_kses_post( $short_dec ); ?></p>
+					if (( '' !== $short_dec ) && ( $show_short_dec )) : ?>
+                        <p class="ele-kd-dec"><?php echo wp_kses_post( $short_dec ); ?></p>
                     <?php 
                     endif; ?>
 
