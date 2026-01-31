@@ -9,7 +9,7 @@ use Elementor\Group_Control_Typography;
 if ( ! defined( 'ABSPATH' ) ) exit;
 
 
-class Kd_Join_Widget extends Widget_Base {
+class Join_Widget extends Widget_Base {
 
     public function get_name() {
         return 'kindaid-join';

@@ -43,12 +43,14 @@ function kindaid_addon_register_widgets( $widgets_manager ) {
     require_once KINDAID_PATH . 'widgets/fact.php';
     require_once KINDAID_PATH . 'widgets/kd-service.php';
     require_once KINDAID_PATH . 'widgets/kd-join.php';
+    require_once KINDAID_PATH . 'widgets/kd-faq.php';
 
     $widgets_manager->register( new \Kindaid\Widgets\Heading_Widget() );
     $widgets_manager->register( new \Kindaid\Widgets\Hero_Widget() );
     $widgets_manager->register( new \Kindaid\Widgets\Fact_Widget() );
     $widgets_manager->register( new \Kindaid\Widgets\Service_Widget() );
-    $widgets_manager->register( new \Kindaid\Widgets\Kd_Join_Widget() );
+    $widgets_manager->register( new \Kindaid\Widgets\Join_Widget() );
+    $widgets_manager->register( new \Kindaid\Widgets\Faq_Widget() );
 
 }
 add_action( 'elementor/widgets/register', 'kindaid_addon_register_widgets' );
