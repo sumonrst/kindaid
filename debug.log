@@ -1,1 +1,32 @@
-[31-Jan-2026 08:04:19 UTC] PHP Notice:  Function Elementor\Controls_Manager::add_control_to_stack was called <strong>incorrectly</strong>. Cannot redeclare control with same name "color_3". Please see <a href="https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 1.0.0.) in C:\xampp\htdocs\kindaid-projectwp\wp-includes\functions.php on line 6131
+[01-Feb-2026 12:58:23 UTC] PHP Fatal error:  Uncaught TypeError: ltrim(): Argument #1 ($string) must be of type string, array given in C:\xampp\htdocs\kindaid-projectwp\wp-includes\formatting.php:4496
+Stack trace:
+#0 C:\xampp\htdocs\kindaid-projectwp\wp-includes\formatting.php(4496): ltrim(Array)
+#1 C:\xampp\htdocs\kindaid-projectwp\wp-content\plugins\kindaid-elementor\widgets\kd-button.php(379): esc_url(Array)
+#2 C:\xampp\htdocs\kindaid-projectwp\wp-content\plugins\elementor\includes\base\controls-stack.php(2374): Kindaid\Widgets\Button_Widget->render()
+#3 C:\xampp\htdocs\kindaid-projectwp\wp-content\plugins\elementor\includes\base\widget-base.php(636): Elementor\Controls_Stack->render_by_mode()
+#4 C:\xampp\htdocs\kindaid-projectwp\wp-content\plugins\elementor\includes\base\widget-base.php(757): Elementor\Widget_Base->render_content()
+#5 C:\xampp\htdocs\kindaid-projectwp\wp-content\plugins\elementor\includes\base\element-base.php(629): Elementor\Widget_Base->get_raw_data(true)
+#6 C:\xampp\htdocs\kindaid-projectwp\wp-content\plugins\elementor\core\base\document.php(1087): Elementor\Element_Base->get_raw_data(true)
+#7 C:\xampp\htdocs\kindaid-projectwp\wp-content\plugins\elementor\core\base\document.php(735): Elementor\Core\Base\Document->get_elements_raw_data(Array, true)
+#8 C:\xampp\htdocs\kindaid-projectwp\wp-content\plugins\elementor\includes\base\controls-stack.php(1071): Elementor\Core\Base\Document->get_initial_config()
+#9 C:\xampp\htdocs\kindaid-projectwp\wp-content\plugins\elementor\core\editor\loader\common\editor-common-scripts-settings.php(40): Elementor\Controls_Stack->get_config()
+#10 C:\xampp\htdocs\kindaid-projectwp\wp-content\plugins\elementor\core\editor\loader\v2\editor-v2-loader.php(171): Elementor\Core\Editor\Loader\Common\Editor_Common_Scripts_Settings::get()
+#11 C:\xampp\htdocs\kindaid-projectwp\wp-content\plugins\elementor\core\editor\editor.php(355): Elementor\Core\Editor\Loader\V2\Editor_V2_Loader->enqueue_scripts()
+#12 C:\xampp\htdocs\kindaid-projectwp\wp-includes\class-wp-hook.php(341): Elementor\Core\Editor\Editor->enqueue_scripts('')
+#13 C:\xampp\htdocs\kindaid-projectwp\wp-includes\class-wp-hook.php(365): WP_Hook->apply_filters('', Array)
+#14 C:\xampp\htdocs\kindaid-projectwp\wp-includes\plugin.php(522): WP_Hook->do_action(Array)
+#15 C:\xampp\htdocs\kindaid-projectwp\wp-includes\script-loader.php(2311): do_action('wp_enqueue_scri...')
+#16 C:\xampp\htdocs\kindaid-projectwp\wp-includes\class-wp-hook.php(341): wp_enqueue_scripts('')
+#17 C:\xampp\htdocs\kindaid-projectwp\wp-includes\class-wp-hook.php(365): WP_Hook->apply_filters('', Array)
+#18 C:\xampp\htdocs\kindaid-projectwp\wp-includes\plugin.php(522): WP_Hook->do_action(Array)
+#19 C:\xampp\htdocs\kindaid-projectwp\wp-includes\general-template.php(3197): do_action('wp_head')
+#20 C:\xampp\htdocs\kindaid-projectwp\wp-content\plugins\elementor\includes\editor-templates\editor-wrapper.php(35): wp_head()
+#21 C:\xampp\htdocs\kindaid-projectwp\wp-content\plugins\elementor\core\editor\loader\v2\editor-v2-loader.php(221): include('C:\\xampp\\htdocs...')
+#22 C:\xampp\htdocs\kindaid-projectwp\wp-content\plugins\elementor\core\editor\editor.php(160): Elementor\Core\Editor\Loader\V2\Editor_V2_Loader->print_root_template()
+#23 C:\xampp\htdocs\kindaid-projectwp\wp-includes\class-wp-hook.php(341): Elementor\Core\Editor\Editor->init('')
+#24 C:\xampp\htdocs\kindaid-projectwp\wp-includes\class-wp-hook.php(365): WP_Hook->apply_filters('', Array)
+#25 C:\xampp\htdocs\kindaid-projectwp\wp-includes\plugin.php(522): WP_Hook->do_action(Array)
+#26 C:\xampp\htdocs\kindaid-projectwp\wp-admin\admin.php(424): do_action('admin_action_el...')
+#27 C:\xampp\htdocs\kindaid-projectwp\wp-admin\post.php(12): require_once('C:\\xampp\\htdocs...')
+#28 {main}
+  thrown in C:\xampp\htdocs\kindaid-projectwp\wp-includes\formatting.php on line 4496

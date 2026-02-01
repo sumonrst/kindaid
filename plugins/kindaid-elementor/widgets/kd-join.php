@@ -110,7 +110,7 @@ class Join_Widget extends Widget_Base {
 
         $this->end_controls_section();
 
-
+        // Button Section Start
         $this->start_controls_section(
             'button_style',
                 [
@@ -1182,12 +1182,12 @@ class Join_Widget extends Widget_Base {
                             <span class="btn-text"><?php echo kd_kses( $settings['btn_text_1'] ); ?></span>
 
                             <?php
-                            $icon_style = $settings['chose_icon_style'] ?? '';
-                            $has_icon = (
-                                ( $icon_style === 'fontawosome_icon' && ! empty( $settings['list_icon']['value'] ) ) ||
-                                ( $icon_style === 'image_icon' && ! empty( $settings['list_image_icon']['url'] ) ) ||
-                                ( $icon_style === 'svg_icon' && ! empty( $settings['list_svg_icon'] ) )
-                            );
+                                $icon_style = $settings['chose_icon_style'] ?? '';
+                                $has_icon = (
+                                    ( $icon_style === 'fontawosome_icon' && ! empty( $settings['list_icon']['value'] ) ) ||
+                                    ( $icon_style === 'image_icon' && ! empty( $settings['list_image_icon']['url'] ) ) ||
+                                    ( $icon_style === 'svg_icon' && ! empty( $settings['list_svg_icon'] ) )
+                                );
                             ?>
 
                             <?php 

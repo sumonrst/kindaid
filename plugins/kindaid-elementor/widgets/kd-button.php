@@ -9,14 +9,14 @@ use Elementor\Group_Control_Typography;
 if ( ! defined( 'ABSPATH' ) ) exit;
 
 
-class Heading_Widget extends Widget_Base {
+class Button_Widget extends Widget_Base {
 
     public function get_name() {
-        return 'kindaid-heading';
+        return 'kindaid-button';
     }
 
     public function get_title() {
-        return __( 'Kindaid Heading', 'kindaid' );
+        return __( 'Kindaid Button', 'kindaid' );
     }
 
     public function get_icon() {
@@ -28,7 +28,7 @@ class Heading_Widget extends Widget_Base {
     }
 
     public function get_keywords(): array {
-		return [ 'heading', 'title' ];
+		return [ 'button', 'kindaid button' ];
 	}
 
     protected function register_controls() {
@@ -52,62 +52,115 @@ class Heading_Widget extends Widget_Base {
             $this->add_control(
                 'chose_style',
                 [
-                    'label' => esc_html__('Chose Join Style', 'kindaid'),
+                    'label' => esc_html__('Chose Button Style', 'kindaid'),
                     'type' => Controls_Manager::SELECT,
                     'label_block' => true,
                     'options' => [
-                        'heading-style-1' => esc_html__('Heading Style 1', 'kindaid'),
-                        'heading-style-2' => esc_html__('Heading Style 2', 'kindaid'),
-                        'heading-style-3' => esc_html__('Heading Style 3', 'kindaid'),
+                        'button-style-1' => esc_html__('Button Style 1', 'kindaid'),
+                        'button-style-2' => esc_html__('Button Style 2', 'kindaid'),
+                        'button-style-3' => esc_html__('Button Style 3', 'kindaid'),
                     ],
-                    'default' => 'heading-style-1',
+                    'default' => 'button-style-1',
                 ]
             );
 
         $this->end_controls_section();
 
 
-        // Title Section Start
+                // Button Section Start
         $this->start_controls_section(
-            'control_section_2',
+            'button_style',
                 [
-                    'label' => __( 'Title', 'kindaid' ),
+                    'label' => __( 'Button Style', 'kindaid' ),
                 ]
             );
 
             $this->add_control(
-                'sub_title',
+                'chose_icon_style',
                 [
-                    'label'       => __( 'Sub Title', 'kindaid' ),
-                    'type'        => Controls_Manager::TEXTAREA,
-                    'placeholder' => __( 'Enter your sub title', 'kindaid' ),
-                    'default'     => __( 'Team section', 'kindaid' ),
-                    'label_block' => true,
-                ]
-            );
-
-
-            $this->add_control(
-                'title',
-                [
-                    'label'       => __( 'Title', 'kindaid' ),
-                    'type'        => Controls_Manager::TEXTAREA,
-                    'placeholder' => __( 'Enter your title', 'kindaid' ),
-                    'default'     => __( 'Meet our Volunteer <span>Team</span> Members', 'kindaid' ),
-                    'label_block' => true,
+                    'label' => esc_html__( 'Select Icon', 'textdomain' ),
+                    'type' => \Elementor\Controls_Manager::SELECT,
+                    'default'     => 'fontawosome_icon',
+                    'options'     => [
+                        'fontawosome_icon' => esc_html__( 'Icon', 'kindaid' ),
+                        'image_icon'       => esc_html__( 'Image', 'kindaid' ),
+                        'svg_icon'         => esc_html__( 'SVG', 'kindaid' ),
+                    ],
                 ]
             );
 
             $this->add_control(
-                'short_dec',
+                'list_icon',
                 [
-                    'label'       => __( 'Short Dec', 'kindaid' ),
-                    'type'        => Controls_Manager::TEXTAREA,
-                    'placeholder' => __( 'Enter your title', 'kindaid' ),
-                    'default'     => __( 'Shor Description It is a long established fact that a reader will be', 'kindaid' ),
+                    'label' => esc_html__( 'Icon', 'textdomain' ),
+                    'type' => \Elementor\Controls_Manager::ICONS,
+                    'label_block' => true,
+                    'default' => [
+                        'value' => 'fas fa-star',
+                        'library' => 'fa-solid',
+                    ],
+                    'condition'   => [
+                        'chose_icon_style' => ['fontawosome_icon'],
+                    ],
+
+                ]
+            );
+
+            $this->add_control(
+				'list_image_icon',
+				[
+					'label' => esc_html__( 'Image Icon', 'kindaid' ),
+					'type' => \Elementor\Controls_Manager::MEDIA,
+                    'label_block' => true,
+					'default' => [
+						'url' => \Elementor\Utils::get_placeholder_image_src(),
+					],
+                    'condition'   => [
+                        'chose_icon_style' => ['image_icon'],
+                    ],
+				]
+			);
+
+            $this->add_control(
+                'list_svg_icon',
+                [
+                    'label' => esc_html__( 'SVG Code Here', 'textdomain' ),
+                    'type' => \Elementor\Controls_Manager::TEXTAREA,
+                    'default' => esc_html__( '' , 'textdomain' ),
+                    'label_block' => true,
+                    'condition'   => [
+                        'chose_icon_style' => ['svg_icon'],
+                    ],
+                ]
+            );
+
+            $this->add_control(
+                'btn_text_1',
+                [
+                    'label'       => __( 'Button Text 1', 'kindaid' ),
+                    'type'        => Controls_Manager::TEXT,
+                    'placeholder' => __( 'Enter your text', 'kindaid' ),
+                    'default'     => __( 'all events', 'kindaid' ),
                     'label_block' => true,
                 ]
             );
+
+            $this->add_control(
+                'btn_url_1',
+                [
+                    'label' => esc_html__( 'Button Link 1', 'kindaid' ),
+                    'type' => \Elementor\Controls_Manager::URL,
+                    'options' => [ 'url', 'is_external', 'nofollow' ],
+                    'default' => [
+                        'url' => '',
+                        'is_external' => true,
+                        'nofollow' => true,
+                        // 'custom_attributes' => '',
+                    ],
+                    'label_block' => true,
+                ]
+            );
+
 
         $this->end_controls_section();
 
@@ -253,59 +306,7 @@ class Heading_Widget extends Widget_Base {
                 ]
             );
 
-            $this->add_control(
-				'separator_heading_4',
-				[
-					'type' => \Elementor\Controls_Manager::HEADING,
-					'label' => __( 'Sub Title Layout Style Here...', 'kindaid' ),
-					'separator' => 'before',
-				]
-			);
-
-            $this->add_responsive_control(
-				'color_2',
-				[
-					'label' => esc_html__( 'Color', 'kindaid' ),
-					'type' => Controls_Manager::COLOR,
-					'selectors' => [
-						'{{WRAPPER}} .ele-kd-subtitle' => 'color: {{VALUE}}',
-					],
-				]
-			);
-
-            $this->add_group_control(
-                Group_Control_Typography::get_type(),
-                [
-                    'name' => 'typography_2',
-                    'selector' => '{{WRAPPER}} .ele-kd-subtitle',
-                ]
-            );
-
-            $this->add_responsive_control(
-                'padding_2',
-                [
-                    'label' => __( 'Padding', 'kindaid' ),
-                    'type' => \Elementor\Controls_Manager::DIMENSIONS,
-                    'size_units' => [ 'px', '%', 'em', 'rem' ],
-                    'selectors' => [
-                        '{{WRAPPER}} .ele-kd-subtitle' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-                    ],
-                ]
-            );
-
-            $this->add_responsive_control(
-                'margin_2',
-                [
-                    'label' => esc_html__('Margin', 'zylo-elementor'),
-                    'type' => Controls_Manager::DIMENSIONS,
-                    'size_units' => ['px', '%', 'em'],
-                    'selectors' => [
-                        '{{WRAPPER}} .ele-kd-subtitle' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-                    ],
-                ]
-            );
-
-
+            
             // Title style here start
 
             $this->add_control(
@@ -360,61 +361,6 @@ class Heading_Widget extends Widget_Base {
                 ]
             );
 
-
-            // Shor Description style here start
-
-            $this->add_control(
-				'separator_heading_7',
-				[
-					'type' => \Elementor\Controls_Manager::HEADING,
-					'label' => __( 'Title Layout Style Here...', 'kindaid' ),
-					'separator' => 'before',
-				]
-			);
-
-            $this->add_responsive_control(
-				'color_4',
-				[
-					'label' => esc_html__( 'Color', 'kindaid' ),
-					'type' => Controls_Manager::COLOR,
-					'selectors' => [
-						'{{WRAPPER}} .ele-kd-dec' => 'color: {{VALUE}}',
-					],
-				]
-			);
-
-            $this->add_group_control(
-                Group_Control_Typography::get_type(),
-                [
-                    'name' => 'typography_4',
-                    'selector' => '{{WRAPPER}} .ele-kd-dec',
-                ]
-            );
-
-            $this->add_responsive_control(
-                'padding_4',
-                [
-                    'label' => __( 'Padding', 'kindaid' ),
-                    'type' => \Elementor\Controls_Manager::DIMENSIONS,
-                    'size_units' => [ 'px', '%', 'em', 'rem' ],
-                    'selectors' => [
-                        '{{WRAPPER}} .ele-kd-dec' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-                    ],
-                ]
-            );
-
-            $this->add_responsive_control(
-                'margin_4',
-                [
-                    'label' => esc_html__('Margin', 'zylo-elementor'),
-                    'type' => Controls_Manager::DIMENSIONS,
-                    'size_units' => ['px', '%', 'em'],
-                    'selectors' => [
-                        '{{WRAPPER}} .ele-kd-dec' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-                    ],
-                ]
-            );
-
         $this->end_controls_section();
 
     }
@@ -425,43 +371,49 @@ class Heading_Widget extends Widget_Base {
         $settings = $this->get_settings_for_display();
         extract($settings);
 
-        if ($chose_style == 'heading-style-1'):   ?>
+        if ($chose_style == 'button-style-1'):   ?>
 
             <?php 
-            if ( ! empty( $sub_title ) || ! empty( $title ) || ! empty( $short_dec ) ) : ?>
-                <div class="tp-section-team-wrap ele-kd-bg mb-45 p-relative">
+            if ( ! empty( $btn_text_1 ) ) : ?>
+                <div class="tp-event-btn-wrap ele-kd-bg mb-50 text-md-end wow fadeInUp" data-wow-duration=".9s" data-wow-delay=".5s">
+                    <a class="tp-btn tp-btn-animetion mr-5 mb-10" href="<?php echo esc_url($btn_url_1['url']); ?>">
+                    <span class="btn-text ele-kd-title"><?php echo kd_kses( $btn_text_1 ); ?></span>
+                    <span class="btn-icon">
+                        <?php
+                            $icon_style = $settings['chose_icon_style'] ?? '';
+                            $has_icon = (
+                                ( $icon_style === 'fontawosome_icon' && ! empty( $settings['list_icon']['value'] ) ) ||
+                                ( $icon_style === 'image_icon' && ! empty( $settings['list_image_icon']['url'] ) ) ||
+                                ( $icon_style === 'svg_icon' && ! empty( $settings['list_svg_icon'] ) )
+                            );
+                        ?>
 
-                    <?php 
-					if (( '' !== $sub_title ) && ( $show_sub_title )) : ?>
-                        <span class="tp-section-subtitle ele-kd-subtitle d-inline-block mb-15 wow fadeInUp"
-                            data-wow-duration=".9s" data-wow-delay=".3s">
-                            <?php echo esc_html( $sub_title ); ?>
-                        </span>
-                    <?php 
-                    endif; ?>
+                        <?php 
+                        if ( $has_icon ) : ?>
+                            <span class="btn-icon">
+                                <?php 
+                                if ( $icon_style === 'fontawosome_icon' && ! empty( $settings['list_icon']['value'] ) ) : ?>
+                                    <i class="<?php echo esc_attr( $settings['list_icon']['value'] ); ?>"></i>
 
-                    <?php 
-					if (( '' !== $title ) && ( $show_title )) : ?>
-                        <h2 class="tp-section-title ele-kd-title mb-20 wow fadeInUp"
-                            data-wow-duration=".9s" data-wow-delay=".4s">
-                            <?php echo kd_kses( $title ); ?>
-                        </h2>
-                    <?php 
-                    endif; ?>
+                                <?php 
+                                elseif ( $icon_style === 'image_icon' && ! empty( $settings['list_image_icon']['url'] ) ) : ?>
+                                    <img src="<?php echo esc_url( $settings['list_image_icon']['url'] ); ?>" alt="">
 
-                    <?php 
-					if (( '' !== $short_dec ) && ( $show_short_dec )) : ?>
-                        <p class="ele-kd-dec"><?php echo kd_kses( $short_dec ); ?></p>
-                    <?php 
-                    endif; ?>
-
+                                <?php 
+                                elseif ( $icon_style === 'svg_icon' && ! empty( $settings['list_svg_icon'] ) ) : ?>
+                                    <?php echo kd_kses( $settings['list_svg_icon'] ); ?>
+                                <?php 
+                                endif; ?>
+                            </span>
+                        <?php 
+                        endif; ?>
+                    </span>
+                    </a>
                 </div>
             <?php 
             endif; ?>
 
-
-
-
+    
         <?php
         endif; ?>
 	<?php

@@ -62,7 +62,9 @@ Tags: blog
 }
 
 
-
+.tp-blog-cat .dvdr:last-child::before {
+    display: none;
+}
 
 
 
