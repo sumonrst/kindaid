@@ -71,7 +71,7 @@ class Button_Widget extends Widget_Base {
         $this->start_controls_section(
             'button_style',
                 [
-                    'label' => __( 'Button Style', 'kindaid' ),
+                    'label' => __( 'Button Section', 'kindaid' ),
                 ]
             );
 

@@ -209,5 +209,24 @@ if ( ! function_exists( 'kindaid_img_src' ) ) {
 
 
 
+if ( ! function_exists( 'kindaid_img_src_alt' ) ) {
+    function kindaid_img_src_alt( $image, $class = '', $alt = '' ) {
+
+        if ( empty( $image ) || empty( $image['url'] ) ) {
+            return false;
+        }
+
+        $alt_text = ! empty( $alt ) 
+            ? $alt 
+            : ( ! empty( $image['alt'] ) ? $image['alt'] : '' );
+
+        return sprintf(
+            '<img src="%s" class="%s" alt="%s">',
+            esc_url( $image['url'] ),
+            esc_attr( $class ),
+            esc_attr( $alt_text )
+        );
+    }
+}
 
 

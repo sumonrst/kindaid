@@ -253,59 +253,7 @@ class Heading_Widget extends Widget_Base {
                 ]
             );
 
-            $this->add_control(
-				'separator_heading_4',
-				[
-					'type' => \Elementor\Controls_Manager::HEADING,
-					'label' => __( 'Sub Title Layout Style Here...', 'kindaid' ),
-					'separator' => 'before',
-				]
-			);
-
-            $this->add_responsive_control(
-				'color_2',
-				[
-					'label' => esc_html__( 'Color', 'kindaid' ),
-					'type' => Controls_Manager::COLOR,
-					'selectors' => [
-						'{{WRAPPER}} .ele-kd-subtitle' => 'color: {{VALUE}}',
-					],
-				]
-			);
-
-            $this->add_group_control(
-                Group_Control_Typography::get_type(),
-                [
-                    'name' => 'typography_2',
-                    'selector' => '{{WRAPPER}} .ele-kd-subtitle',
-                ]
-            );
-
-            $this->add_responsive_control(
-                'padding_2',
-                [
-                    'label' => __( 'Padding', 'kindaid' ),
-                    'type' => \Elementor\Controls_Manager::DIMENSIONS,
-                    'size_units' => [ 'px', '%', 'em', 'rem' ],
-                    'selectors' => [
-                        '{{WRAPPER}} .ele-kd-subtitle' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-                    ],
-                ]
-            );
-
-            $this->add_responsive_control(
-                'margin_2',
-                [
-                    'label' => esc_html__('Margin', 'zylo-elementor'),
-                    'type' => Controls_Manager::DIMENSIONS,
-                    'size_units' => ['px', '%', 'em'],
-                    'selectors' => [
-                        '{{WRAPPER}} .ele-kd-subtitle' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-                    ],
-                ]
-            );
-
-
+           
             // Title style here start
 
             $this->add_control(
@@ -356,6 +304,24 @@ class Heading_Widget extends Widget_Base {
                     'size_units' => ['px', '%', 'em'],
                     'selectors' => [
                         '{{WRAPPER}} .ele-kd-title' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    ],
+                ]
+            );
+
+            
+            $this->add_responsive_control(
+                'width_1',
+                [
+                    'label' => __( 'Width', 'textdomain' ),
+                    'type' => \Elementor\Controls_Manager::SLIDER,
+                    'size_units' => [ 'px', '%', 'vw' ],
+                    'range' => [
+                        'px' => [ 'min' => 0, 'max' => 2000 ],
+                        '%'  => [ 'min' => 0, 'max' => 100 ],
+                        'vw' => [ 'min' => 0, 'max' => 100 ],
+                    ],
+                    'selectors' => [
+                        '{{WRAPPER}} .ele-kd-title' => 'width: {{SIZE}}{{UNIT}};',
                     ],
                 ]
             );

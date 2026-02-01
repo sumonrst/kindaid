@@ -753,9 +753,7 @@ class Blog_Post_Widget extends Widget_Base {
 
     protected function render() {
         $settings = $this->get_settings_for_display();
-        extract($settings);
-
-        if ($chose_style == 'blog-style-1'):   
+        extract($settings); 
         
         $args = [
             // 'post_type'      => 'post',
@@ -788,7 +786,10 @@ class Blog_Post_Widget extends Widget_Base {
             $args['category__not_in'] = $settings['exclude_categories'];
         }
 
-        $query = new \WP_Query( $args );  ?>
+        $query = new \WP_Query( $args );  
+
+        if ($chose_style == 'blog-style-1'):  ?>
+        
 
         <div class="tp-blog-area ele-kd-bg tp-blog-style pt-115 pb-90 fix p-relative">
             <div class="container container-1324">

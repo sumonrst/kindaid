@@ -39,6 +39,7 @@ require_once KINDAID_PATH . 'inc/helper-functions.php';
 function kindaid_addon_register_widgets( $widgets_manager ) {
 
     require_once KINDAID_PATH . 'widgets/heading.php';
+    require_once KINDAID_PATH . 'widgets/kd-button.php';
     require_once KINDAID_PATH . 'widgets/hero.php';
     require_once KINDAID_PATH . 'widgets/fact.php';
     require_once KINDAID_PATH . 'widgets/kd-service.php';
@@ -47,7 +48,8 @@ function kindaid_addon_register_widgets( $widgets_manager ) {
     require_once KINDAID_PATH . 'widgets/kd-step.php';
     require_once KINDAID_PATH . 'widgets/kd-why-choose-us.php';
     require_once KINDAID_PATH . 'widgets/kd-blog-post.php';
-    require_once KINDAID_PATH . 'widgets/kd-button.php';
+    require_once KINDAID_PATH . 'widgets/kd-brand.php';
+    require_once KINDAID_PATH . 'widgets/kd-team.php';
 
     $widgets_manager->register( new \Kindaid\Widgets\Heading_Widget() );
     $widgets_manager->register( new \Kindaid\Widgets\Button_Widget() );
@@ -59,6 +61,8 @@ function kindaid_addon_register_widgets( $widgets_manager ) {
     $widgets_manager->register( new \Kindaid\Widgets\What_We_Do_Widget() );
     $widgets_manager->register( new \Kindaid\Widgets\Why_Choose_Us_Widget() );
     $widgets_manager->register( new \Kindaid\Widgets\Blog_Post_Widget() );
+    $widgets_manager->register( new \Kindaid\Widgets\Brand_Widget() );
+    $widgets_manager->register( new \Kindaid\Widgets\Team_Widget() );
 
 }
 add_action( 'elementor/widgets/register', 'kindaid_addon_register_widgets' );
