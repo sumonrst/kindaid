@@ -44,7 +44,7 @@ class Fact_Widget extends Widget_Base {
         $this->start_controls_section(
             'settings_section',
                 [
-                    'label' => __( 'Hero Settings', 'kindaid' ),
+                    'label' => __( 'Fact Settings', 'kindaid' ),
                 ]
             );
 
@@ -302,6 +302,114 @@ class Fact_Widget extends Widget_Base {
         $this->end_controls_section();
 
 
+        /** Border Style Tabs **/
+        $this->start_controls_section(
+            'style_tab_15',
+                [
+                    'label' => esc_html__('Border Style', 'kindaid'),
+                    'tab'   => Controls_Manager::TAB_STYLE,
+                ]
+            );
+
+            // Color
+            $this->add_control(
+                'color_15',
+                [
+                    'label' => esc_html__( 'Line Color', 'kindaid' ),
+                    'type' => \Elementor\Controls_Manager::COLOR,
+                    'default' => 'rgba(255,255,255,0.1)',
+                    'selectors' => [
+                        '{{WRAPPER}} .tp-fact-item-border::before' => 'background: {{VALUE}};',
+                    ],
+                ]
+            );
+
+            // Width
+            $this->add_responsive_control(
+                'width_15',
+                [
+                    'label' => esc_html__( 'Line Width', 'kindaid' ),
+                    'type' => \Elementor\Controls_Manager::SLIDER,
+                    'size_units' => [ 'px' ],
+                    'range' => [
+                        'px' => [ 'min' => 0, 'max' => 20 ],
+                    ],
+                    'default' => [
+                        'size' => 1,
+                        'unit' => 'px',
+                    ],
+                    'selectors' => [
+                        '{{WRAPPER}} .tp-fact-item-border::before' => 'width: {{SIZE}}{{UNIT}};',
+                    ],
+                ]
+            );
+
+            // Height
+            $this->add_responsive_control(
+                'height_15',
+                [
+                    'label' => esc_html__( 'Line Height', 'kindaid' ),
+                    'type' => \Elementor\Controls_Manager::SLIDER,
+                    'size_units' => [ 'px', '%' ],
+                    'range' => [
+                        'px' => [ 'min' => 0, 'max' => 1000 ],
+                        '%' => [ 'min' => 0, 'max' => 100 ],
+                    ],
+                    'default' => [
+                        'size' => 100,
+                        'unit' => '%',
+                    ],
+                    'selectors' => [
+                        '{{WRAPPER}} .tp-fact-item-border::before' => 'height: {{SIZE}}{{UNIT}};',
+                    ],
+                ]
+            );
+
+            // Right Position
+            $this->add_responsive_control(
+                'right_15',
+                [
+                    'label' => esc_html__( 'Right Position', 'kindaid' ),
+                    'type' => \Elementor\Controls_Manager::SLIDER,
+                    'size_units' => [ 'px', '%' ],
+                    'range' => [
+                        'px' => [ 'min' => -100, 'max' => 100 ],
+                        '%' => [ 'min' => -100, 'max' => 100 ],
+                    ],
+                    'default' => [
+                        'size' => -6,
+                        'unit' => 'px',
+                    ],
+                    'selectors' => [
+                        '{{WRAPPER}} .tp-fact-item-border::before' => 'right: {{SIZE}}{{UNIT}};',
+                    ],
+                ]
+            );
+
+            // Top Position
+            $this->add_responsive_control(
+                'border_top_15',
+                [
+                    'label' => esc_html__( 'Top Position', 'kindaid' ),
+                    'type' => \Elementor\Controls_Manager::SLIDER,
+                    'size_units' => [ 'px', '%' ],
+                    'range' => [
+                        'px' => [ 'min' => -100, 'max' => 100 ],
+                        '%' => [ 'min' => -100, 'max' => 100 ],
+                    ],
+                    'default' => [
+                        'size' => 0,
+                        'unit' => 'px',
+                    ],
+                    'selectors' => [
+                        '{{WRAPPER}} .tp-fact-item-border::before' => 'top: {{SIZE}}{{UNIT}};',
+                    ],
+                ]
+            );
+
+        $this->end_controls_section();
+
+
         /** Extra Text Style Tabs **/
         $this->start_controls_section(
             'style_tab_4',
@@ -370,9 +478,10 @@ class Fact_Widget extends Widget_Base {
             <div class="container container-1424">
                 <div class="row">
                     <?php 
+                    $total = count( $settings['tabs'] );
                     foreach ( $settings['tabs'] as $key => $item ) : 
                     extract( $item ); 
-                    $border_class = (isset($tab_border_show) && 'yes' === $tab_border_show) ? 'tp-fact-item-border' : '';
+                    $border_class = ( $key === $total - 1 ) ? '' : 'tp-fact-item-border';
                     ?>
                         <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
                             <div class="tp-fact-item <?php echo esc_attr( $border_class ); ?> text-center pt-20 pb-25">
