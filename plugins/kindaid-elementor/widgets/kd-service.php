@@ -76,61 +76,23 @@ class Service_Widget extends Widget_Base {
                 ]
             );
 
+            // Service icon section Start
             $this->add_control(
-                'sub_title',
+                'chose_icon_style_3',
                 [
-                    'label'       => __( 'Sub Title', 'kindaid' ),
-                    'type'        => Controls_Manager::TEXTAREA,
-                    'placeholder' => __( 'Enter your sub title', 'kindaid' ),
-                    'default'     => __( 'How we help', 'kindaid' ),
-                    'label_block' => true,
-                ]
-            );
-
-
-            $this->add_control(
-                'title',
-                [
-                    'label'       => __( 'Title', 'kindaid' ),
-                    'type'        => Controls_Manager::TEXTAREA,
-                    'placeholder' => __( 'Enter your title', 'kindaid' ),
-                    'default'     => __( 'Delivering Solutions', 'kindaid' ),
-                    'label_block' => true,
-                ]
-            );
-
-        $this->end_controls_section();
-
-
-
-        //  Service single card start
-
-        $this->start_controls_section(
-            'control_section_1',
-                [
-                    'label' => __( 'Service Content', 'kindaid' ),
-                ]
-            );
-            $repeater = new \Elementor\Repeater();
-
-
-
-            $repeater->add_control(
-                'chose_icon_style',
-                [
-                    'label' => esc_html__( 'Select Icon', 'textdomain' ),
+                    'label' => esc_html__( 'Select Btn Icon 2', 'textdomain' ),
                     'type' => \Elementor\Controls_Manager::SELECT,
-                    'default'     => 'fontawosome_icon',
+                    'default'     => 'fontawosome_icon_3',
                     'options'     => [
-                        'fontawosome_icon' => esc_html__( 'Icon', 'kindaid' ),
-                        'image_icon'       => esc_html__( 'Image', 'kindaid' ),
-                        'svg_icon'         => esc_html__( 'SVG', 'kindaid' ),
+                        'fontawosome_icon_3' => esc_html__( 'Icon', 'kindaid' ),
+                        'image_icon_3'       => esc_html__( 'Image', 'kindaid' ),
+                        'svg_icon_3'         => esc_html__( 'SVG', 'kindaid' ),
                     ],
                 ]
             );
 
-            $repeater->add_control(
-                'list_icon',
+            $this->add_control(
+                'list_icon_3',
                 [
                     'label' => esc_html__( 'Icon', 'textdomain' ),
                     'type' => \Elementor\Controls_Manager::ICONS,
@@ -140,14 +102,14 @@ class Service_Widget extends Widget_Base {
                         'library' => 'fa-solid',
                     ],
                     'condition'   => [
-                        'chose_icon_style' => ['fontawosome_icon'],
+                        'chose_icon_style_3' => ['fontawosome_icon_3'],
                     ],
 
                 ]
             );
 
-            $repeater->add_control(
-				'list_image_icon',
+            $this->add_control(
+				'list_image_icon_3',
 				[
 					'label' => esc_html__( 'Image Icon', 'kindaid' ),
 					'type' => \Elementor\Controls_Manager::MEDIA,
@@ -156,138 +118,59 @@ class Service_Widget extends Widget_Base {
 						'url' => \Elementor\Utils::get_placeholder_image_src(),
 					],
                     'condition'   => [
-                        'chose_icon_style' => ['image_icon'],
+                        'chose_icon_style_3' => ['image_icon_3'],
                     ],
 				]
 			);
 
-            $repeater->add_control(
-                'list_svg_icon',
+            $this->add_control(
+                'list_svg_icon_3',
                 [
                     'label' => esc_html__( 'SVG Code Here', 'textdomain' ),
                     'type' => \Elementor\Controls_Manager::TEXTAREA,
                     'default' => esc_html__( '' , 'textdomain' ),
                     'label_block' => true,
                     'condition'   => [
-                        'chose_icon_style' => ['svg_icon'],
+                        'chose_icon_style_3' => ['svg_icon_3'],
                     ],
                 ]
             );
-            $repeater->add_control(
-                'list_title',
-                [
-                    'label' => esc_html__( 'Title', 'textdomain' ),
-                    'type' => \Elementor\Controls_Manager::TEXT,
-                    'default' => esc_html__( 'Healthy Food' , 'textdomain' ),
-                    'label_block' => true,
-                ]
-            );
-            $repeater->add_control(
-                'list_title_url',
-                [
-                    'label' => esc_html__( 'Title Url', 'textdomain' ),
-                    'type' => \Elementor\Controls_Manager::TEXT,
-                    'default' => esc_html__( '#' , 'textdomain' ),
-                    'label_block' => true,
-                ]
-            );
-
-            $repeater->add_control(
-                'list_content',
-                [
-                    'label' => esc_html__( 'Content', 'textdomain' ),
-                    'type' => \Elementor\Controls_Manager::TEXTAREA,
-                    'default' => esc_html__( 'Health care are essential for a childs growth.' , 'textdomain' ),
-                    'show_label' => false,
-                ]
-            );
-            $repeater->add_control(
-                'list_btn_text',
-                [
-                    'label' => esc_html__( 'Button Text', 'textdomain' ),
-                    'type' => \Elementor\Controls_Manager::TEXT,
-                    'default' => esc_html__( 'Read More' , 'textdomain' ),
-                    'label_block' => true,
-                ]
-            );
-            $repeater->add_control(
-                'list_btn_url',
-                [
-                    'label' => esc_html__( 'Button URL', 'textdomain' ),
-                    'type' => \Elementor\Controls_Manager::TEXT,
-                    'default' => esc_html__( '#' , 'textdomain' ),
-                    'label_block' => true,
-                    
-                ]
-            );
-
-
-
 
             $this->add_control(
-                'list',
+                'title',
                 [
-                    'label' => esc_html__( 'Service List', 'textdomain' ),
-                    'type' => \Elementor\Controls_Manager::REPEATER,
-                    'fields' => $repeater->get_controls(),
-                    'default' => [
-                        [
-                            'list_title'    => esc_html__( 'Healthy Food', 'textdomain' ),
-                            'list_content'  => esc_html__( 'Health care are essential for a childs growth.', 'textdomain' ),
-                            'list_btn_text' => esc_html__( 'Read More', 'textdomain' ),
-                            'list_btn_url'  => esc_html__( '#', 'textdomain' ),
-                        ],
-                        [
-                            'list_title'    => esc_html__( 'Healthy Food', 'textdomain' ),
-                            'list_content'  => esc_html__( 'Health care are essential for a childs growth.', 'textdomain' ),
-                            'list_btn_text' => esc_html__( 'Read More', 'textdomain' ),
-                            'list_btn_url'  => esc_html__( '#', 'textdomain' ),
-                        ],
-                    ],
-                    'title_field' => '{{{ list_title }}}',
+                    'label'       => __( 'Title', 'kindaid' ),
+                    'type'        => Controls_Manager::TEXTAREA,
+                    'placeholder' => __( 'Enter your title', 'kindaid' ),
+                    'default'     => __( 'Child<br> Assistance', 'kindaid' ),
+                    'label_block' => true,
+                ]
+            );
+            $this->add_control(
+                'title_url',
+                [
+                    'label'       => __( 'Title URL', 'kindaid' ),
+                    'type'        => Controls_Manager::TEXTAREA,
+                    'placeholder' => __( 'Enter your title', 'kindaid' ),
+                    'default'     => __( '#', 'kindaid' ),
+                    'label_block' => true,
+                ]
+            );
+
+            $this->add_control(
+                'short_dec',
+                [
+                    'label'       => __( 'Short Dec', 'kindaid' ),
+                    'type'        => Controls_Manager::TEXTAREA,
+                    'placeholder' => __( 'Enter your sub title', 'kindaid' ),
+                    'default'     => __( 'Education is the first to independence child.', 'kindaid' ),
+                    'label_block' => true,
                 ]
             );
 
         $this->end_controls_section();
 
 
-
-
-        // Thumbnail & Shape Section Start
-        $this->start_controls_section(
-            'Thumbnail_1',
-                [
-                    'label' => __( 'Thumbnail', 'kindaid' ),
-                ]
-            );
-
-            $this->add_control(
-                'shape_1',
-                [
-                    'label' => esc_html__( 'Shape Image 1', 'kindaid' ),
-                    'type' => \Elementor\Controls_Manager::MEDIA,
-                    'description' => esc_html__('Add Background Image 2 From Here', 'kindaid'),
-                    'default' => [
-                        'url' => \Elementor\Utils::get_placeholder_image_src(),
-                    ],
-                    'label_block' => true,
-                ]
-            );
-
-            $this->add_control(
-                'shape_2',
-                [
-                    'label'       => esc_html__('Shape Image 2', 'kindaid'),
-                    'description' => esc_html__('Add Shape Image 1 From Here', 'kindaid'),
-                    'type'        => \Elementor\Controls_Manager::MEDIA,
-                    'default'     => [
-                        'url' => \Elementor\Utils::get_placeholder_image_src(),
-                    ],
-                    'dynamic'     => ['active' => true],
-                ]
-            );
-            
-        $this->end_controls_section(); 
         
     }
 
@@ -344,6 +227,10 @@ class Service_Widget extends Widget_Base {
 					'type' => \Elementor\Controls_Manager::HEADING,
 					'label' => __( 'Sub Title Layout Style Here...', 'kindaid' ),
 					'separator' => 'before',
+                    'condition'   => [
+                        'chose_style' => ['service-style-1'],
+                    ],
+                    
 				]
 			);
 
@@ -355,6 +242,9 @@ class Service_Widget extends Widget_Base {
 					'selectors' => [
 						'{{WRAPPER}} .ele-kd-subtitle' => 'color: {{VALUE}}',
 					],
+                    'condition'   => [
+                        'chose_style' => ['service-style-1'],
+                    ],
 				]
 			);
 
@@ -363,6 +253,9 @@ class Service_Widget extends Widget_Base {
                 [
                     'name' => 'typography_2',
                     'selector' => '{{WRAPPER}} .ele-kd-subtitle',
+                    'condition'   => [
+                        'chose_style' => ['service-style-1'],
+                    ],
                 ]
             );
 
@@ -375,6 +268,9 @@ class Service_Widget extends Widget_Base {
                     'selectors' => [
                         '{{WRAPPER}} .ele-kd-subtitle' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                     ],
+                    'condition'   => [
+                        'chose_style' => ['service-style-1'],
+                    ],
                 ]
             );
 
@@ -386,6 +282,9 @@ class Service_Widget extends Widget_Base {
                     'size_units' => ['px', '%', 'em'],
                     'selectors' => [
                         '{{WRAPPER}} .ele-kd-subtitle' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    ],
+                    'condition'   => [
+                        'chose_style' => ['service-style-1'],
                     ],
                 ]
             );
@@ -441,6 +340,61 @@ class Service_Widget extends Widget_Base {
                     'size_units' => ['px', '%', 'em'],
                     'selectors' => [
                         '{{WRAPPER}} .ele-kd-title' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    ],
+                ]
+            );
+
+
+            // Short Description here start
+
+            $this->add_control(
+				'separator_heading_9',
+				[
+					'type' => \Elementor\Controls_Manager::HEADING,
+					'label' => __( 'Short Dec Style Here...', 'kindaid' ),
+					'separator' => 'before',
+				]
+			);
+
+            $this->add_responsive_control(
+				'color_7',
+				[
+					'label' => esc_html__( 'Color', 'kindaid' ),
+					'type' => Controls_Manager::COLOR,
+					'selectors' => [
+						'{{WRAPPER}} .ele-kd-dec' => 'color: {{VALUE}}',
+					],
+				]
+			);
+
+            $this->add_group_control(
+                Group_Control_Typography::get_type(),
+                [
+                    'name' => 'typography_7',
+                    'selector' => '{{WRAPPER}} .ele-kd-dec',
+                ]
+            );
+
+            $this->add_responsive_control(
+                'padding_8',
+                [
+                    'label' => __( 'Padding', 'kindaid' ),
+                    'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                    'size_units' => [ 'px', '%', 'em', 'rem' ],
+                    'selectors' => [
+                        '{{WRAPPER}} .ele-kd-dec' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    ],
+                ]
+            );
+
+            $this->add_responsive_control(
+                'margin_8',
+                [
+                    'label' => esc_html__('Margin', 'zylo-elementor'),
+                    'type' => Controls_Manager::DIMENSIONS,
+                    'size_units' => ['px', '%', 'em'],
+                    'selectors' => [
+                        '{{WRAPPER}} .ele-kd-dec' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                     ],
                 ]
             );
@@ -701,7 +655,7 @@ class Service_Widget extends Widget_Base {
 				'separator_heading_1',
 				[
 					'type' => \Elementor\Controls_Manager::HEADING,
-					'label' => __( 'Title Layout Style Here...', 'kindaid' ),
+					'label' => __( 'Title Layout Section Here...', 'kindaid' ),
 					'separator' => 'before',
 				]
 			);
@@ -721,8 +675,23 @@ class Service_Widget extends Widget_Base {
                     'label'   => esc_html__( 'Show Sub Title', 'cleenpro-elementor' ),
                     'type'    => Controls_Manager::SWITCHER,
                     'default' => 'yes',
+                    'condition'   => [
+                        'chose_style' => ['service-style-1'],
+                    ],
                 ]
             );
+            $this->add_control(
+                'show_short_dec',
+                [
+                    'label'   => esc_html__( 'Show Short Dec', 'cleenpro-elementor' ),
+                    'type'    => Controls_Manager::SWITCHER,
+                    'default' => 'yes',
+                    'condition'   => [
+                        'chose_style' => ['service-style-2'],
+                    ],
+                ]
+            );
+
             
             
             //  Service Card Layout Start
@@ -733,6 +702,9 @@ class Service_Widget extends Widget_Base {
 					'type' => \Elementor\Controls_Manager::HEADING,
 					'label' => __( 'Card Layout Style Here...', 'kindaid' ),
 					'separator' => 'before',
+                    'condition'   => [
+                        'chose_style' => ['service-style-1'],
+                    ],
 				]
 			);
 
@@ -742,6 +714,9 @@ class Service_Widget extends Widget_Base {
                     'label'   => esc_html__( 'Show Card Icon', 'cleenpro-elementor' ),
                     'type'    => Controls_Manager::SWITCHER,
                     'default' => 'yes',
+                    'condition'   => [
+                        'chose_style' => ['service-style-1'],
+                    ],
                 ]
             );
             $this->add_control(
@@ -750,6 +725,9 @@ class Service_Widget extends Widget_Base {
                     'label'   => esc_html__( 'Show Card Title', 'cleenpro-elementor' ),
                     'type'    => Controls_Manager::SWITCHER,
                     'default' => 'yes',
+                    'condition'   => [
+                        'chose_style' => ['service-style-1'],
+                    ],
                 ]
             );
             $this->add_control(
@@ -758,6 +736,9 @@ class Service_Widget extends Widget_Base {
                     'label'   => esc_html__( 'Show Card Description', 'cleenpro-elementor' ),
                     'type'    => Controls_Manager::SWITCHER,
                     'default' => 'yes',
+                    'condition'   => [
+                        'chose_style' => ['service-style-1'],
+                    ],
                 ]
             );
             $this->add_control(
@@ -766,6 +747,9 @@ class Service_Widget extends Widget_Base {
                     'label'   => esc_html__( 'Show Card Button', 'cleenpro-elementor' ),
                     'type'    => Controls_Manager::SWITCHER,
                     'default' => 'yes',
+                    'condition'   => [
+                        'chose_style' => ['service-style-1'],
+                    ],
                 ]
             );
 
@@ -777,6 +761,9 @@ class Service_Widget extends Widget_Base {
 					'type' => \Elementor\Controls_Manager::HEADING,
 					'label' => __( 'Thumbnail & Shape Style Here...', 'kindaid' ),
 					'separator' => 'before',
+                    'condition'   => [
+                        'chose_style' => ['service-style-1'],
+                    ],
 				]
 			);
 
@@ -786,6 +773,9 @@ class Service_Widget extends Widget_Base {
                     'label'   => esc_html__( 'Show Thumbnail 1', 'cleenpro-elementor' ),
                     'type'    => Controls_Manager::SWITCHER,
                     'default' => 'yes',
+                    'condition'   => [
+                        'chose_style' => ['service-style-1'],
+                    ],
                 ]
             );	
             $this->add_control(
@@ -794,6 +784,9 @@ class Service_Widget extends Widget_Base {
                     'label'   => esc_html__( 'Show Shape 1', 'cleenpro-elementor' ),
                     'type'    => Controls_Manager::SWITCHER,
                     'default' => 'yes',
+                    'condition'   => [
+                        'chose_style' => ['service-style-1'],
+                    ],
                 ]
             );	
 
@@ -922,6 +915,62 @@ class Service_Widget extends Widget_Base {
                 </div>
             </div>
         </div>
+
+
+
+        <?php 
+        elseif ($chose_style == 'service-style-2'):   ?>
+
+        <div class="tp-service-item tp-service-2-item icon-anime-wrap ele-kd-bg wow fadeInUp" data-wow-duration=".9s"  data-wow-delay=".3s" data-bg-color="#ffca24">
+            <span class="tp-service-icon icon-anime mb-75 d-inline-block">
+                <?php 
+                    $icon_style_3 = $settings['chose_icon_style_3'] ?? ''; 
+                    $has_icon_3 = (
+                        ( $icon_style_3 === 'fontawosome_icon_3' && ! empty( $list_icon_3['value'] ) ) ||
+                        ( $icon_style_3 === 'image_icon_3' && ! empty( $list_image_icon_3['url'] ) ) ||
+                        ( $icon_style_3 === 'svg_icon_3' && ! empty( $list_svg_icon_3 ) )
+                    );
+                ?>
+
+                <?php 
+                if ( $has_icon_3 ) : ?>
+                    <span class="btn-icon">
+                        <?php 
+                        if ( $icon_style_3 === 'fontawosome_icon_3' && ! empty( $list_icon_3['value'] ) ) : ?>
+                            <i class="<?php echo esc_attr( $list_icon_3['value'] ); ?>"></i>
+
+                            <?php 
+                            elseif ( $icon_style_3 === 'image_icon_3' && ! empty( $list_image_icon_3['url'] ) ) : ?>
+                                <img src="<?php echo esc_url( $list_image_icon_3['url'] ); ?>" alt="">
+
+                            <?php 
+                            elseif ( $icon_style_3 === 'svg_icon_3' && ! empty( $list_svg_icon_3 ) ) : ?>
+                                <?php echo kd_kses( $list_svg_icon_3 ); ?>
+                        <?php 
+                        endif; ?>
+                    </span>
+                <?php 
+                endif; ?>
+            </span>
+
+            <?php 
+			if (!empty($title)) : ?>
+                <h3 class="tp-service-title ele-kd-title mb-15">
+                    <a href="<?php echo esc_url($title_url); ?>" class="common-underline">
+                        <?php echo kd_kses( $title ); ?>
+                    </a>
+                </h3>
+            <?php 
+            endif; ?>
+
+            <?php 
+			if (!empty($short_dec)) : ?>
+                <p class="tp-service-dec ele-kd-dec mb-0"><?php echo esc_html( $short_dec ); ?></p>
+            <?php 
+            endif; ?>
+        </div>
+
+
 
         <?php
         endif; ?>
