@@ -134,3 +134,14 @@ Stack trace:
 [02-Feb-2026 10:54:08 UTC] PHP Warning:  Undefined variable $icon_style_2 in C:\xampp\htdocs\kindaid-projectwp\wp-content\plugins\kindaid-elementor\widgets\hero.php on line 1079
 [02-Feb-2026 10:54:08 UTC] PHP Warning:  Undefined variable $icon_style_2 in C:\xampp\htdocs\kindaid-projectwp\wp-content\plugins\kindaid-elementor\widgets\hero.php on line 1080
 [02-Feb-2026 13:44:19 UTC] PHP Parse error:  syntax error, unexpected token "}", expecting "elseif" or "else" or "endif" in C:\xampp\htdocs\kindaid-projectwp\wp-content\plugins\kindaid-elementor\widgets\kd-service.php on line 960
+[02-Feb-2026 15:12:53 UTC] PHP Notice:  Function Elementor\Controls_Manager::add_control_to_stack was called <strong>incorrectly</strong>. Cannot redeclare control with same name "bg_image_1". Please see <a href="https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 1.0.0.) in C:\xampp\htdocs\kindaid-projectwp\wp-includes\functions.php on line 6131
+[02-Feb-2026 16:21:53 UTC] PHP Warning:  Undefined variable $style_tab_6 in C:\xampp\htdocs\kindaid-projectwp\wp-content\plugins\kindaid-elementor\widgets\kd-about.php on line 862
+[02-Feb-2026 16:22:00 UTC] PHP Warning:  Undefined variable $style_tab_6 in C:\xampp\htdocs\kindaid-projectwp\wp-content\plugins\kindaid-elementor\widgets\kd-about.php on line 862
+[02-Feb-2026 16:41:31 UTC] PHP Warning:  Undefined array key "shape_1" in C:\xampp\htdocs\kindaid-projectwp\wp-content\plugins\kindaid-elementor\widgets\kd-service.php on line 810
+[02-Feb-2026 16:41:31 UTC] PHP Warning:  Undefined array key "shape_2" in C:\xampp\htdocs\kindaid-projectwp\wp-content\plugins\kindaid-elementor\widgets\kd-service.php on line 820
+[02-Feb-2026 16:41:31 UTC] PHP Warning:  Undefined array key "chose_icon_style" in C:\xampp\htdocs\kindaid-projectwp\wp-content\plugins\kindaid-elementor\widgets\kd-service.php on line 852
+[02-Feb-2026 16:41:31 UTC] PHP Warning:  Undefined array key "chose_icon_style" in C:\xampp\htdocs\kindaid-projectwp\wp-content\plugins\kindaid-elementor\widgets\kd-service.php on line 853
+[02-Feb-2026 16:41:31 UTC] PHP Warning:  Undefined array key "chose_icon_style" in C:\xampp\htdocs\kindaid-projectwp\wp-content\plugins\kindaid-elementor\widgets\kd-service.php on line 854
+[02-Feb-2026 16:41:31 UTC] PHP Warning:  Undefined array key "chose_icon_style" in C:\xampp\htdocs\kindaid-projectwp\wp-content\plugins\kindaid-elementor\widgets\kd-service.php on line 852
+[02-Feb-2026 16:41:31 UTC] PHP Warning:  Undefined array key "chose_icon_style" in C:\xampp\htdocs\kindaid-projectwp\wp-content\plugins\kindaid-elementor\widgets\kd-service.php on line 853
+[02-Feb-2026 16:41:31 UTC] PHP Warning:  Undefined array key "chose_icon_style" in C:\xampp\htdocs\kindaid-projectwp\wp-content\plugins\kindaid-elementor\widgets\kd-service.php on line 854
