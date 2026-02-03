@@ -63,13 +63,14 @@ class Hero_Widget extends Widget_Base {
 
         $this->end_controls_section();
 
+
         // Hero Content Section
         $this->start_controls_section(
             'control_section_2',
                 [
                     'label' => __( 'Hero Content', 'kindaid' ),
                     'condition'   => [
-                        'chose_style' => ['hero-style-1'],
+                        'chose_style' => ['hero-style-1', 'hero-style-3'],
                     ],
                 ]
             );
@@ -82,6 +83,9 @@ class Hero_Widget extends Widget_Base {
                     'placeholder' => __( 'Enter your sub title', 'kindaid' ),
                     'default'     => __( 'Need Help...', 'kindaid' ),
                     'label_block' => true,
+                    'condition'   => [
+                        'chose_style' => ['hero-style-1', 'hero-style-2'],
+                    ],
                 ]
             );
 
@@ -91,7 +95,7 @@ class Hero_Widget extends Widget_Base {
 					'label' => esc_html__( 'Upload Sub Title Icon', 'kindaid' ),
 					'type' => \Elementor\Controls_Manager::MEDIA,
                     'condition'   => [
-                        'chose_style' => ['hero-style-4'],
+                        'chose_style' => ['hero-style-1', 'hero-style-2'],
                     ],
 					'default' => [
 						'url' => \Elementor\Utils::get_placeholder_image_src(),
@@ -119,6 +123,9 @@ class Hero_Widget extends Widget_Base {
                     'placeholder' => __( 'Enter your content', 'kindaid' ),
                     'default'     => __( 'Hempel Foundation is the <br> majority owner of the Kindaid Group!', 'kindaid' ),
                     'label_block' => true,
+                    'condition'   => [
+                        'chose_style' => ['hero-style-1', 'hero-style-2'],
+                    ],
                 ]
             );
 
@@ -128,7 +135,7 @@ class Hero_Widget extends Widget_Base {
 					'label' => esc_html__( 'Hero Image', 'kindaid' ),
 					'type' => \Elementor\Controls_Manager::MEDIA,
                     'condition'   => [
-                        'chose_style' => ['hero-style-1'],
+                        'chose_style' => ['hero-style-1', 'hero-style-2'],
                     ],
 					'default' => [
 						'url' => \Elementor\Utils::get_placeholder_image_src(),
@@ -136,6 +143,118 @@ class Hero_Widget extends Widget_Base {
 					'label_block' => true,
 				]
 			);
+        $this->end_controls_section();
+
+
+
+                
+        // Hero Button section start
+        $this->start_controls_section(
+            'control_section_5',
+                [
+                    'label' => __( 'Button', 'kindaid' ),
+                ]
+            );
+
+            $this->add_control(
+                'btn_text_11',
+                [
+                    'label'       => __( 'Button Text', 'kindaid' ),
+                    'type'        => Controls_Manager::TEXT,
+                    'placeholder' => __( 'Enter your sub title', 'kindaid' ),
+                    'default'     => __( 'Button Text', 'kindaid' ),
+                    'label_block' => true,
+                    'condition'   => [
+                        'chose_style' => ['hero-style-3'],
+                    ],
+                ]
+            );
+            $this->add_control(
+                'btn_url_11',
+                [
+                    'label'       => __( 'Button URL', 'kindaid' ),
+                    'type'        => Controls_Manager::TEXT,
+                    'placeholder' => __( 'Enter your sub title', 'kindaid' ),
+                    'default'     => __( '#', 'kindaid' ),
+                    'label_block' => true,
+                    'condition'   => [
+                        'chose_style' => ['hero-style-3'],
+                    ],
+                ]
+            );
+            $this->add_control(
+                'btn_text_12',
+                [
+                    'label'       => __( 'Button 2 Text', 'kindaid' ),
+                    'type'        => Controls_Manager::TEXT,
+                    'placeholder' => __( 'Enter your sub title', 'kindaid' ),
+                    'default'     => __( 'Button Text', 'kindaid' ),
+                    'label_block' => true,
+                    'condition'   => [
+                        'chose_style' => ['hero-style-3'],
+                    ],
+                ]
+            );
+            $this->add_control(
+                'btn_url_12',
+                [
+                    'label'       => __( 'Button 2 URL', 'kindaid' ),
+                    'type'        => Controls_Manager::TEXT,
+                    'placeholder' => __( 'Enter your sub title', 'kindaid' ),
+                    'default'     => __( '#', 'kindaid' ),
+                    'label_block' => true,
+                    'condition'   => [
+                        'chose_style' => ['hero-style-3'],
+                    ],
+                ]
+            );
+        $this->end_controls_section();
+
+
+
+        // Hero style 3 video section start
+        $this->start_controls_section(
+            'control_section_3',
+                [
+                    'label' => __( 'Hero Video', 'kindaid' ),
+                    'condition'   => [
+                        'chose_style' => ['hero-style-3'],
+                    ],
+                ]
+            );
+
+            $this->add_control(
+                'video_url',
+                [
+                    'label'       => __( 'Hero Mp4 Video URL', 'kindaid' ),
+                    'type'        => Controls_Manager::TEXTAREA,
+                    'placeholder' => __( 'Enter your title', 'kindaid' ),
+                    'default'     => __( '#', 'kindaid' ),
+                    'label_block' => true,
+                ]
+            );
+            $this->add_control(
+                'popup_video_text',
+                [
+                    'label'       => __( 'Popup Video Text', 'kindaid' ),
+                    'type'        => Controls_Manager::TEXT,
+                    'placeholder' => __( 'Enter your title', 'kindaid' ),
+                    'default'     => __( 'Feature<br> Who are you ', 'kindaid' ),
+                    'label_block' => true,
+                ]
+            );
+            $this->add_control(
+                'popup_video_url',
+                [
+                    'label'       => __( 'Popup Video URL', 'kindaid' ),
+                    'type'        => Controls_Manager::TEXTAREA,
+                    'placeholder' => __( 'Enter your title', 'kindaid' ),
+                    'default'     => __( '#', 'kindaid' ),
+                    'label_block' => true,
+                ]
+            );
+
+
         $this->end_controls_section();
 
 
@@ -1273,6 +1392,89 @@ class Hero_Widget extends Widget_Base {
                 </span>
             </div>
         </div>
+
+
+
+        <?php 
+        elseif ($chose_style == 'hero-style-3') :  ?> 
+        
+        
+        <div class="tp-hero-area tp-hero-3-style fix">
+            <?php 
+            if (!empty($video_url)): ?>
+                <div class="tp-hero-3-video-container">
+                    <video loop="" muted="" autoplay="" playsinline="">
+                        <source src="<?php echo esc_url( $video_url ); ?>" type="video/mp4">
+                    </video>
+                </div> 
+            <?php 
+            endif; ?>
+            <div class="container-fluid container-1790">
+                <div class="row align-items-end">
+                <div class="col-lg-7">
+                    <div class="tp-hero-content p-relative z-index-2 mb-30">
+                        <?php 
+                        if (!empty($title)): ?>
+                            <h2 class="tp-hero-title mb-40 wow fadeInUp" data-wow-duration=".9s" data-wow-delay=".3s"><?php echo kd_kses( $title ); ?></h2>
+                        <?php 
+                        endif; ?>
+
+                        <div class="tp-hero-btn wow fadeInUp" data-wow-duration=".9s" data-wow-delay=".4s">
+                        <?php 
+                        if (!empty($btn_text_11)): ?>
+                            <a class="tp-btn tp-btn-animetion mr-5 mb-10" href="<?php echo esc_html( $btn_url_11 ); ?>">
+                                <span class="btn-text"><?php echo esc_html( $btn_text_11 ); ?></span>
+                                <span class="btn-icon">
+                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 7H13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M7 1L13 7L7 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </span>
+                            </a>
+                        <?php 
+                        endif; ?>
+
+                        <?php 
+                        if (!empty($btn_text_12)): ?>
+                            <a class="tp-btn tp-btn-secondary tp-btn-animetion mb-10" href="<?php echo esc_html( $btn_url_12 ); ?>">
+                                <span class="btn-text"><?php echo esc_html( $btn_text_12 ); ?></span>
+                                <span class="btn-icon">
+                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 7H13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M7 1L13 7L7 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </span>
+                            </a>
+                        <?php 
+                        endif; ?>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="d-flex justify-content-lg-end">
+                        <?php 
+                        if (!empty($popup_video_text)): ?>
+                            <div class="tp-hero-3-video-wrap mb-40 wow fadeInUp" data-wow-duration=".9s" data-wow-delay=".5s">
+                                <span class="tp-hero-3-video-text mr-25"><?php echo kd_kses( $popup_video_text ); ?></span>
+                                <a class="tp-hero-3-video-btn popup-video" href="<?php echo esc_url( $popup_video_url ); ?>">
+                                <span>
+                                    <svg width="15" height="17" viewBox="0 0 15 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.660254 1.73205C0.660254 0.962251 1.49359 0.481125 2.16025 0.866025L14.1603 7.79423C14.8269 8.17913 14.8269 9.14138 14.1603 9.52628L2.16025 16.4545C1.49359 16.8394 0.660254 16.3583 0.660254 15.5885L0.660254 1.73205Z" fill="currentColor" />
+                                    </svg>
+                                </span>
+                                </a>
+                            </div>
+                        <?php 
+                        endif; ?>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
 
 
 
