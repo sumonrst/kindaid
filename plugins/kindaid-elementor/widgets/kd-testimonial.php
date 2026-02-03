@@ -355,6 +355,42 @@ class Testimonial_Widget extends Widget_Base {
                 ]
             );
 
+            // Rating style here start
+            $this->add_control(
+				'separator_heading_23',
+				[
+					'type' => \Elementor\Controls_Manager::HEADING,
+					'label' => __( 'Rating Style Here...', 'kindaid' ),
+					'separator' => 'before',
+				]
+			);
+
+            $this->add_control(
+                'rating_svg_color',
+                [
+                    'label' => esc_html__( 'Star SVG Color', 'kindaid' ),
+                    'type' => \Elementor\Controls_Manager::COLOR,
+                    'selectors' => [
+                        '{{WRAPPER}} .tp-testimonal-star svg' => 'fill: {{VALUE}};',
+                    ],
+                ]
+            );
+
+            $this->add_responsive_control(
+                'rating_svg_width',
+                [
+                    'label' => esc_html__( 'Star SVG Width', 'kindaid' ),
+                    'type' => \Elementor\Controls_Manager::SLIDER,
+                    'size_units' => [ 'px', 'em', '%' ],
+                    'range' => [
+                        'px' => [ 'min' => 5, 'max' => 100 ],
+                    ],
+                    'selectors' => [
+                        '{{WRAPPER}} .tp-testimonal-star svg' => 'width: {{SIZE}}{{UNIT}};',
+                    ],
+                ]
+            );
+
             // SubTitle style here start
             $this->add_control(
 				'separator_heading_21',

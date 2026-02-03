@@ -52,6 +52,7 @@ function kindaid_addon_register_widgets( $widgets_manager ) {
     require_once KINDAID_PATH . 'widgets/kd-team.php';
     require_once KINDAID_PATH . 'widgets/kd-about.php';
     require_once KINDAID_PATH . 'widgets/kd-testimonial.php';
+    require_once KINDAID_PATH . 'widgets/kd-gallery.php';
 
     $widgets_manager->register( new \Kindaid\Widgets\Heading_Widget() );
     $widgets_manager->register( new \Kindaid\Widgets\Button_Widget() );
@@ -67,6 +68,7 @@ function kindaid_addon_register_widgets( $widgets_manager ) {
     $widgets_manager->register( new \Kindaid\Widgets\Team_Widget() );
     $widgets_manager->register( new \Kindaid\Widgets\About_Widget() );
     $widgets_manager->register( new \Kindaid\Widgets\Testimonial_Widget() );
+    $widgets_manager->register( new \Kindaid\Widgets\Gallery_Widget() );
 
 }
 add_action( 'elementor/widgets/register', 'kindaid_addon_register_widgets' );
