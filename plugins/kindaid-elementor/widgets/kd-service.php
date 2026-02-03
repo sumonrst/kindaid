@@ -1228,7 +1228,7 @@ class Service_Widget extends Widget_Base {
 
                 <?php 
                 if (!empty($title)) : ?>
-                    <h3 class="tp-service-title text-uppercase mb-15">
+                    <h3 class="tp-service-title ele-kd-title text-uppercase mb-15">
                         <a href="<?php echo esc_url($title_url); ?>" class="common-underline">
                             <?php echo kd_kses( $title ); ?>
                         </a>
