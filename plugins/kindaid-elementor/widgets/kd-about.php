@@ -1340,7 +1340,7 @@ class About_Widget extends Widget_Base {
         <?php 
         elseif ($chose_style == 'about-style-2') : ?>
 
-        <div class="tp-about-area pt-120 pb-90">
+        <div class="tp-about-area ele-kd-bg pt-120 pb-90">
             <div class="container container-1424">
                 <div class="row align-items-center">
                 <div class="offset-xl-1 col-xl-5 offset-lg-2 col-lg-9">

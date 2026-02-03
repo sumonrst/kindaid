@@ -89,7 +89,7 @@ class Service_Widget extends Widget_Base {
                         'svg_icon_3'         => esc_html__( 'SVG', 'kindaid' ),
                     ],
                     'condition'   => [
-                        'chose_style' => ['service-style-2'],
+                        'chose_style' => ['service-style-2', 'service-style-3'],
                     ],
                 ]
             );
@@ -107,10 +107,6 @@ class Service_Widget extends Widget_Base {
                     'condition'   => [
                         'chose_icon_style_3' => ['fontawosome_icon_3'],
                     ],
-                    'condition'   => [
-                        'chose_style' => ['service-style-2'],
-                    ],
-
                 ]
             );
 
@@ -351,7 +347,7 @@ class Service_Widget extends Widget_Base {
                 [
                     'label' => esc_html__( 'Thumbnail', 'kindaid' ),
                     'condition'   => [
-                        'chose_style' => ['service-style-1'],
+                        'chose_style' => ['service-style-1','service-style-3'],
                     ],
                 ]	
             );
@@ -366,7 +362,7 @@ class Service_Widget extends Widget_Base {
                         'url' => \Elementor\Utils::get_placeholder_image_src(),
                     ],
                     'condition'   => [
-                        'chose_style' => 'service-style-1',
+                        'chose_style' => ['service-style-1', 'service-style-3'],
                     ],
                 ]
             );
@@ -1187,6 +1183,67 @@ class Service_Widget extends Widget_Base {
         </div>
 
 
+        <?php 
+        elseif ($chose_style == 'service-style-3'):   ?>
+
+            <div class="tp-service-3-item fix icon-anime-wrap position-relative mb-30 wow fadeInUp" data-wow-duration=".9s" data-wow-delay=".3s">
+                <div class="tp-service-3-thumb position-relative">
+                <?php	
+                if ( kindaid_img_src($settings['shape_1']) )  :  ?>
+                    <?php echo kindaid_img_src( $settings['shape_1'], 'w-100 ele-kd-ser-img' ); ?>
+                <?php
+                endif; ?>
+                </div>
+                <div class="tp-service-3-top">
+                <span class="tp-service-icon icon-anime mb-25 d-inline-block">
+                     <?php 
+                        $icon_style_3 = $settings['chose_icon_style_3'] ?? ''; 
+                        $has_icon_3 = (
+                            ( $icon_style_3 === 'fontawosome_icon_3' && ! empty( $list_icon_3['value'] ) ) ||
+                            ( $icon_style_3 === 'image_icon_3' && ! empty( $list_image_icon_3['url'] ) ) ||
+                            ( $icon_style_3 === 'svg_icon_3' && ! empty( $list_svg_icon_3 ) )
+                        );
+                    ?>
+
+                    <?php 
+                    if ( $has_icon_3 ) : ?>
+                        <span class="btn-icon">
+                            <?php 
+                            if ( $icon_style_3 === 'fontawosome_icon_3' && ! empty( $list_icon_3['value'] ) ) : ?>
+                                <i class="<?php echo esc_attr( $list_icon_3['value'] ); ?>"></i>
+
+                                <?php 
+                                elseif ( $icon_style_3 === 'image_icon_3' && ! empty( $list_image_icon_3['url'] ) ) : ?>
+                                    <img src="<?php echo esc_url( $list_image_icon_3['url'] ); ?>" alt="">
+
+                                <?php 
+                                elseif ( $icon_style_3 === 'svg_icon_3' && ! empty( $list_svg_icon_3 ) ) : ?>
+                                    <?php echo kd_kses( $list_svg_icon_3 ); ?>
+                            <?php 
+                            endif; ?>
+                        </span>
+                    <?php 
+                    endif; ?>
+                </span>
+
+                <?php 
+                if (!empty($title)) : ?>
+                    <h3 class="tp-service-title text-uppercase mb-15">
+                        <a href="<?php echo esc_url($title_url); ?>" class="common-underline">
+                            <?php echo kd_kses( $title ); ?>
+                        </a>
+                    </h3>
+                <?php 
+                endif; ?>
+                </div>
+                <div class="tp-service-3-dec">
+                    <?php 
+                    if (!empty($short_dec)) : ?>
+                        <p class="ele-kd-dec mb-0"><?php echo kd_kses( $short_dec ); ?></p>
+                    <?php 
+                    endif; ?>
+                </div>
+            </div>
 
         <?php
         endif; ?>
