@@ -194,6 +194,9 @@ class Service_Widget extends Widget_Base {
             'control_section_1',
                 [
                     'label' => __( 'Service Content', 'kindaid' ),
+                    'condition'   => [
+                        'chose_style' => ['service-style-1'],
+                    ],
                 ]
             );
             $repeater = new \Elementor\Repeater();
@@ -347,6 +350,9 @@ class Service_Widget extends Widget_Base {
 			'thumbnail_11',
                 [
                     'label' => esc_html__( 'Thumbnail', 'kindaid' ),
+                    'condition'   => [
+                        'chose_style' => ['service-style-1'],
+                    ],
                 ]	
             );
 

@@ -152,7 +152,7 @@ if ( ! function_exists( 'kindaid_bg_style' ) ) {
 }
 
 
-if ( ! function_exists( 'cleenpro_img_src' ) ) {
+if ( ! function_exists( 'kd_img_src' ) ) {
 	/**
 	 * Get the image URL from an Elementor image array.
 	 *
@@ -165,7 +165,7 @@ if ( ! function_exists( 'cleenpro_img_src' ) ) {
 	 * @param array $image Elementor image array containing 'id', 'url', etc.
 	 * @return string Escaped image URL or empty string if not available.
 	 */
-	function cleenpro_img_src( $image ) {
+	function kd_img_src( $image ) {
 		// Ensure a valid image ID exists
 		if ( ! empty( $image['id'] ) ) {
 			$src = wp_get_attachment_image_src( $image['id'], 'full' );

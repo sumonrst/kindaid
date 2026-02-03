@@ -67,7 +67,7 @@ class Button_Widget extends Widget_Base {
         $this->end_controls_section();
 
 
-                // Button Section Start
+        // Button Section Start
         $this->start_controls_section(
             'button_style',
                 [
