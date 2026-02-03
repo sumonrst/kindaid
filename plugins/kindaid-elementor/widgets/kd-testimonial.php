@@ -355,13 +355,65 @@ class Testimonial_Widget extends Widget_Base {
                 ]
             );
 
-            // Title style here start
+            // SubTitle style here start
+            $this->add_control(
+				'separator_heading_21',
+				[
+					'type' => \Elementor\Controls_Manager::HEADING,
+					'label' => __( 'Subtitle Style Here...', 'kindaid' ),
+					'separator' => 'before',
+				]
+			);
 
+            $this->add_responsive_control(
+				'color_21',
+				[
+					'label' => esc_html__( 'Color', 'kindaid' ),
+					'type' => Controls_Manager::COLOR,
+					'selectors' => [
+						'{{WRAPPER}} .ele-kd-subtitle' => 'color: {{VALUE}}',
+					],
+				]
+			);
+
+            $this->add_group_control(
+                Group_Control_Typography::get_type(),
+                [
+                    'name' => 'typography_21',
+                    'selector' => '{{WRAPPER}} .ele-kd-subtitle',
+                ]
+            );
+
+            $this->add_responsive_control(
+                'padding_21',
+                [
+                    'label' => __( 'Padding', 'kindaid' ),
+                    'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                    'size_units' => [ 'px', '%', 'em', 'rem' ],
+                    'selectors' => [
+                        '{{WRAPPER}} .ele-kd-subtitle' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    ],
+                ]
+            );
+
+            $this->add_responsive_control(
+                'margin_21',
+                [
+                    'label' => esc_html__('Margin', 'zylo-elementor'),
+                    'type' => Controls_Manager::DIMENSIONS,
+                    'size_units' => ['px', '%', 'em'],
+                    'selectors' => [
+                        '{{WRAPPER}} .ele-kd-subtitle' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    ],
+                ]
+            );
+
+            // Short Description style here start
             $this->add_control(
 				'separator_heading_6',
 				[
 					'type' => \Elementor\Controls_Manager::HEADING,
-					'label' => __( 'Title Layout Style Here...', 'kindaid' ),
+					'label' => __( 'Short Description Style Here...', 'kindaid' ),
 					'separator' => 'before',
 				]
 			);
@@ -376,29 +428,6 @@ class Testimonial_Widget extends Widget_Base {
 					],
 				]
 			);
-
-            $this->add_responsive_control(
-				'color_4',
-				[
-					'label' => esc_html__( 'Active Color', 'kindaid' ),
-					'type' => Controls_Manager::COLOR,
-					'selectors' => [
-						'{{WRAPPER}} .ele-kd-item.active .ele-kd-title' => 'color: {{VALUE}}',
-					],
-				]
-			);
-
-            $this->add_control(
-                'color_5',
-                [
-                    'label' => __( 'Active Icon Color', 'textdomain' ),
-                    'type' => \Elementor\Controls_Manager::COLOR,
-                    'selectors' => [
-                        '{{WRAPPER}} .tp-faq-item.active .tp-faq-button::before' => 'background: {{VALUE}};',
-                        '{{WRAPPER}} .tp-faq-item.active .tp-faq-button::after'  => 'background: {{VALUE}};',
-                    ],
-                ]
-            );
 
             $this->add_group_control(
                 Group_Control_Typography::get_type(),
@@ -433,12 +462,12 @@ class Testimonial_Widget extends Widget_Base {
             );
 
 
-            // Description  Start
+            // Client Name style Start
             $this->add_control(
 				'separator_heading_4',
 				[
 					'type' => \Elementor\Controls_Manager::HEADING,
-					'label' => __( 'Description Style Here...', 'kindaid' ),
+					'label' => __( 'Client Name Style Here...', 'kindaid' ),
 					'separator' => 'before',
 				]
 			);
@@ -449,7 +478,7 @@ class Testimonial_Widget extends Widget_Base {
 					'label' => esc_html__( 'Color', 'kindaid' ),
 					'type' => Controls_Manager::COLOR,
 					'selectors' => [
-						'{{WRAPPER}} .ele-kd-dec' => 'color: {{VALUE}}',
+						'{{WRAPPER}} .ele-kd-cle-name' => 'color: {{VALUE}}',
 					],
 				]
 			);
@@ -458,7 +487,7 @@ class Testimonial_Widget extends Widget_Base {
                 Group_Control_Typography::get_type(),
                 [
                     'name' => 'typography_2',
-                    'selector' => '{{WRAPPER}} .ele-kd-dec',
+                    'selector' => '{{WRAPPER}} .ele-kd-cle-name',
                 ]
             );
 
@@ -469,7 +498,7 @@ class Testimonial_Widget extends Widget_Base {
                     'type' => \Elementor\Controls_Manager::DIMENSIONS,
                     'size_units' => [ 'px', '%', 'em', 'rem' ],
                     'selectors' => [
-                        '{{WRAPPER}} .ele-kd-dec' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                        '{{WRAPPER}} .ele-kd-cle-name' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                     ],
                 ]
             );
@@ -481,7 +510,62 @@ class Testimonial_Widget extends Widget_Base {
                     'type' => Controls_Manager::DIMENSIONS,
                     'size_units' => ['px', '%', 'em'],
                     'selectors' => [
-                        '{{WRAPPER}} .ele-kd-dec' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                        '{{WRAPPER}} .ele-kd-cle-name' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    ],
+                ]
+            );
+
+
+
+            // Client Designation style Start
+            $this->add_control(
+				'separator_heading_22',
+				[
+					'type' => \Elementor\Controls_Manager::HEADING,
+					'label' => __( 'Client Designation Style Here...', 'kindaid' ),
+					'separator' => 'before',
+				]
+			);
+
+            $this->add_responsive_control(
+				'color_22',
+				[
+					'label' => esc_html__( 'Color', 'kindaid' ),
+					'type' => Controls_Manager::COLOR,
+					'selectors' => [
+						'{{WRAPPER}} .ele-kd-cle-desig' => 'color: {{VALUE}}',
+					],
+				]
+			);
+
+            $this->add_group_control(
+                Group_Control_Typography::get_type(),
+                [
+                    'name' => 'typography_22',
+                    'selector' => '{{WRAPPER}} .ele-kd-cle-desig',
+                ]
+            );
+
+            $this->add_responsive_control(
+                'padding_22',
+                [
+                    'label' => __( 'Padding', 'kindaid' ),
+                    'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                    'size_units' => [ 'px', '%', 'em', 'rem' ],
+                    'selectors' => [
+                        '{{WRAPPER}} .ele-kd-cle-desig' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    ],
+                ]
+            );
+
+            $this->add_responsive_control(
+                'margin_22',
+                [
+                    'label' => esc_html__('Margin', 'zylo-elementor'),
+                    'type' => Controls_Manager::DIMENSIONS,
+                    'size_units' => ['px', '%', 'em'],
+                    'selectors' => [
+                        '{{WRAPPER}} .ele-kd-cle-desig' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                     ],
                 ]
             );
@@ -507,7 +591,7 @@ class Testimonial_Widget extends Widget_Base {
 
         if ($chose_style == 'testimonial-style-1'):   ?>
 
-        <div class="tp-testimonial-area pt-115 pb-120">
+        <div class="tp-testimonial-area ele-kd-bg pt-115 pb-120">
             <div class="container container-1324 p-relative">
                 <div class="row justify-content-center">
                     <div class="col-xl-9 col-lg-10 col-md-11 text-center">
@@ -531,38 +615,45 @@ class Testimonial_Widget extends Widget_Base {
                                                 );
                                                 ?>
 
-                                                <?php if ( $has_icon_20 ) : ?>
+                                                <?php 
+                                                if ( $has_icon_20 ) : ?>
+                                                        <?php 
+                                                        for ( $i = 1; $i <= $rating; $i++ ) : ?>
 
-                                                        <?php for ( $i = 1; $i <= $rating; $i++ ) : ?>
-
-                                                            <?php if ( $item['chose_icon_style_20'] === 'fontawosome_icon_20' && ! empty( $item['list_icon_20']['value'] ) ) : ?>
+                                                            <?php 
+                                                            if ( $item['chose_icon_style_20'] === 'fontawosome_icon_20' && ! empty( $item['list_icon_20']['value'] ) ) : ?>
 
                                                                 <?php \Elementor\Icons_Manager::render_icon( $item['list_icon_20'], [ 'aria-hidden' => 'true' ] ); ?>
 
-                                                            <?php elseif ( $item['chose_icon_style_20'] === 'image_icon_20' && ! empty( $item['list_image_icon_20']['url'] ) ) : ?>
+                                                            <?php 
+                                                            elseif ( $item['chose_icon_style_20'] === 'image_icon_20' && ! empty( $item['list_image_icon_20']['url'] ) ) : ?>
 
                                                                 <img src="<?php echo esc_url( $item['list_image_icon_20']['url'] ); ?>" alt="">
 
-                                                            <?php elseif ( $item['chose_icon_style_20'] === 'svg_icon_20' && ! empty( $item['list_svg_icon_20'] ) ) : ?>
+                                                            <?php 
+                                                            elseif ( $item['chose_icon_style_20'] === 'svg_icon_20' && ! empty( $item['list_svg_icon_20'] ) ) : ?>
 
                                                                 <?php echo kd_kses( $item['list_svg_icon_20'] ); ?>
 
-                                                            <?php endif; ?>
+                                                            <?php 
+                                                            endif; ?>
 
-                                                        <?php endfor; ?>
+                                                        <?php 
+                                                        endfor; ?>
+                                                <?php 
+                                                endif; ?>
 
-                                                <?php endif; ?>
                                             </div>
 
                                             <?php 
                                             if (!empty($list_title)) : ?>
-                                                <span class="tp-testimonal-label mb-20 d-inline-block"><?php echo esc_html($list_title); ?></span>
+                                                <span class="tp-testimonal-label ele-kd-subtitle mb-20 d-inline-block"><?php echo esc_html($list_title); ?></span>
                                             <?php 
                                             endif; ?>
 
                                             <?php 
                                             if (!empty($list_dec)) : ?>
-                                                <h4 class="tp-testimonal-dec">
+                                                <h4 class="tp-testimonal-dec ele-kd-title">
                                                     <?php echo kd_kses($list_dec); ?>
                                                 </h4>
                                             <?php 
@@ -578,13 +669,13 @@ class Testimonial_Widget extends Widget_Base {
                                                 <div class="tp-testimonal-bio">
                                                     <?php 
                                                     if (!empty($list_name)) : ?>
-                                                        <h4 class="tp-testimonal-name"><?php echo esc_html($list_name); ?></h4>
+                                                        <h4 class="tp-testimonal-name ele-kd-cle-name"><?php echo esc_html($list_name); ?></h4>
                                                     <?php 
                                                     endif; ?>
 
                                                     <?php 
                                                     if (!empty($list_desig)) : ?>
-                                                        <span><?php echo esc_html($list_desig); ?></span>
+                                                        <span class="ele-kd-cle-desig"><?php echo esc_html($list_desig); ?></span>
                                                     <?php 
                                                     endif; ?>
                                                 </div>
